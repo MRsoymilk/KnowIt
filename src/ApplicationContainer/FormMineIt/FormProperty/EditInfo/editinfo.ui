@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EditInfo</class>
+ <widget class="QWidget" name="EditInfo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>748</width>
+    <height>891</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>EditInfo</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QToolBox" name="toolBox">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="pageBasicInformation">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>730</width>
+        <height>693</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Basic Information</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="1" column="2">
+        <widget class="QToolButton" name="tBtnName_zh_Edit">
+         <property name="text">
+          <string>Edit</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="lineEditCompoundType"/>
+       </item>
+       <item row="9" column="1">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEditCompoundName_zh"/>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEditCompoundName_en"/>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="labelStructurePicture">
+         <property name="text">
+          <string>Structure Picture</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="labelCASNumber">
+         <property name="text">
+          <string>CAS Number</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="labelMolecularFormula">
+         <property name="text">
+          <string>Molecular Formula</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="labelState">
+         <property name="text">
+          <string>State</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="labelMolecularWeight">
+         <property name="text">
+          <string>Molecular Weight</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="labelCompoundName_zh">
+         <property name="text">
+          <string>Compound Name(zh)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="lineEditMolecularWeight"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="lineEditMolecularFormula"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelCompoundName_en">
+         <property name="text">
+          <string>Compound Name(en)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QLineEdit" name="lineEditStructurePicturePath"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="labelCompoundType">
+         <property name="text">
+          <string>Compound Type</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QLineEdit" name="lineEditState"/>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="lineEditCASNumber"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QToolButton" name="tBtnName_en_Edit">
+         <property name="text">
+          <string>Edit</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="2">
+        <widget class="QToolButton" name="tBtnUploadStructure">
+         <property name="text">
+          <string>Upload</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QGraphicsView" name="graphicsViewStructure"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageSpectralData">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>730</width>
+        <height>693</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Spectral Data</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="1" column="0" colspan="4">
+        <layout class="QGridLayout" name="gLayPoint">
+         <item row="0" column="0">
+          <widget class="QToolButton" name="tBtnPointStart">
+           <property name="text">
+            <string>start</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QToolButton" name="tBtnPoint2000">
+           <property name="text">
+            <string>2000</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QToolButton" name="tBtnPoint0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QToolButton" name="tBtnPoint4000">
+           <property name="text">
+            <string>4000</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="labelPointStart">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="labelPoint4000">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="labelPoint2000">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLabel" name="labelPoint0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="5" column="1" colspan="2">
+        <widget class="QLineEdit" name="lineEditPlotPath"/>
+       </item>
+       <item row="4" column="3">
+        <widget class="QToolButton" name="tBtnEditPeakAssistance">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Edit</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="labelPlotPath">
+         <property name="text">
+          <string>Plot Path</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="labelPeak">
+         <property name="text">
+          <string>Peak(Main)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Peak(Assistance)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="3">
+        <widget class="QToolButton" name="tBtnUploadSpectral">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Upload</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="4">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QToolButton" name="tBtnRedoCrop">
+           <property name="text">
+            <string>redo crop</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="tBtnFittingCurve">
+           <property name="text">
+            <string>fitting curve</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="tBtnFindPeak">
+           <property name="text">
+            <string>find peak</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0" colspan="4">
+        <widget class="QGraphicsView" name="graphicsViewSpectral"/>
+       </item>
+       <item row="3" column="1" colspan="2">
+        <widget class="QLineEdit" name="lineEditPeakMain"/>
+       </item>
+       <item row="3" column="3">
+        <widget class="QToolButton" name="tBtnEditPeakMain">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Edit</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1" colspan="2">
+        <widget class="QLineEdit" name="lineEditPeakAssistance"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageSpectralAcquisitionConditions">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>730</width>
+        <height>693</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Spectral Acquisition Conditions</string>
+      </attribute>
+      <layout class="QFormLayout" name="formLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelInstrumentModel">
+         <property name="text">
+          <string>Instrument Model</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEditInstrumentModel"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="labelLaserWavelength">
+         <property name="text">
+          <string>Laser Wavelength</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="labelCalculusTimes">
+         <property name="text">
+          <string>Calculus Times</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="labelLaserPower">
+         <property name="text">
+          <string>Laser Power</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEditLaserWavelength"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="lineEditLaserPower"/>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="lineEditCalculusTimes"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="labelMeasuringEnvironment">
+         <property name="text">
+          <string>Measuring Environment</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="lineEditMeasuringEnvironment"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="labelMeasuringTemperature">
+         <property name="text">
+          <string>Measuring Temperature</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="lineEditMeasuringTemperature"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageSampleInformation">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>730</width>
+        <height>693</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Sample Information</string>
+      </attribute>
+      <layout class="QFormLayout" name="formLayout_3">
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelOrigin">
+         <property name="text">
+          <string>Origin</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEditOrigin"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="labelStorage">
+         <property name="text">
+          <string>Storage</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEditStorage"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="labelDerivativeState">
+         <property name="text">
+          <string>Derivative State</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="lineEditDerivativeState"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageAnnotationsAndTags">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>730</width>
+        <height>693</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Annotations and Tags</string>
+      </attribute>
+      <layout class="QFormLayout" name="formLayout_4">
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelCategory">
+         <property name="text">
+          <string>Category</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEditCategory"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="labelApplicationArea">
+         <property name="text">
+          <string>Application Area</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEditApplicationArea"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="labelDataVersion">
+         <property name="text">
+          <string>Data Version</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="lineEditDataVersion"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="labelLastModified">
+         <property name="text">
+          <string>Last Modified</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="lineEditLastModified"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageOriginate">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>730</width>
+        <height>693</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Originate</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelSource">
+         <property name="text">
+          <string>Source</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEditSource"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QToolButton" name="tBtnSourceEdit">
+         <property name="text">
+          <string>Edit</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>643</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

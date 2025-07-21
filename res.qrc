@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/icons/KnowIt.png</file>
+        <file>res/splash/knowit_logo.png</file>
+        <file>res/icons/black/auto_scale.png</file>
+        <file>res/icons/black/crop.png</file>
+        <file>res/icons/black/MineIt.png</file>
+        <file>res/icons/black/original_image.png</file>
+        <file>res/icons/black/xaxis_invert.png</file>
+        <file>res/icons/MineIt.png</file>
+        <file>res/icons/black/settings.png</file>
+        <file>res/icons/settings.png</file>
+    </qresource>
+</RCC>

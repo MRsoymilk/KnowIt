@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormMineIt</class>
+ <widget class="QWidget" name="FormMineIt">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>867</width>
+    <height>687</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MineIt</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,1,1">
+   <item row="0" column="0">
+    <widget class="QLabel" name="labelMineIt">
+     <property name="text">
+      <string>MineIt</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QWidget" name="widgetToolbar" native="true"/>
+   </item>
+   <item row="2" column="0">
+    <layout class="QGridLayout" name="gLayPlot"/>
+   </item>
+   <item row="2" column="1" rowspan="2">
+    <layout class="QGridLayout" name="gLayProperty"/>
+   </item>
+   <item row="3" column="0">
+    <layout class="QGridLayout" name="gLayDataset"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
