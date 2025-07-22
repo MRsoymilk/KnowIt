@@ -25,14 +25,14 @@ DialogAdd::~DialogAdd()
 void DialogAdd::init()
 {
     m_editID = new EditID;
-    m_editURL = new EditURL;
+    // m_editURL = new EditURL;
     m_editInfo = new EditInfo;
 
     ui->stackedWidget->addWidget(m_editID);
-    ui->stackedWidget->addWidget(m_editURL);
+    // ui->stackedWidget->addWidget(m_editURL);
     ui->stackedWidget->addWidget(m_editInfo);
 
-    m_editWidgets = {m_editID, m_editURL, m_editInfo};
+    m_editWidgets = {m_editID, /*m_editURL,*/ m_editInfo};
 
     ui->stackedWidget->setCurrentWidget(m_editID);
 
@@ -49,12 +49,14 @@ void DialogAdd::on_btnNext_clicked()
         } else {
             return;
         }
-    } else if (auto edit = qobject_cast<EditURL *>(m_editWidgets[index])) {
-        if (edit->check()) {
-        } else {
-            return;
-        }
-    } else if (auto edit = qobject_cast<EditInfo *>(m_editWidgets[index])) {
+    }
+    // else if (auto edit = qobject_cast<EditURL *>(m_editWidgets[index])) {
+    //     if (edit->check()) {
+    //     } else {
+    //         return;
+    //     }
+    // }
+    else if (auto edit = qobject_cast<EditInfo *>(m_editWidgets[index])) {
         QJsonObject obj = edit->getData();
         obj.insert("ID", ui->labelID->text());
         QString url = QString("%1/%2").arg(MY_GLOBAL->get<QString>(URL_SERVER),

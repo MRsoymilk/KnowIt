@@ -25,7 +25,7 @@ const QString STATE = "State";
 // Spectral Data
 const QString PEAK_MAIN = "Peak(Main)";
 const QString PEAK_ASSISTANCE = "Peak(Assistance)";
-const QString PLOT_PATH = "Plot Path";
+const QString SPECTRAL_PICTURE = "Spectral Picture";
 // Spectral Acquisition Conditions
 const QString INSTRUMENT_MODEL = "Instrument Model";
 const QString LASER_WAVELENGTH = "Laser Wavelength";
@@ -61,6 +61,11 @@ const QString KEY_URL_COMPOUND_VIEW = "url_compound_view";
 const QString PATH_CV_FIND_CROP = "path_cv_find_crop";
 const QString PATH_CV_FIND_PEAK = "path_cv_find_peak";
 const QString PATH_CV_FIND_CURVE = "path_cv_find_curve";
+const QString GROUP_CALIBRATION = "CALIBRATION";
+const QString CALIBRATION_START = "start";
+const QString CALIBRATION_4000 = "4000";
+const QString CALIBRATION_2000 = "2000";
+const QString CALIBRATION_0 = "0";
 
 const QString DFT_URL_SERVER = "http://192.168.123.233:5020";
 const QString DFT_PATH_PING = "/ping";
@@ -74,6 +79,10 @@ const QString DFT_PATH_HTML_ANALYSIS = "/html/analysis";
 const QString DFT_PATH_CV_FIND_CROP = "/cv/find/crop";
 const QString DFT_PATH_CV_FIND_PEAK = "/cv/find/peak";
 const QString DFT_PATH_CV_FIND_CURVE = "/cv/find/curve";
+const QString DFT_CALIBRATION_START = "(0, 0)";
+const QString DFT_CALIBRATION_4000 = "(0, 0)";
+const QString DFT_CALIBRATION_2000 = "(0, 0)";
+const QString DFT_CALIBRATION_0 = "(0, 0)";
 
 const QString CFG_GROUP_PROGRAM = "Program";
 const QString CFG_PROGRAM_THEME = "theme";

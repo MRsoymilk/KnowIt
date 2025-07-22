@@ -1215,4 +1215,10 @@ QToolButton#AutoScale {
 QToolButton#PeakAssistance {
   qproperty-icon: url(:/res/icons/white/peak_assistance.png);
 }
+QToolButton#find_peak {
+  qproperty-icon: url(:/res/icons/white/find_peak.png);
+}
+QToolButton#fitting_curve {
+  qproperty-icon: url(:/res/icons/white/fitting_curve.png);
+}
 /*# sourceMappingURL=Dark.qss.map */

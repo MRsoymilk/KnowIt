@@ -72,6 +72,20 @@ void initConfig()
                             SETTING_CONFIG_GET(GROUP_SERVER,
                                                PATH_CV_FIND_PEAK,
                                                DFT_PATH_CV_FIND_PEAK));
+    MY_GLOBAL->set<QString>(CALIBRATION_START,
+                            SETTING_CONFIG_GET(GROUP_CALIBRATION,
+                                               CALIBRATION_START,
+                                               DFT_CALIBRATION_START));
+    MY_GLOBAL->set<QString>(CALIBRATION_4000,
+                            SETTING_CONFIG_GET(GROUP_CALIBRATION,
+                                               CALIBRATION_4000,
+                                               DFT_CALIBRATION_4000));
+    MY_GLOBAL->set<QString>(CALIBRATION_2000,
+                            SETTING_CONFIG_GET(GROUP_CALIBRATION,
+                                               CALIBRATION_2000,
+                                               DFT_CALIBRATION_2000));
+    MY_GLOBAL->set<QString>(CALIBRATION_0,
+                            SETTING_CONFIG_GET(GROUP_CALIBRATION, CALIBRATION_0, DFT_CALIBRATION_0));
 }
 
 QString initConnect()

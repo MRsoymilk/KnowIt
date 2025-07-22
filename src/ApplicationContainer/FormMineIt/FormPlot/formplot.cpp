@@ -125,11 +125,11 @@ void FormPlot::init()
     m_sceneSpectral = new QGraphicsScene(this);
     ui->graphicsViewPicture->setScene(m_sceneSpectral);
 
-    // 设置抗锯齿渲染与平滑缩放
     ui->graphicsViewPicture->setRenderHint(QPainter::Antialiasing);
     ui->graphicsViewPicture->setRenderHint(QPainter::SmoothPixmapTransform);
     ui->graphicsViewPicture->setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
-    ui->graphicsViewPicture->setResizeAnchor(QGraphicsView::AnchorViewCenter);
+    ui->graphicsViewPicture->setDragMode(QGraphicsView::ScrollHandDrag);
+    ui->graphicsViewPicture->setResizeAnchor(QGraphicsView::AnchorUnderMouse);
 }
 
 void FormPlot::initChart()
@@ -148,9 +148,6 @@ void FormPlot::initChart()
 
     m_series->attachAxis(m_axisX);
     m_series->attachAxis(m_axisY);
-
-    qDebug() << "m_axisX:" << m_axisX;
-    qDebug() << "chart axisX:" << m_chart->axes(Qt::Horizontal).first();
 
     m_chartView = new MyChartView(m_chart);
     m_chartView->setRenderHint(QPainter::Antialiasing);

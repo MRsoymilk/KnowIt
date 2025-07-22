@@ -13,6 +13,38 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="labelOrigin">
+     <property name="text">
+      <string>Origin</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="lineEditOrigin"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="labelStorage">
+     <property name="text">
+      <string>Storage</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="lineEditStorage"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="labelDerivativeState">
+     <property name="text">
+      <string>Derivative State</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="lineEditDerivativeState"/>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

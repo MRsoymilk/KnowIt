@@ -15,6 +15,10 @@ public:
     explicit SpectralAcquisitionConditions(QWidget *parent = nullptr);
     ~SpectralAcquisitionConditions();
 
+    void setSpectralAcquisitionConditions(const QJsonObject &data);
+
+    QJsonObject getSpectralAcquisitionConditions();
+
 private:
     Ui::SpectralAcquisitionConditions *ui;
 };

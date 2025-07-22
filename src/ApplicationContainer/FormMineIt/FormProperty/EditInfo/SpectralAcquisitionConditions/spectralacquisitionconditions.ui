@@ -13,6 +13,68 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="labelInstrumentModel">
+     <property name="text">
+      <string>Instrument Model</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="lineEditInstrumentModel"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="labelLaserWavelength">
+     <property name="text">
+      <string>Laser Wavelength</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="lineEditLaserWavelength"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="labelLaserPower">
+     <property name="text">
+      <string>Laser Power</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="lineEditLaserPower"/>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="labelCalculusTimes">
+     <property name="text">
+      <string>Calculus Times</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="lineEditCalculusTimes"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="labelMeasuringEnvironment">
+     <property name="text">
+      <string>Measuring Environment</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLineEdit" name="lineEditMeasuringEnvironment"/>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="labelMeasuringTemperature">
+     <property name="text">
+      <string>Measuring Temperature</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLineEdit" name="lineEditMeasuringTemperature"/>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

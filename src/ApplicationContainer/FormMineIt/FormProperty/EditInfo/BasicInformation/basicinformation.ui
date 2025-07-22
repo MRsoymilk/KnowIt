@@ -6,13 +6,132 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>746</width>
+    <height>571</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="labelCompoundName_en">
+     <property name="text">
+      <string>Compound Name(en)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="lineEditCompoundName_en"/>
+   </item>
+   <item row="0" column="2">
+    <widget class="QToolButton" name="tBtnName_en_Edit">
+     <property name="text">
+      <string>Edit</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="labelCompoundName_zh">
+     <property name="text">
+      <string>Compound Name(zh)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="lineEditCompoundName_zh"/>
+   </item>
+   <item row="1" column="2">
+    <widget class="QToolButton" name="tBtnName_zh_Edit">
+     <property name="text">
+      <string>Edit</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="labelMolecularFormula">
+     <property name="text">
+      <string>Molecular Formula</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="lineEditMolecularFormula"/>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="labelMolecularWeight">
+     <property name="text">
+      <string>Molecular Weight</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="lineEditMolecularWeight"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="labelCASNumber">
+     <property name="text">
+      <string>CAS Number</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLineEdit" name="lineEditCASNumber"/>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="labelCompoundType">
+     <property name="text">
+      <string>Compound Type</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLineEdit" name="lineEditCompoundType"/>
+   </item>
+   <item row="6" column="1">
+    <widget class="QGraphicsView" name="graphicsViewStructure"/>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="labelStructurePicture">
+     <property name="text">
+      <string>Structure Picture</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QLineEdit" name="lineEditStructurePicturePath"/>
+   </item>
+   <item row="7" column="2">
+    <widget class="QToolButton" name="tBtnUploadStructure">
+     <property name="text">
+      <string>Upload</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="labelState">
+     <property name="text">
+      <string>State</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QLineEdit" name="lineEditState"/>
+   </item>
+   <item row="9" column="1">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>120</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

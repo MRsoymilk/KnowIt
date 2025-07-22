@@ -228,7 +228,7 @@ void FormProperty::initProperty()
             {
                 tr("Peak(Main)"),
                 tr("Peak(Assistance)"),
-                tr("Plot Path"),
+                tr("Spectral Picture"),
             },
         },
         {

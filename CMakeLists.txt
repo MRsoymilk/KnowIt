@@ -101,6 +101,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         res.qrc
+        src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.h src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.cpp src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET KnowIt APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

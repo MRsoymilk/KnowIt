@@ -69,8 +69,8 @@ void FormDataset::on_tableView_clicked(const QModelIndex &index)
     QString url_get_img_structure = QString("%1%2/%3/%4")
                                         .arg(MY_GLOBAL->get<QString>(URL_SERVER),
                                              MY_GLOBAL->get<QString>(PATH_LOAD_IMG),
-                                             objInfo["ID"].toString(),
-                                             objSpectralData["Plot Path"].toString());
+                                             objInfo[ID].toString(),
+                                             objSpectralData[SPECTRAL_PICTURE].toString());
     MY_HTTP->getImage(
         url_get_img_structure,
         [=](QPixmap pix) { emit itStructure(pix); },
