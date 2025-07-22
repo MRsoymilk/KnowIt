@@ -31,11 +31,12 @@ void MainWindow::init() {
   ui->tBtnSetting->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
   initTheme();
+  initMsgBar();
 }
 
 void MainWindow::initMsgBar() {
   QLabel *linkLabel = new QLabel(this);
-  linkLabel->setText(QString("version: %1 on ").arg(APP_VERSION));
+  linkLabel->setText(QString("version: %1").arg(APP_VERSION));
   linkLabel->setTextFormat(Qt::RichText);
   linkLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
   linkLabel->setOpenExternalLinks(true);

@@ -20,20 +20,19 @@ class MainWindow : public QMainWindow {
   ~MainWindow();
 
  private slots:
-
   void on_tBtnSetting_clicked();
 
  private:
   void init();
-
- private:
-  Ui::MainWindow *ui;
-  FormMineIt *m_AppMineIt;
-  FormApplicationMenu *m_Menu;
   void initTheme();
   void setTheme(const QString &theme);
   void menuThemeSelect(QAction *selectedTheme);
-  QString m_theme;
   void initMsgBar();
+
+ private:
+  Ui::MainWindow *ui;
+  QString m_theme;
+  FormMineIt *m_AppMineIt;
+  FormApplicationMenu *m_Menu;
 };
 #endif  // MAINWINDOW_H
