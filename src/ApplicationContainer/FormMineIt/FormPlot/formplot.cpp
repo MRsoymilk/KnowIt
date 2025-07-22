@@ -177,8 +177,16 @@ void FormPlot::on_tBtnOriginalImage_clicked() {
   updateSpectralPixmap();
   if (m_isOriginalPicture) {
     ui->stackedWidget->setCurrentIndex(STACK_INDEX::PICTURE);
+    ui->tBtnAutoScale->setVisible(false);
+    ui->tBtnCrop->setVisible(false);
+    ui->tBtnPeakAssistance->setVisible(false);
+    ui->tBtnXaxisInvert->setVisible(false);
   } else {
     ui->stackedWidget->setCurrentIndex(STACK_INDEX::PLOT);
+    ui->tBtnAutoScale->setVisible(true);
+    ui->tBtnCrop->setVisible(true);
+    ui->tBtnPeakAssistance->setVisible(true);
+    ui->tBtnXaxisInvert->setVisible(true);
   }
 }
 
