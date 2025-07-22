@@ -1,12 +1,14 @@
 #include "mainwindow.h"
 
 #include <QFile>
+#include <QLabel>
 
 #include "./ui_mainwindow.h"
 #include "FormSetting/formsetting.h"
 #include "formapplicationmenu.h"
 #include "formmineit.h"
 #include "g_define.h"
+#include "version.h"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
   ui->setupUi(this);
@@ -29,6 +31,15 @@ void MainWindow::init() {
   ui->tBtnSetting->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
   initTheme();
+}
+
+void MainWindow::initMsgBar() {
+  QLabel *linkLabel = new QLabel(this);
+  linkLabel->setText(QString("version: %1 on ").arg(APP_VERSION));
+  linkLabel->setTextFormat(Qt::RichText);
+  linkLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
+  linkLabel->setOpenExternalLinks(true);
+  ui->statusbar->addPermanentWidget(linkLabel);
 }
 
 void MainWindow::initTheme() {

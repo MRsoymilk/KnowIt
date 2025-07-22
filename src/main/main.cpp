@@ -6,11 +6,13 @@
 #include "mainwindow.h"
 #include "myglobal.h"
 #include "myhttp.h"
+#include "version.h"
 
 void initConfig();
 QString initConnect();
 
 int main(int argc, char *argv[]) {
+  LOG_INFO("version: {}", APP_VERSION);
   QApplication a(argc, argv);
   a.setWindowIcon(QIcon(":/res/icons/KnowIt.png"));
 

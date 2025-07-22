@@ -34,5 +34,6 @@ class MainWindow : public QMainWindow {
   void setTheme(const QString &theme);
   void menuThemeSelect(QAction *selectedTheme);
   QString m_theme;
+  void initMsgBar();
 };
 #endif  // MAINWINDOW_H
