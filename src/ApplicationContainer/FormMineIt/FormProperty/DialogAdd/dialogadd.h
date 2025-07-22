@@ -19,14 +19,13 @@ class DialogAdd : public QDialog {
  public:
   explicit DialogAdd(QWidget *parent = nullptr);
   ~DialogAdd();
- signals:
+
+ private:
+  void init();
 
  private slots:
   void on_btnNext_clicked();
   void on_btnPrevious_clicked();
-
- private:
-  void init();
 
  private:
   Ui::DialogAdd *ui;

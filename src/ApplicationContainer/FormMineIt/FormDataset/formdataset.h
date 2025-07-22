@@ -27,14 +27,16 @@ class FormDataset : public QWidget {
   void onSelectedDataDelete();
   void onUpdateData();
 
+ private:
+  void init();
+  void clearData();
+
  private slots:
   void on_tableView_clicked(const QModelIndex &index);
 
  private:
   Ui::FormDataset *ui;
-  void init();
   QStandardItemModel *m_model;
-  void clearData();
 };
 
 #endif  // FORMDATASET_H

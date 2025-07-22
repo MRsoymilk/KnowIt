@@ -13,17 +13,17 @@ class Originate : public QWidget {
  public:
   explicit Originate(QWidget *parent = nullptr);
   ~Originate();
-
   void setOriginate(const QJsonObject &data);
-
   QJsonObject getOriginate();
+
+ private:
+  void init();
 
  private slots:
   void on_tBtnSourceEdit_clicked();
 
  private:
   Ui::Originate *ui;
-  void init();
 };
 
 #endif  // ORIGINATE_H

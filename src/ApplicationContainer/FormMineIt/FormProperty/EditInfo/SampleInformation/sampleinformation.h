@@ -13,9 +13,7 @@ class SampleInformation : public QWidget {
  public:
   explicit SampleInformation(QWidget *parent = nullptr);
   ~SampleInformation();
-
   void setSampleInformation(const QJsonObject &data);
-
   QJsonObject getSampleInformation();
 
  private:

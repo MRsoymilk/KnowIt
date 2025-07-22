@@ -13,6 +13,7 @@ class MyChartView;
 
 class FormPlot : public QWidget {
   Q_OBJECT
+
  public:
   enum STACK_INDEX { PLOT, PICTURE };
 
@@ -26,12 +27,6 @@ class FormPlot : public QWidget {
 
  protected:
   void wheelEvent(QWheelEvent *event) override;
- private slots:
-  void on_tBtnXaxisInvert_clicked();
-  void on_tBtnOriginalImage_clicked();
-  void on_tBtnAutoScale_clicked();
-  void on_tBtnCrop_clicked();
-  void on_tBtnPeakAssistance_clicked();
 
  private:
   void init();
@@ -40,6 +35,13 @@ class FormPlot : public QWidget {
   void updateSeries();
   void updateSpectralPixmap();
 
+ private slots:
+  void on_tBtnXaxisInvert_clicked();
+  void on_tBtnOriginalImage_clicked();
+  void on_tBtnAutoScale_clicked();
+  void on_tBtnCrop_clicked();
+  void on_tBtnPeakAssistance_clicked();
+
  private:
   Ui::FormPlot *ui;
   QChart *m_chart;
@@ -47,7 +49,6 @@ class FormPlot : public QWidget {
   QLineSeries *m_series;
   QValueAxis *m_axisX;
   QValueAxis *m_axisY;
-
   QMap<int, int> m_rawMainData;
   QMap<int, int> m_rawAssistanceData;
   bool m_isXAxisInverted = false;
@@ -55,7 +56,6 @@ class FormPlot : public QWidget {
   bool m_isPeakAssistance = false;
   bool m_isCrop = false;
   bool m_isAutoScale = false;
-
   QPixmap m_pixSpectral;
   QGraphicsScene *m_sceneSpectral = nullptr;
   QGraphicsPixmapItem *m_itemSpectral = nullptr;

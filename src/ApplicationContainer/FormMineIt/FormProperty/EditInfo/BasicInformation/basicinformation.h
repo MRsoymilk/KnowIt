@@ -21,19 +21,20 @@ class BasicInformation : public QWidget {
  signals:
   void sendStructure(const QPixmap &pix);
 
+ protected:
+  bool eventFilter(QObject *watched, QEvent *event) override;
+
  private:
-  Ui::BasicInformation *ui;
   void init();
   bool handleGraphicsViewStructure(QEvent *event);
 
- public:
-  bool eventFilter(QObject *watched, QEvent *event);
  private slots:
   void on_tBtnName_zh_Edit_clicked();
   void on_tBtnName_en_Edit_clicked();
   void on_tBtnUploadStructure_clicked();
 
  private:
+  Ui::BasicInformation *ui;
   QString m_id, m_uuid;
 };
 

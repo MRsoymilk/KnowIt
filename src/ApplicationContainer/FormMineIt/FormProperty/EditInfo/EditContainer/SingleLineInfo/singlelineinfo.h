@@ -14,6 +14,7 @@ class SingleLineInfo : public QWidget {
   explicit SingleLineInfo(const QString &txt = "", QWidget *parent = nullptr);
   ~SingleLineInfo();
   QString getInfo();
+
  private slots:
   void on_tBtnDelete_clicked();
 

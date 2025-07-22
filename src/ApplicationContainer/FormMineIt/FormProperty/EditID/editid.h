@@ -14,12 +14,13 @@ class EditID : public QWidget {
   explicit EditID(QWidget *parent = nullptr);
   ~EditID();
   bool check();
- private slots:
-  void on_comboBoxMajor_currentTextChanged(const QString &major);
 
  private:
   void init();
   void updateID();
+
+ private slots:
+  void on_comboBoxMajor_currentTextChanged(const QString &major);
 
  private:
   Ui::EditID *ui;

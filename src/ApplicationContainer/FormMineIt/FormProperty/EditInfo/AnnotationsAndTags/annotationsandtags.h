@@ -13,9 +13,7 @@ class AnnotationsAndTags : public QWidget {
  public:
   explicit AnnotationsAndTags(QWidget *parent = nullptr);
   ~AnnotationsAndTags();
-
   void setAnnotationsAndTags(const QJsonObject &data);
-
   QJsonObject getAnnotationsAndTags();
 
  private:

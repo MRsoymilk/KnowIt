@@ -9,6 +9,7 @@ class EditContainer;
 
 class EditContainer : public QDialog {
   Q_OBJECT
+
  public:
   enum TYPE { PEAK, SINGLE_LINE };
 
@@ -17,6 +18,7 @@ class EditContainer : public QDialog {
   ~EditContainer();
   void setData(const QString &data);
   const QString getData();
+
  private slots:
   void on_tBtnAdd_clicked();
   void on_buttonBox_accepted();

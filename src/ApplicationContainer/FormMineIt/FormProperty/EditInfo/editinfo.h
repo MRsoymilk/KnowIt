@@ -20,7 +20,7 @@ class EditInfo;
 
 class EditInfo : public QWidget {
   Q_OBJECT
- public:
+
  public:
   explicit EditInfo(const QJsonObject &data = {}, QWidget *parent = nullptr);
   ~EditInfo();
@@ -30,6 +30,7 @@ class EditInfo : public QWidget {
  signals:
   void sendStructure(const QPixmap &pix);
   void sendSpectral(const QPixmap &pix);
+
  public slots:
   void onStructure(const QPixmap &pix);
   void onSpectral(const QPixmap &pix);
@@ -39,7 +40,6 @@ class EditInfo : public QWidget {
 
  private:
   Ui::EditInfo *ui;
-
   QString m_uuid;
   QString m_id;
   AnnotationsAndTags *m_AnnotationsAndTags;

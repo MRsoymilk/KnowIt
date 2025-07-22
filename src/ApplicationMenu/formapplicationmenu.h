@@ -14,11 +14,11 @@ class FormApplicationMenu : public QWidget {
   explicit FormApplicationMenu(QWidget *parent = nullptr);
   ~FormApplicationMenu();
 
- private slots:
-  void on_tBtnMineIt_clicked();
-
  private:
   void init();
+
+ private slots:
+  void on_tBtnMineIt_clicked();
 
  private:
   Ui::FormApplicationMenu *ui;

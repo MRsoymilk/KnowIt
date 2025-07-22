@@ -15,14 +15,6 @@ class EditURL : public QWidget {
   ~EditURL();
   bool check();
 
-  // signals:
-  //     void backEditID();
-  //     void editURLFinished();
-
-  // private slots:
-  //     void on_btnPrevious_clicked();
-  //     void on_btnNext_clicked();
-
  private:
   Ui::EditURL *ui;
 };

@@ -16,19 +16,14 @@ class FormProperty : public QWidget {
  public:
   explicit FormProperty(QWidget *parent = nullptr);
   ~FormProperty();
+
  signals:
   void selectedDataDelete();
-  // void selectedDataEdit();
   void dataAdd();
 
  public slots:
   void onItInfo(const QJsonObject &data);
   void onItStructure(const QPixmap &pix);
-
- private slots:
-  void on_btnAdd_clicked();
-  void on_btnEdit_clicked();
-  void on_btnDelete_clicked();
 
  protected:
   void resizeEvent(QResizeEvent *event) override;
@@ -49,10 +44,14 @@ class FormProperty : public QWidget {
   void clearInfo();
   void showAllProperties();
 
+ private slots:
+  void on_btnAdd_clicked();
+  void on_btnEdit_clicked();
+  void on_btnDelete_clicked();
+
  private:
   Ui::FormProperty *ui;
   QStandardItemModel *m_model;
-
   QList<QPair<QString, QStringList>> m_propertyCategories;  // 分类及字段（有顺序）
   QMap<QString, QStringList> m_propertyMap;                 // 分类查找（便于筛选）
   QList<QPushButton *> m_categoryButtons;                   // 按钮引用（用于切换状态）

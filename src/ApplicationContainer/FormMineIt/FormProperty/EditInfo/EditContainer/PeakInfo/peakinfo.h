@@ -15,6 +15,7 @@ class PeakInfo : public QWidget {
   ~PeakInfo();
   double getWavelength();
   double getIntensity();
+
  private slots:
   void on_tBtnDelete_clicked();
 
