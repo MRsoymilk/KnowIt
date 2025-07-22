@@ -19,6 +19,9 @@ private slots:
     void on_tBtnMineIt_clicked();
 
 private:
+    void init();
+
+private:
     Ui::FormApplicationMenu *ui;
 };
 

@@ -34,6 +34,7 @@ signals:
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
+
 private slots:
     void on_tBtnName_en_Edit_clicked();
     void on_tBtnName_zh_Edit_clicked();

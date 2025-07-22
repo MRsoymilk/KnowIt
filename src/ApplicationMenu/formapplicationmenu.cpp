@@ -6,6 +6,16 @@ FormApplicationMenu::FormApplicationMenu(QWidget *parent)
     , ui(new Ui::FormApplicationMenu)
 {
     ui->setupUi(this);
+    init();
+}
+
+FormApplicationMenu::~FormApplicationMenu()
+{
+    delete ui;
+}
+
+void FormApplicationMenu::init()
+{
     ui->tBtnMineIt->setToolTip("MineIt");
     ui->tBtnMineIt->setObjectName("MineIt");
     ui->tBtnMineIt->setIcon(QIcon(":/res/icons/MineIt.png"));
@@ -13,11 +23,6 @@ FormApplicationMenu::FormApplicationMenu(QWidget *parent)
     ui->tBtnMineIt->setCheckable(true);
     ui->tBtnMineIt->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
     ui->tBtnMineIt->setChecked(true);
-}
-
-FormApplicationMenu::~FormApplicationMenu()
-{
-    delete ui;
 }
 
 void FormApplicationMenu::on_tBtnMineIt_clicked() {}

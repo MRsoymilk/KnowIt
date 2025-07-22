@@ -24,16 +24,22 @@ public:
 public slots:
     void onItPlot(const QJsonObject &data);
     void onItSpectral(const QPixmap &pix);
+
+protected:
+    void wheelEvent(QWheelEvent *event) override;
 private slots:
     void on_tBtnXaxisInvert_clicked();
     void on_tBtnOriginalImage_clicked();
     void on_tBtnAutoScale_clicked();
     void on_tBtnCrop_clicked();
+    void on_tBtnPeakAssistance_clicked();
 
 private:
     void init();
     void initToolButtons();
     void initChart();
+    void updateSeries();
+    void updateSpectralPixmap();
 
 private:
     Ui::FormPlot *ui;
@@ -43,16 +49,17 @@ private:
     QValueAxis *m_axisX;
     QValueAxis *m_axisY;
 
-    QMap<int, int> m_rawData;       // 保存原始 Peak(Main) 数据
-    bool m_isXAxisInverted = false; // 当前方向标志
+    QMap<int, int> m_rawMainData;
+    QMap<int, int> m_rawAssistanceData;
+    bool m_isXAxisInverted = false;
     bool m_isOriginalPicture = false;
-    void updateSeries();
-    void updateSpectralPixmap();
-    QPixmap m_pixSpectral;
+    bool m_isPeakAssistance = false;
+    bool m_isCrop = false;
+    bool m_isAutoScale = false;
 
-    // QWidget interface
-protected:
-    void resizeEvent(QResizeEvent *event);
+    QPixmap m_pixSpectral;
+    QGraphicsScene *m_sceneSpectral = nullptr;
+    QGraphicsPixmapItem *m_itemSpectral = nullptr;
 };
 
 #endif // FORMPLOT_H

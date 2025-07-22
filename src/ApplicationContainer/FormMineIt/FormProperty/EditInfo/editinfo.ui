@@ -17,7 +17,7 @@
    <item row="0" column="0">
     <widget class="QToolBox" name="toolBox">
      <property name="currentIndex">
-      <number>0</number>
+      <number>4</number>
      </property>
      <widget class="QWidget" name="pageBasicInformation">
       <property name="geometry">
@@ -237,12 +237,12 @@
         </layout>
        </item>
        <item row="5" column="1" colspan="2">
-        <widget class="QLineEdit" name="lineEditPlotPath"/>
+        <widget class="QLineEdit" name="lineEditSpectralPicturePath"/>
        </item>
        <item row="4" column="3">
         <widget class="QToolButton" name="tBtnEditPeakAssistance">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -255,7 +255,7 @@
        <item row="5" column="0">
         <widget class="QLabel" name="labelPlotPath">
          <property name="text">
-          <string>Plot Path</string>
+          <string>Spectral Picture</string>
          </property>
         </widget>
        </item>
@@ -276,7 +276,7 @@
        <item row="5" column="3">
         <widget class="QToolButton" name="tBtnUploadSpectral">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -333,7 +333,7 @@
        <item row="3" column="3">
         <widget class="QToolButton" name="tBtnEditPeakMain">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>

@@ -1,6 +1,7 @@
 #include "editinfo.h"
 #include <QFileDialog>
 #include <QJsonArray>
+#include <QMainWindow>
 #include <QWheelEvent>
 #include "EditContainer/editcontainer.h"
 #include "g_define.h"
@@ -49,6 +50,14 @@ void EditInfo::init()
     m_pointData[1] = {ui->labelPoint4000, QPoint(), nullptr};
     m_pointData[2] = {ui->labelPoint2000, QPoint(), nullptr};
     m_pointData[3] = {ui->labelPoint0, QPoint(), nullptr};
+
+    ui->tBtnEditPeakAssistance->setObjectName("edit");
+    ui->tBtnEditPeakMain->setObjectName("edit");
+    ui->tBtnName_en_Edit->setObjectName("edit");
+    ui->tBtnName_zh_Edit->setObjectName("edit");
+    ui->tBtnSourceEdit->setObjectName("edit");
+    ui->tBtnUploadSpectral->setObjectName("upload");
+    ui->tBtnUploadStructure->setObjectName("upload");
 }
 
 bool EditInfo::handleGraphicsViewSpectral(QEvent *event)
@@ -205,10 +214,11 @@ void EditInfo::setBasicInformation(const QJsonObject &data)
         [=](QPixmap pix) {
             QGraphicsScene *scene = new QGraphicsScene(this);
             scene->addPixmap(pix);
-            scene->setSceneRect(pix.rect());
+            // scene->setSceneRect(pix.rect());
+            scene->setSceneRect(QRectF(QPointF(0, 0), pix.size()));
 
             ui->graphicsViewStructure->setScene(scene);
-            ui->graphicsViewStructure->fitInView(scene->sceneRect(), Qt::KeepAspectRatio);
+            // ui->graphicsViewStructure->fitInView(scene->sceneRect(), Qt::KeepAspectRatio);
             ui->graphicsViewStructure->setRenderHints(QPainter::Antialiasing
                                                       | QPainter::SmoothPixmapTransform);
             ui->graphicsViewStructure->setDragMode(QGraphicsView::ScrollHandDrag);
@@ -221,13 +231,13 @@ void EditInfo::setSpectralData(const QJsonObject &data)
 {
     QJsonObject objSpectralData = data[SPECTRAL_DATA].toObject();
     ui->lineEditPeakMain->setText(objSpectralData.value(PEAK_MAIN).toString());
-    ui->lineEditPlotPath->setText(objSpectralData.value(PLOT_PATH).toString());
+    ui->lineEditSpectralPicturePath->setText(objSpectralData.value(PLOT_PATH).toString());
 
     QString url_get_img = QString("%1%2/%3/%4")
                               .arg(MY_GLOBAL->get<QString>(URL_SERVER),
                                    MY_GLOBAL->get<QString>(PATH_LOAD_IMG),
                                    m_id,
-                                   ui->lineEditPlotPath->text());
+                                   ui->lineEditSpectralPicturePath->text());
     MY_HTTP->getImage(
         url_get_img,
         [=](QPixmap pix) {
@@ -236,7 +246,7 @@ void EditInfo::setSpectralData(const QJsonObject &data)
             scene->setSceneRect(pix.rect());
 
             ui->graphicsViewSpectral->setScene(scene);
-            ui->graphicsViewSpectral->fitInView(scene->sceneRect(), Qt::KeepAspectRatio);
+            // ui->graphicsViewSpectral->fitInView(scene->sceneRect(), Qt::KeepAspectRatio);
             ui->graphicsViewSpectral->setRenderHints(QPainter::Antialiasing
                                                      | QPainter::SmoothPixmapTransform);
             ui->graphicsViewSpectral->setDragMode(QGraphicsView::ScrollHandDrag);
@@ -303,7 +313,7 @@ QJsonObject EditInfo::getSpectralData()
     QJsonObject objSpectralData;
     objSpectralData.insert(PEAK_MAIN, ui->lineEditPeakMain->text());
     objSpectralData.insert(PEAK_ASSISTANCE, ui->lineEditPeakAssistance->text());
-    objSpectralData.insert(PLOT_PATH, ui->lineEditPlotPath->text());
+    objSpectralData.insert(PLOT_PATH, ui->lineEditSpectralPicturePath->text());
     return objSpectralData;
 }
 
@@ -492,7 +502,7 @@ void EditInfo::on_tBtnFittingCurve_clicked()
                                       MY_GLOBAL->get<QString>(PATH_CV_FIND_CURVE));
     QJsonObject obj;
     obj.insert("UUID", m_uuid);
-    QString fullPath = ui->lineEditPlotPath->text();
+    QString fullPath = ui->lineEditSpectralPicturePath->text();
     QString fileName = QFileInfo(fullPath).fileName();
     obj.insert("file", fileName);
 
@@ -605,7 +615,7 @@ void EditInfo::on_tBtnUploadSpectral_clicked()
     if (path.isEmpty()) {
         return;
     }
-    ui->lineEditPlotPath->setText(path);
+    ui->lineEditSpectralPicturePath->setText(path);
     m_pixRamanSpectral.load(path);
     if (m_pixRamanSpectral.isNull()) {
         QMessageBox::warning(this, tr("Error"), tr("Failed to load image."));
@@ -625,7 +635,7 @@ void EditInfo::on_tBtnUploadSpectral_clicked()
         [=](QJsonObject obj) {
             qDebug() << "Upload OK:" << obj;
             QFileInfo info(path);
-            ui->lineEditPlotPath->setText(QString("original/%1").arg(info.fileName()));
+            ui->lineEditSpectralPicturePath->setText(QString("original/%1").arg(info.fileName()));
         },
         [](QString err) { qDebug() << "Upload Error:" << err; });
 

@@ -31,5 +31,9 @@ private:
     Ui::MainWindow *ui;
     FormMineIt *m_AppMineIt;
     FormApplicationMenu *m_Menu;
+    void initTheme();
+    void setTheme(const QString &theme);
+    void menuThemeSelect(QAction *selectedTheme);
+    QString m_theme;
 };
 #endif // MAINWINDOW_H

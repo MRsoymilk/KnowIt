@@ -75,6 +75,9 @@ const QString DFT_PATH_CV_FIND_CROP = "/cv/find/crop";
 const QString DFT_PATH_CV_FIND_PEAK = "/cv/find/peak";
 const QString DFT_PATH_CV_FIND_CURVE = "/cv/find/curve";
 
+const QString CFG_GROUP_PROGRAM = "Program";
+const QString CFG_PROGRAM_THEME = "theme";
+
 // function
 #include "mysetting.h"
 #define SETTING_CONFIG_GET(group, key, ...) \

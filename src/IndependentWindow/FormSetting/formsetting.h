@@ -3,6 +3,8 @@
 
 #include <QWidget>
 
+class ServerSetting;
+
 namespace Ui {
 class FormSetting;
 }
@@ -21,6 +23,8 @@ private slots:
 
 private:
     Ui::FormSetting *ui;
+    void init();
+    ServerSetting *m_serverSetting;
 };
 
 #endif // FORMSETTING_H

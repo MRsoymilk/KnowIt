@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ServerSetting</class>
+ <widget class="QWidget" name="ServerSetting">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>544</width>
+    <height>712</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Server</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="labelUrl">
+        <property name="text">
+         <string>url</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEditUrl"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="labelPathPing">
+        <property name="text">
+         <string>path ping</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEditPathPing"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="labelPathUploadImg">
+        <property name="text">
+         <string>path upload img</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lineEditPathUploadImg"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="labelLoadImg">
+        <property name="text">
+         <string>path load img</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="lineEditPathLoadImg"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="labelPathDatasetCheck">
+        <property name="text">
+         <string>path dataset check</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="lineEditPathDatasetCheck"/>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="labelPathDatasetSet">
+        <property name="text">
+         <string>path dataset set</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLineEdit" name="lineEditPathDatasetSet"/>
+      </item>
+      <item row="6" column="1">
+       <widget class="QLineEdit" name="lineEditPathDatasetGet"/>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="labelPathDatasetGet">
+        <property name="text">
+         <string>path dataset get</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="labelPathDatasetDel">
+        <property name="text">
+         <string>path dataset del</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLabel" name="labelPathHtmlAnalysis">
+        <property name="text">
+         <string>path html analysis</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QLineEdit" name="lineEditPathDatasetDel"/>
+      </item>
+      <item row="8" column="1">
+       <widget class="QLineEdit" name="lineEditPathHtmlAnalysis"/>
+      </item>
+      <item row="9" column="0">
+       <widget class="QLabel" name="labelPathCvFindCrop">
+        <property name="text">
+         <string>path cv find crop</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0">
+       <widget class="QLabel" name="labelPathCvFindCurve">
+        <property name="text">
+         <string>path cv find curve</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0">
+       <widget class="QLabel" name="labelPathCvFindPeak">
+        <property name="text">
+         <string>path cv find peak</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="1">
+       <widget class="QLineEdit" name="lineEditPathCvFindCrop"/>
+      </item>
+      <item row="10" column="1">
+       <widget class="QLineEdit" name="lineEditPathCvFindPeak"/>
+      </item>
+      <item row="11" column="1">
+       <widget class="QLineEdit" name="lineEditPathCvFindCurve"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -10,5 +10,41 @@
         <file>res/icons/MineIt.png</file>
         <file>res/icons/black/settings.png</file>
         <file>res/icons/settings.png</file>
+        <file>res/themes/icons/arrow_down.svg</file>
+        <file>res/themes/icons/arrow_down_disabled.svg</file>
+        <file>res/themes/icons/arrow_up.svg</file>
+        <file>res/themes/icons/arrow_up_disabled.svg</file>
+        <file>res/themes/icons/branch_closed.svg</file>
+        <file>res/themes/icons/branch_open.svg</file>
+        <file>res/themes/icons/checkbox_check_dark.svg</file>
+        <file>res/themes/icons/checkbox_check_disabled.svg</file>
+        <file>res/themes/icons/checkbox_check_lite.svg</file>
+        <file>res/themes/icons/handle_horizontal.svg</file>
+        <file>res/themes/icons/handle_vertical.svg</file>
+        <file>res/themes/icons/radio_check_dark.svg</file>
+        <file>res/themes/icons/radio_check_disabled.svg</file>
+        <file>res/themes/icons/radio_check_lite.svg</file>
+        <file>res/themes/icons/toolbar_ext.svg</file>
+        <file>res/themes/icons/yes.svg</file>
+        <file>res/themes/Dark.qss</file>
+        <file>res/themes/Lite.qss</file>
+        <file>res/themes/OSX_Dark.qss</file>
+        <file>res/themes/OSX_Lite.qss</file>
+        <file>res/icons/black/edit.png</file>
+        <file>res/icons/black/find_peak.png</file>
+        <file>res/icons/black/fitting_curve.png</file>
+        <file>res/icons/black/peak_assistance.png</file>
+        <file>res/icons/black/upload.png</file>
+        <file>res/icons/white/auto_scale.png</file>
+        <file>res/icons/white/crop.png</file>
+        <file>res/icons/white/edit.png</file>
+        <file>res/icons/white/find_peak.png</file>
+        <file>res/icons/white/fitting_curve.png</file>
+        <file>res/icons/white/MineIt.png</file>
+        <file>res/icons/white/original_image.png</file>
+        <file>res/icons/white/peak_assistance.png</file>
+        <file>res/icons/white/settings.png</file>
+        <file>res/icons/white/upload.png</file>
+        <file>res/icons/white/xaxis_invert.png</file>
     </qresource>
 </RCC>

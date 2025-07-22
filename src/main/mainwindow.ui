@@ -18,6 +18,21 @@
     <item row="1" column="0">
      <widget class="QWidget" name="widgetApplicationMenu" native="true">
       <layout class="QGridLayout" name="gridLayout_4">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
        <item row="0" column="0">
         <layout class="QGridLayout" name="gLayApplicationMenu"/>
        </item>
@@ -27,8 +42,27 @@
     <item row="1" column="1">
      <widget class="QWidget" name="widgetApplicationContainer" native="true">
       <layout class="QGridLayout" name="gridLayout_3">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
        <item row="0" column="0">
-        <layout class="QGridLayout" name="gLayApplicationContainer"/>
+        <layout class="QGridLayout" name="gLayApplicationContainer">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+        </layout>
        </item>
       </layout>
      </widget>
@@ -68,8 +102,38 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuTheme">
+    <property name="title">
+     <string>Theme</string>
+    </property>
+    <addaction name="actionLite"/>
+    <addaction name="actionDark"/>
+    <addaction name="actionOSX_Lite"/>
+    <addaction name="actionOSX_Dark"/>
+   </widget>
+   <addaction name="menuTheme"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionLite">
+   <property name="text">
+    <string>Lite</string>
+   </property>
+  </action>
+  <action name="actionDark">
+   <property name="text">
+    <string>Dark</string>
+   </property>
+  </action>
+  <action name="actionOSX_Lite">
+   <property name="text">
+    <string>OSX_Lite</string>
+   </property>
+  </action>
+  <action name="actionOSX_Dark">
+   <property name="text">
+    <string>OSX_Dark</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

@@ -16,18 +16,36 @@ FormPlot::~FormPlot()
 }
 void FormPlot::onItPlot(const QJsonObject &data)
 {
-    m_rawData.clear();
+    m_rawMainData.clear();
+    m_rawAssistanceData.clear();
+
     QString peakStr = data["Peak(Main)"].toString();
+    QString peakAssistanceStr = data["Peak(Assistance)"].toString();
 
-    QRegularExpression re(R"(\((\d+),\s*(\d+)\))");
-    QRegularExpressionMatchIterator i = re.globalMatch(peakStr);
+    {
+        QRegularExpression re(R"(\((\d+),\s*(\d+)\))");
+        QRegularExpressionMatchIterator i = re.globalMatch(peakStr);
 
-    while (i.hasNext()) {
-        QRegularExpressionMatch match = i.next();
-        int x = match.captured(1).toInt();
-        int y = match.captured(2).toInt();
-        if (x >= 0 && x <= 4000 && y >= 0 && y <= 100)
-            m_rawData[x] = y;
+        while (i.hasNext()) {
+            QRegularExpressionMatch match = i.next();
+            int x = match.captured(1).toInt();
+            int y = match.captured(2).toInt();
+            if (x >= 0 && x <= 4000 && y >= 0 && y <= 100)
+                m_rawMainData[x] = y;
+        }
+    }
+
+    {
+        QRegularExpression re(R"(\((\d+),\s*(\d+)\))");
+        QRegularExpressionMatchIterator i = re.globalMatch(peakAssistanceStr);
+
+        while (i.hasNext()) {
+            QRegularExpressionMatch match = i.next();
+            int x = match.captured(1).toInt();
+            int y = match.captured(2).toInt();
+            if (x >= 0 && x <= 4000 && y >= 0 && y <= 100)
+                m_rawAssistanceData[x] = y;
+        }
     }
 
     updateSeries();
@@ -42,18 +60,19 @@ void FormPlot::onItSpectral(const QPixmap &pix)
 void FormPlot::updateSpectralPixmap()
 {
     if (!m_pixSpectral.isNull()) {
-        ui->labelSpectral->setPixmap(m_pixSpectral.scaled(ui->labelSpectral->size(),
-                                                          Qt::KeepAspectRatio,
-                                                          Qt::SmoothTransformation));
-    } else {
-        ui->labelSpectral->setText(tr("Spectral"));
-    }
-}
+        if (!m_itemSpectral) {
+            m_itemSpectral = new QGraphicsPixmapItem();
+            m_sceneSpectral->addItem(m_itemSpectral);
+        }
 
-void FormPlot::resizeEvent(QResizeEvent *event)
-{
-    QWidget::resizeEvent(event);
-    updateSpectralPixmap();
+        m_itemSpectral->setPixmap(m_pixSpectral);
+
+        m_sceneSpectral->setSceneRect(m_pixSpectral.rect());
+    } else {
+        m_sceneSpectral->clear();
+        m_itemSpectral = nullptr;
+        m_sceneSpectral->addText(tr("Spectral"));
+    }
 }
 
 void FormPlot::updateSeries()
@@ -62,8 +81,17 @@ void FormPlot::updateSeries()
     points.reserve(4001);
 
     for (int x = 0; x <= 4000; ++x) {
-        int y = m_rawData.value(x, 0);
-        points.append(QPointF(x, y));
+        points.append(QPointF(x, 0));
+    }
+
+    if (m_isPeakAssistance) {
+        for (auto it = m_rawAssistanceData.constBegin(); it != m_rawAssistanceData.constEnd();
+             ++it) {
+            points[it.key()].setY(it.value());
+        }
+    }
+    for (auto it = m_rawMainData.constBegin(); it != m_rawMainData.constEnd(); ++it) {
+        points[it.key()].setY(it.value());
     }
 
     m_series->replace(points);
@@ -75,7 +103,17 @@ void FormPlot::updateSeries()
         m_axisX->setRange(0, 4000);
         m_axisX->setReverse(false);
     }
-    m_axisY->setRange(0, 100);
+
+    if (m_isAutoScale) {
+        qreal maxY = 0;
+        for (const auto &pt : points) {
+            if (pt.y() > maxY)
+                maxY = pt.y();
+        }
+        m_axisY->setRange(0, maxY);
+    } else {
+        m_axisY->setRange(0, 100);
+    }
 }
 
 void FormPlot::init()
@@ -83,6 +121,15 @@ void FormPlot::init()
     initChart();
 
     initToolButtons();
+
+    m_sceneSpectral = new QGraphicsScene(this);
+    ui->graphicsViewPicture->setScene(m_sceneSpectral);
+
+    // 设置抗锯齿渲染与平滑缩放
+    ui->graphicsViewPicture->setRenderHint(QPainter::Antialiasing);
+    ui->graphicsViewPicture->setRenderHint(QPainter::SmoothPixmapTransform);
+    ui->graphicsViewPicture->setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
+    ui->graphicsViewPicture->setResizeAnchor(QGraphicsView::AnchorViewCenter);
 }
 
 void FormPlot::initChart()
@@ -114,31 +161,28 @@ void FormPlot::initToolButtons()
 {
     ui->tBtnOriginalImage->setToolTip(tr("original image"));
     ui->tBtnOriginalImage->setObjectName("OriginalImage");
-    ui->tBtnOriginalImage->setIcon(QIcon(":/res/icons/black/original_image.png"));
     ui->tBtnOriginalImage->setIconSize(QSize(24, 24));
     ui->tBtnOriginalImage->setCheckable(true);
-    // ui->tBtnOriginalImage->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
     ui->tBtnXaxisInvert->setToolTip(tr("xaxis invert"));
     ui->tBtnXaxisInvert->setObjectName("XaxisInvert");
-    ui->tBtnXaxisInvert->setIcon(QIcon(":/res/icons/black/xaxis_invert.png"));
     ui->tBtnXaxisInvert->setIconSize(QSize(24, 24));
     ui->tBtnXaxisInvert->setCheckable(true);
-    // ui->tBtnXaxisInvert->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
     ui->tBtnCrop->setToolTip(tr("crop"));
     ui->tBtnCrop->setObjectName("Crop");
-    ui->tBtnCrop->setIcon(QIcon(":/res/icons/black/crop.png"));
     ui->tBtnCrop->setIconSize(QSize(24, 24));
     ui->tBtnCrop->setCheckable(true);
-    // ui->tBtnCrop->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
     ui->tBtnAutoScale->setToolTip(tr("auto scale"));
     ui->tBtnAutoScale->setObjectName("AutoScale");
-    ui->tBtnAutoScale->setIcon(QIcon(":/res/icons/black/auto_scale.png"));
     ui->tBtnAutoScale->setIconSize(QSize(24, 24));
     ui->tBtnAutoScale->setCheckable(true);
-    // ui->tBtnAutoScale->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+
+    ui->tBtnPeakAssistance->setToolTip(tr("peak assistance"));
+    ui->tBtnPeakAssistance->setObjectName("PeakAssistance");
+    ui->tBtnPeakAssistance->setIconSize(QSize(24, 24));
+    ui->tBtnPeakAssistance->setCheckable(true);
 }
 
 void FormPlot::on_tBtnXaxisInvert_clicked()
@@ -151,6 +195,7 @@ void FormPlot::on_tBtnXaxisInvert_clicked()
 void FormPlot::on_tBtnOriginalImage_clicked()
 {
     m_isOriginalPicture = !m_isOriginalPicture;
+    updateSpectralPixmap();
     if (m_isOriginalPicture) {
         ui->stackedWidget->setCurrentIndex(STACK_INDEX::PICTURE);
     } else {
@@ -158,6 +203,40 @@ void FormPlot::on_tBtnOriginalImage_clicked()
     }
 }
 
-void FormPlot::on_tBtnAutoScale_clicked() {}
+void FormPlot::on_tBtnAutoScale_clicked()
+{
+    m_isAutoScale = !m_isAutoScale;
+    updateSeries();
+}
 
-void FormPlot::on_tBtnCrop_clicked() {}
+void FormPlot::on_tBtnCrop_clicked()
+{
+    m_isCrop = !m_isCrop;
+    ui->tBtnCrop->setChecked(m_isCrop);
+    if (m_isCrop) {
+        m_chartView->setCropEnabled(true);
+        m_chartView->recordInitialAxisRange();
+    } else {
+        m_chartView->setCropEnabled(false);
+        m_chartView->backInitialRange();
+    }
+}
+
+void FormPlot::on_tBtnPeakAssistance_clicked()
+{
+    m_isPeakAssistance = !m_isPeakAssistance;
+    updateSeries();
+}
+
+void FormPlot::wheelEvent(QWheelEvent *event)
+{
+    if (ui->graphicsViewPicture->underMouse()) {
+        const double scaleFactor = 1.15;
+        if (event->angleDelta().y() > 0)
+            ui->graphicsViewPicture->scale(scaleFactor, scaleFactor);
+        else
+            ui->graphicsViewPicture->scale(1.0 / scaleFactor, 1.0 / scaleFactor);
+    } else {
+        QWidget::wheelEvent(event);
+    }
+}

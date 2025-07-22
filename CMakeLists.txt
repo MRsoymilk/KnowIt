@@ -50,6 +50,24 @@ set(PROJECT_SOURCES
         src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/EditContainer/SingleLineInfo/singlelineinfo.h
         src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/EditContainer/SingleLineInfo/singlelineinfo.cpp
         src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/EditContainer/SingleLineInfo/singlelineinfo.ui
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/AnnotationsAndTags/annotationsandtags.h
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/AnnotationsAndTags/annotationsandtags.cpp
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/AnnotationsAndTags/annotationsandtags.ui
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.h
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.cpp
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/Originate/originate.h
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/Originate/originate.cpp
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/Originate/originate.ui
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SampleInformation/sampleinformation.h
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SampleInformation/sampleinformation.cpp
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SampleInformation/sampleinformation.ui
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.h
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralAcquisitionConditions/spectralacquisitionconditions.h
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralAcquisitionConditions/spectralacquisitionconditions.cpp
+        src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralAcquisitionConditions/spectralacquisitionconditions.ui
         src/ApplicationContainer/FormMineIt/FormDataset/formdataset.h
         src/ApplicationContainer/FormMineIt/FormDataset/formdataset.cpp
         src/ApplicationContainer/FormMineIt/FormDataset/formdataset.ui
@@ -59,6 +77,9 @@ set(PROJECT_SOURCES
         src/IndependentWindow/FormSetting/formsetting.h
         src/IndependentWindow/FormSetting/formsetting.cpp
         src/IndependentWindow/FormSetting/formsetting.ui
+        src/IndependentWindow/FormSetting/ServerSetting/serversetting.h
+        src/IndependentWindow/FormSetting/ServerSetting/serversetting.cpp
+        src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui
         src/ApplicationMenu/formapplicationmenu.h
         src/ApplicationMenu/formapplicationmenu.cpp
         src/ApplicationMenu/formapplicationmenu.ui

@@ -84,11 +84,7 @@
             <number>0</number>
            </property>
            <item row="0" column="0">
-            <widget class="QLabel" name="labelSpectral">
-             <property name="text">
-              <string>Spectral</string>
-             </property>
-            </widget>
+            <widget class="QGraphicsView" name="graphicsViewPicture"/>
            </item>
           </layout>
          </widget>
@@ -117,6 +113,13 @@
         </size>
        </property>
       </spacer>
+     </item>
+     <item>
+      <widget class="QToolButton" name="tBtnPeakAssistance">
+       <property name="text">
+        <string>peak assistance</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QToolButton" name="tBtnAutoScale">

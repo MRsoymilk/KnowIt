@@ -118,7 +118,7 @@ void FormDataset::onSelectedDataDelete()
                                       MY_GLOBAL->get<QString>(PATH_DATASET_DEL));
 
     QJsonObject obj;
-    obj.insert("ID", id);
+    obj.insert(ID, id);
 
     QJsonObject res = MY_HTTP->post_sync(url, obj);
     LOG_INFO("Delete result: {}", res);

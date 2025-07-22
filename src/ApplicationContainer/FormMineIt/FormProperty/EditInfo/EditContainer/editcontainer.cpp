@@ -11,6 +11,7 @@ EditContainer::EditContainer(TYPE type, QWidget *parent)
 {
     ui->setupUi(this);
     m_type = type;
+    ui->tBtnAdd->setObjectName("add");
 }
 
 EditContainer::~EditContainer()
