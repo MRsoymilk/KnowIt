@@ -17,6 +17,7 @@ public:
 
 private:
     Ui::ServerSetting *ui;
+    void init();
 };
 
 #endif // SERVERSETTING_H

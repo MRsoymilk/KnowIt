@@ -2,6 +2,7 @@
 #include "ui_formsetting.h"
 
 #include "ServerSetting/serversetting.h"
+#include "SpectralSetting/spectralsetting.h"
 
 FormSetting::FormSetting(QWidget *parent)
     : QWidget(parent)
@@ -20,6 +21,8 @@ void FormSetting::init()
 {
     m_serverSetting = new ServerSetting;
     ui->vLay->addWidget(m_serverSetting);
+    m_spectralSetting = new SpectralSetting;
+    ui->vLay->addWidget(m_spectralSetting);
 }
 
 void FormSetting::on_buttonBox_accepted()

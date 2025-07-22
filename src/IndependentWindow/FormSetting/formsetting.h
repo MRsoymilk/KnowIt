@@ -4,6 +4,7 @@
 #include <QWidget>
 
 class ServerSetting;
+class SpectralSetting;
 
 namespace Ui {
 class FormSetting;
@@ -25,6 +26,7 @@ private:
     Ui::FormSetting *ui;
     void init();
     ServerSetting *m_serverSetting;
+    SpectralSetting *m_spectralSetting;
 };
 
 #endif // FORMSETTING_H
