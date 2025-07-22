@@ -7,19 +7,18 @@ namespace Ui {
 class SingleLineInfo;
 }
 
-class SingleLineInfo : public QWidget
-{
-    Q_OBJECT
+class SingleLineInfo : public QWidget {
+  Q_OBJECT
 
-public:
-    explicit SingleLineInfo(const QString &txt = "", QWidget *parent = nullptr);
-    ~SingleLineInfo();
-    QString getInfo();
-private slots:
-    void on_tBtnDelete_clicked();
+ public:
+  explicit SingleLineInfo(const QString &txt = "", QWidget *parent = nullptr);
+  ~SingleLineInfo();
+  QString getInfo();
+ private slots:
+  void on_tBtnDelete_clicked();
 
-private:
-    Ui::SingleLineInfo *ui;
+ private:
+  Ui::SingleLineInfo *ui;
 };
 
-#endif // SINGLELINEINFO_H
+#endif  // SINGLELINEINFO_H

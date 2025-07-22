@@ -11,30 +11,29 @@ namespace Ui {
 class DialogAdd;
 }
 
-class DialogAdd : public QDialog
-{
-    Q_OBJECT
-public:
-    enum class EDIT { ID = 0, URL, INFO };
+class DialogAdd : public QDialog {
+  Q_OBJECT
+ public:
+  enum class EDIT { ID = 0, URL, INFO };
 
-public:
-    explicit DialogAdd(QWidget *parent = nullptr);
-    ~DialogAdd();
-signals:
+ public:
+  explicit DialogAdd(QWidget *parent = nullptr);
+  ~DialogAdd();
+ signals:
 
-private slots:
-    void on_btnNext_clicked();
-    void on_btnPrevious_clicked();
+ private slots:
+  void on_btnNext_clicked();
+  void on_btnPrevious_clicked();
 
-private:
-    void init();
+ private:
+  void init();
 
-private:
-    Ui::DialogAdd *ui;
-    EditID *m_editID;
-    EditURL *m_editURL;
-    EditInfo *m_editInfo;
-    QVector<QWidget *> m_editWidgets;
+ private:
+  Ui::DialogAdd *ui;
+  EditID *m_editID;
+  EditURL *m_editURL;
+  EditInfo *m_editInfo;
+  QVector<QWidget *> m_editWidgets;
 };
 
-#endif // DIALOGADD_H
+#endif  // DIALOGADD_H

@@ -7,22 +7,21 @@ namespace Ui {
 class FormApplicationMenu;
 }
 
-class FormApplicationMenu : public QWidget
-{
-    Q_OBJECT
+class FormApplicationMenu : public QWidget {
+  Q_OBJECT
 
-public:
-    explicit FormApplicationMenu(QWidget *parent = nullptr);
-    ~FormApplicationMenu();
+ public:
+  explicit FormApplicationMenu(QWidget *parent = nullptr);
+  ~FormApplicationMenu();
 
-private slots:
-    void on_tBtnMineIt_clicked();
+ private slots:
+  void on_tBtnMineIt_clicked();
 
-private:
-    void init();
+ private:
+  void init();
 
-private:
-    Ui::FormApplicationMenu *ui;
+ private:
+  Ui::FormApplicationMenu *ui;
 };
 
-#endif // FORMAPPLICATIONMENU_H
+#endif  // FORMAPPLICATIONMENU_H

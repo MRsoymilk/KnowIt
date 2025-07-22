@@ -7,17 +7,16 @@ namespace Ui {
 class SplashScreen;
 }
 
-class SplashScreen : public QWidget
-{
-    Q_OBJECT
+class SplashScreen : public QWidget {
+  Q_OBJECT
 
-public:
-    explicit SplashScreen(QWidget *parent = nullptr);
-    ~SplashScreen();
-    void setStatusText(const QString &text);
+ public:
+  explicit SplashScreen(QWidget *parent = nullptr);
+  ~SplashScreen();
+  void setStatusText(const QString &text);
 
-private:
-    Ui::SplashScreen *ui;
+ private:
+  Ui::SplashScreen *ui;
 };
 
-#endif // SPLASHSCREEN_H
+#endif  // SPLASHSCREEN_H

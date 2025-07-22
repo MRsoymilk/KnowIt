@@ -7,20 +7,19 @@ namespace Ui {
 class AnnotationsAndTags;
 }
 
-class AnnotationsAndTags : public QWidget
-{
-    Q_OBJECT
+class AnnotationsAndTags : public QWidget {
+  Q_OBJECT
 
-public:
-    explicit AnnotationsAndTags(QWidget *parent = nullptr);
-    ~AnnotationsAndTags();
+ public:
+  explicit AnnotationsAndTags(QWidget *parent = nullptr);
+  ~AnnotationsAndTags();
 
-    void setAnnotationsAndTags(const QJsonObject &data);
+  void setAnnotationsAndTags(const QJsonObject &data);
 
-    QJsonObject getAnnotationsAndTags();
+  QJsonObject getAnnotationsAndTags();
 
-private:
-    Ui::AnnotationsAndTags *ui;
+ private:
+  Ui::AnnotationsAndTags *ui;
 };
 
-#endif // ANNOTATIONSANDTAGS_H
+#endif  // ANNOTATIONSANDTAGS_H

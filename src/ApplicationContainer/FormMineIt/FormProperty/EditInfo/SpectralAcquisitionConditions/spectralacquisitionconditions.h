@@ -7,20 +7,19 @@ namespace Ui {
 class SpectralAcquisitionConditions;
 }
 
-class SpectralAcquisitionConditions : public QWidget
-{
-    Q_OBJECT
+class SpectralAcquisitionConditions : public QWidget {
+  Q_OBJECT
 
-public:
-    explicit SpectralAcquisitionConditions(QWidget *parent = nullptr);
-    ~SpectralAcquisitionConditions();
+ public:
+  explicit SpectralAcquisitionConditions(QWidget *parent = nullptr);
+  ~SpectralAcquisitionConditions();
 
-    void setSpectralAcquisitionConditions(const QJsonObject &data);
+  void setSpectralAcquisitionConditions(const QJsonObject &data);
 
-    QJsonObject getSpectralAcquisitionConditions();
+  QJsonObject getSpectralAcquisitionConditions();
 
-private:
-    Ui::SpectralAcquisitionConditions *ui;
+ private:
+  Ui::SpectralAcquisitionConditions *ui;
 };
 
-#endif // SPECTRALACQUISITIONCONDITIONS_H
+#endif  // SPECTRALACQUISITIONCONDITIONS_H

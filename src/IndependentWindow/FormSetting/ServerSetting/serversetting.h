@@ -7,17 +7,16 @@ namespace Ui {
 class ServerSetting;
 }
 
-class ServerSetting : public QWidget
-{
-    Q_OBJECT
+class ServerSetting : public QWidget {
+  Q_OBJECT
 
-public:
-    explicit ServerSetting(QWidget *parent = nullptr);
-    ~ServerSetting();
+ public:
+  explicit ServerSetting(QWidget *parent = nullptr);
+  ~ServerSetting();
 
-private:
-    Ui::ServerSetting *ui;
-    void init();
+ private:
+  Ui::ServerSetting *ui;
+  void init();
 };
 
-#endif // SERVERSETTING_H
+#endif  // SERVERSETTING_H

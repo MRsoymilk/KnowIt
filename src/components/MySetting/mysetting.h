@@ -4,29 +4,25 @@
 #include <QSettings>
 #include <QString>
 
-class MySetting
-{
-public:
-    enum class SETTING { CONFIG };
+class MySetting {
+ public:
+  enum class SETTING { CONFIG };
 
-public:
-    static MySetting &getInstance();
-    ~MySetting();
-    void setValue(SETTING s, const QString &group, const QString &key, const QString &val);
-    QString getValue(SETTING s,
-                     const QString &group,
-                     const QString &key,
-                     const QString &val_dft = "");
-    QStringList getGroups(SETTING s);
-    void sync(SETTING s);
+ public:
+  static MySetting &getInstance();
+  ~MySetting();
+  void setValue(SETTING s, const QString &group, const QString &key, const QString &val);
+  QString getValue(SETTING s, const QString &group, const QString &key, const QString &val_dft = "");
+  QStringList getGroups(SETTING s);
+  void sync(SETTING s);
 
-private:
-    MySetting();
+ private:
+  MySetting();
 
-private:
-    QMap<SETTING, QSettings *> m_settings;
+ private:
+  QMap<SETTING, QSettings *> m_settings;
 };
 
 #define MY_SETTING MySetting::getInstance()
 
-#endif // MYSETTING_H
+#endif  // MYSETTING_H

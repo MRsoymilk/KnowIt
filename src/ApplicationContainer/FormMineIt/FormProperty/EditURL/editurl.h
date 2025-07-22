@@ -7,25 +7,24 @@ namespace Ui {
 class EditURL;
 }
 
-class EditURL : public QWidget
-{
-    Q_OBJECT
+class EditURL : public QWidget {
+  Q_OBJECT
 
-public:
-    explicit EditURL(QWidget *parent = nullptr);
-    ~EditURL();
-    bool check();
+ public:
+  explicit EditURL(QWidget *parent = nullptr);
+  ~EditURL();
+  bool check();
 
-    // signals:
-    //     void backEditID();
-    //     void editURLFinished();
+  // signals:
+  //     void backEditID();
+  //     void editURLFinished();
 
-    // private slots:
-    //     void on_btnPrevious_clicked();
-    //     void on_btnNext_clicked();
+  // private slots:
+  //     void on_btnPrevious_clicked();
+  //     void on_btnNext_clicked();
 
-private:
-    Ui::EditURL *ui;
+ private:
+  Ui::EditURL *ui;
 };
 
-#endif // EDITURL_H
+#endif  // EDITURL_H

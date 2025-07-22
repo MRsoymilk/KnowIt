@@ -9,24 +9,23 @@ namespace Ui {
 class DialogEdit;
 }
 
-class DialogEdit : public QDialog
-{
-    Q_OBJECT
+class DialogEdit : public QDialog {
+  Q_OBJECT
 
-public:
-    explicit DialogEdit(const QJsonObject &data = {}, QWidget *parent = nullptr);
-    ~DialogEdit();
+ public:
+  explicit DialogEdit(const QJsonObject &data = {}, QWidget *parent = nullptr);
+  ~DialogEdit();
 
-private:
-    void init(const QJsonObject &data = {});
+ private:
+  void init(const QJsonObject &data = {});
 
-private slots:
-    void on_buttonBox_accepted();
-    void on_buttonBox_rejected();
+ private slots:
+  void on_buttonBox_accepted();
+  void on_buttonBox_rejected();
 
-private:
-    Ui::DialogEdit *ui;
-    EditInfo *m_editInfo;
+ private:
+  Ui::DialogEdit *ui;
+  EditInfo *m_editInfo;
 };
 
-#endif // DIALOGEDIT_H
+#endif  // DIALOGEDIT_H

@@ -7,20 +7,19 @@ namespace Ui {
 class SampleInformation;
 }
 
-class SampleInformation : public QWidget
-{
-    Q_OBJECT
+class SampleInformation : public QWidget {
+  Q_OBJECT
 
-public:
-    explicit SampleInformation(QWidget *parent = nullptr);
-    ~SampleInformation();
+ public:
+  explicit SampleInformation(QWidget *parent = nullptr);
+  ~SampleInformation();
 
-    void setSampleInformation(const QJsonObject &data);
+  void setSampleInformation(const QJsonObject &data);
 
-    QJsonObject getSampleInformation();
+  QJsonObject getSampleInformation();
 
-private:
-    Ui::SampleInformation *ui;
+ private:
+  Ui::SampleInformation *ui;
 };
 
-#endif // SAMPLEINFORMATION_H
+#endif  // SAMPLEINFORMATION_H

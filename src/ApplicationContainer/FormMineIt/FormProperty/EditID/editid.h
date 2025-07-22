@@ -7,25 +7,24 @@ namespace Ui {
 class EditID;
 }
 
-class EditID : public QWidget
-{
-    Q_OBJECT
+class EditID : public QWidget {
+  Q_OBJECT
 
-public:
-    explicit EditID(QWidget *parent = nullptr);
-    ~EditID();
-    bool check();
-private slots:
-    void on_comboBoxMajor_currentTextChanged(const QString &major);
+ public:
+  explicit EditID(QWidget *parent = nullptr);
+  ~EditID();
+  bool check();
+ private slots:
+  void on_comboBoxMajor_currentTextChanged(const QString &major);
 
-private:
-    void init();
-    void updateID();
+ private:
+  void init();
+  void updateID();
 
-private:
-    Ui::EditID *ui;
-    QString m_id;
-    QMap<QString, QStringList> m_mapMajorMinor;
+ private:
+  Ui::EditID *ui;
+  QString m_id;
+  QMap<QString, QStringList> m_mapMajorMinor;
 };
 
-#endif // EDITID_H
+#endif  // EDITID_H

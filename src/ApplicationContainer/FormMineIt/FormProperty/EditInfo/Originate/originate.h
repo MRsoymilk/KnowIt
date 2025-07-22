@@ -7,24 +7,23 @@ namespace Ui {
 class Originate;
 }
 
-class Originate : public QWidget
-{
-    Q_OBJECT
+class Originate : public QWidget {
+  Q_OBJECT
 
-public:
-    explicit Originate(QWidget *parent = nullptr);
-    ~Originate();
+ public:
+  explicit Originate(QWidget *parent = nullptr);
+  ~Originate();
 
-    void setOriginate(const QJsonObject &data);
+  void setOriginate(const QJsonObject &data);
 
-    QJsonObject getOriginate();
+  QJsonObject getOriginate();
 
-private slots:
-    void on_tBtnSourceEdit_clicked();
+ private slots:
+  void on_tBtnSourceEdit_clicked();
 
-private:
-    Ui::Originate *ui;
-    void init();
+ private:
+  Ui::Originate *ui;
+  void init();
 };
 
-#endif // ORIGINATE_H
+#endif  // ORIGINATE_H

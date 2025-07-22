@@ -7,47 +7,37 @@
 #include <QObject>
 #include <functional>
 
-class MyHttp : public QObject
-{
-    Q_OBJECT
-public:
-    static MyHttp *instance();
+class MyHttp : public QObject {
+  Q_OBJECT
+ public:
+  static MyHttp *instance();
 
-    // 同步返回 JSON 对象（阻塞）
-    QJsonObject post_sync(const QString &url, const QJsonObject &json);
+  // 同步返回 JSON 对象（阻塞）
+  QJsonObject post_sync(const QString &url, const QJsonObject &json);
 
-    // 异步 JSON 请求：成功和失败使用回调函数处理
-    void post_async(const QString &url,
-                    const QJsonObject &json,
-                    std::function<void(QJsonObject)> onSuccess,
-                    std::function<void(QString)> onError);
-    // 同步 GET 请求，返回 QJsonObject
-    QJsonObject get_sync(const QString &url);
-
-    // 异步 GET 请求
-    void get_async(const QString &url,
-                   std::function<void(QJsonObject)> onSuccess,
-                   std::function<void(QString)> onError);
-    void postImage(const QString &url,
-                   const QString &imagePath,
-                   const QJsonObject &json,
-                   std::function<void(QJsonObject)> onSuccess,
-                   std::function<void(QString)> onError);
-    void getImage(const QString &url,
-                  std::function<void(QPixmap)> onSuccess,
+  // 异步 JSON 请求：成功和失败使用回调函数处理
+  void post_async(const QString &url, const QJsonObject &json, std::function<void(QJsonObject)> onSuccess,
                   std::function<void(QString)> onError);
+  // 同步 GET 请求，返回 QJsonObject
+  QJsonObject get_sync(const QString &url);
 
-private:
-    explicit MyHttp(QObject *parent = nullptr);
-    MyHttp(const MyHttp &) = delete;
-    MyHttp &operator=(const MyHttp &) = delete;
+  // 异步 GET 请求
+  void get_async(const QString &url, std::function<void(QJsonObject)> onSuccess, std::function<void(QString)> onError);
+  void postImage(const QString &url, const QString &imagePath, const QJsonObject &json,
+                 std::function<void(QJsonObject)> onSuccess, std::function<void(QString)> onError);
+  void getImage(const QString &url, std::function<void(QPixmap)> onSuccess, std::function<void(QString)> onError);
 
-    QNetworkAccessManager *m_manager;
+ private:
+  explicit MyHttp(QObject *parent = nullptr);
+  MyHttp(const MyHttp &) = delete;
+  MyHttp &operator=(const MyHttp &) = delete;
+
+  QNetworkAccessManager *m_manager;
 };
 
 #define MY_HTTP MyHttp::instance()
 
-#endif // MYHTTP_H
+#endif  // MYHTTP_H
 
 /*
 QJsonObject req;

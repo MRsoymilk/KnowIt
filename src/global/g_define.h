@@ -89,10 +89,8 @@ const QString CFG_PROGRAM_THEME = "theme";
 
 // function
 #include "mysetting.h"
-#define SETTING_CONFIG_GET(group, key, ...) \
-    MY_SETTING.getValue(MySetting::SETTING::CONFIG, group, key, ##__VA_ARGS__)
-#define SETTING_CONFIG_SET(group, key, value) \
-    MY_SETTING.setValue(MySetting::SETTING::CONFIG, group, key, value)
+#define SETTING_CONFIG_GET(group, key, ...) MY_SETTING.getValue(MySetting::SETTING::CONFIG, group, key, ##__VA_ARGS__)
+#define SETTING_CONFIG_SET(group, key, value) MY_SETTING.setValue(MySetting::SETTING::CONFIG, group, key, value)
 #define SETTING_CONFIG_GROUPS() MY_SETTING.getGroups(MySetting::SETTING::CONFIG)
 #define SETTING_CONFIG_SYNC() MY_SETTING.sync(MySetting::SETTING::CONFIG)
 
@@ -103,4 +101,4 @@ const QString CFG_PROGRAM_THEME = "theme";
 #define LOG_ERROR(...) MY_LOG.getLogger()->error(__VA_ARGS__)
 #define LOG_CRITICAL(...) MY_LOG.getLogger()->critical(__VA_ARGS__)
 
-#endif // G_DEFINE_H
+#endif  // G_DEFINE_H

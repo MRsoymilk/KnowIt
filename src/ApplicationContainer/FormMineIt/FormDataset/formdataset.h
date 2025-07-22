@@ -10,32 +10,31 @@ namespace Ui {
 class FormDataset;
 }
 
-class FormDataset : public QWidget
-{
-    Q_OBJECT
+class FormDataset : public QWidget {
+  Q_OBJECT
 
-public:
-    explicit FormDataset(QWidget *parent = nullptr);
-    ~FormDataset();
+ public:
+  explicit FormDataset(QWidget *parent = nullptr);
+  ~FormDataset();
 
-signals:
-    void itInfo(const QJsonObject &data);
-    void itPlot(const QJsonObject &data);
-    void itStructure(const QPixmap &pix);
-    void itSpectral(const QPixmap &pix);
+ signals:
+  void itInfo(const QJsonObject &data);
+  void itPlot(const QJsonObject &data);
+  void itStructure(const QPixmap &pix);
+  void itSpectral(const QPixmap &pix);
 
-public slots:
-    void onSelectedDataDelete();
-    void onUpdateData();
+ public slots:
+  void onSelectedDataDelete();
+  void onUpdateData();
 
-private slots:
-    void on_tableView_clicked(const QModelIndex &index);
+ private slots:
+  void on_tableView_clicked(const QModelIndex &index);
 
-private:
-    Ui::FormDataset *ui;
-    void init();
-    QStandardItemModel *m_model;
-    void clearData();
+ private:
+  Ui::FormDataset *ui;
+  void init();
+  QStandardItemModel *m_model;
+  void clearData();
 };
 
-#endif // FORMDATASET_H
+#endif  // FORMDATASET_H
