@@ -200,6 +200,8 @@ void FormProperty::initProperty() {
               tr("Molecular Formula"),
               tr("Molecular Weight"),
               tr("Compound Type"),
+              tr("Category"),
+              tr("Application Area"),
               tr("CAS Number"),
               tr("Structure Picture"),
               tr("State"),
@@ -235,8 +237,6 @@ void FormProperty::initProperty() {
       {
           tr("Annotations And Tags"),
           {
-              tr("Category"),
-              tr("Application Area"),
               tr("Data Version"),
               tr("Last Modified"),
           },

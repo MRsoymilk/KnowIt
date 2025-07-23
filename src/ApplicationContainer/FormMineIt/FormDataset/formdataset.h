@@ -34,6 +34,8 @@ class FormDataset : public QWidget {
  private slots:
   void on_tableView_clicked(const QModelIndex &index);
 
+  void on_tBtnRefresh_clicked();
+
  private:
   Ui::FormDataset *ui;
   QStandardItemModel *m_model;

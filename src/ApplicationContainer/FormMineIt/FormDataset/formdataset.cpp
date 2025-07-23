@@ -32,8 +32,6 @@ void FormDataset::on_tableView_clicked(const QModelIndex &index) {
   QModelIndex idIndex = index.sibling(index.row(), 0);
   QString id = idIndex.data().toString();
 
-  qDebug() << "Activated ID:" << id;
-
   QString url = QString("%1%2").arg(MY_GLOBAL->get<QString>(URL_SERVER), MY_GLOBAL->get<QString>(PATH_DATASET_GET));
   QJsonObject obj{{"ID", id}};
   QJsonObject res = MY_HTTP->post_sync(url, obj);
@@ -104,3 +102,5 @@ void FormDataset::onSelectedDataDelete() {
   LOG_INFO("Delete result: {}", res);
   onUpdateData();
 }
+
+void FormDataset::on_tBtnRefresh_clicked() { onUpdateData(); }
