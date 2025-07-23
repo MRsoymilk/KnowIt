@@ -9,8 +9,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Charts Network)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Charts Network)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Charts Network LinguistTools)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Charts Network LinguistTools)
 
 set(PROJECT_SOURCES
         src/main/main.cpp
@@ -175,3 +175,20 @@ configure_file(
   ${CMAKE_CURRENT_BINARY_DIR}/version.h
 )
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
+
+set(TRANSLATIONS
+ res/i18n/en.ts
+ res/i18n/zh_simple.ts
+ res/i18n/zh_traditional.ts
+)
+qt_standard_project_setup(I18N_TRANSLATED_LANGUAGES)
+qt_add_translations(${PROJECT_NAME} TS_FILES ${TRANSLATIONS})
+
+if (WIN32)
+    set(APP_ICON_PATH "${CMAKE_CURRENT_SOURCE_DIR}/res/icons/KnowIt.ico")
+
+    set(APP_ICON_RC "${CMAKE_CURRENT_BINARY_DIR}/app_icon.rc")
+    file(WRITE ${APP_ICON_RC} "IDI_ICON1 ICON \"${APP_ICON_PATH}\"\n")
+
+    target_sources(MyApp PRIVATE ${APP_ICON_RC})
+endif()

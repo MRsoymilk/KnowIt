@@ -46,5 +46,9 @@
         <file>res/icons/white/settings.png</file>
         <file>res/icons/white/upload.png</file>
         <file>res/icons/white/xaxis_invert.png</file>
+        <file>res/i18n/en.ts</file>
+        <file>res/i18n/zh_simple.ts</file>
+        <file>res/i18n/zh_traditional.ts</file>
+        <file>res/icons/KnowIt.ico</file>
     </qresource>
 </RCC>
