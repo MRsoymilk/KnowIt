@@ -2,6 +2,7 @@
 
 #include <QFile>
 #include <QLabel>
+#include <QTranslator>
 
 #include "./ui_mainwindow.h"
 #include "FormSetting/formsetting.h"
@@ -30,8 +31,49 @@ void MainWindow::init() {
   ui->tBtnSetting->setCheckable(true);
   ui->tBtnSetting->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
+  initLanguage();
   initTheme();
   initMsgBar();
+}
+
+void MainWindow::initLanguage() {
+  QString language = SETTING_CONFIG_GET(CFG_GROUP_PROGRAM, CFG_PROGRAM_LANGUAGE, "en");
+  connect(ui->menuLanguage, &QMenu::triggered, this, &MainWindow::menuLanguageSelect);
+  const QList<QAction *> actions = ui->menuLanguage->actions();
+  for (QAction *act : actions) {
+    act->setCheckable(true);
+    if (act->text() == language) {
+      menuLanguageSelect(act);
+    }
+  }
+}
+
+void MainWindow::menuLanguageSelect(QAction *selectedAction) {
+  QString language = selectedAction->text();
+  setLanguage(language);
+  const QList<QAction *> actions = ui->menuLanguage->actions();
+  for (QAction *act : actions) {
+    if (act == selectedAction) {
+      act->setChecked(true);
+    } else {
+      act->setChecked(false);
+    }
+  }
+}
+
+void MainWindow::setLanguage(const QString &language) {
+  QTranslator *translator = new QTranslator(this);
+  if (translator->load(QString(":/res/i18n/%1.qm").arg(language))) {
+    qApp->installTranslator(translator);
+    ui->retranslateUi(this);
+    if (m_AppMineIt) {
+      m_AppMineIt->retranslateUI();
+    }
+    if (m_Menu) {
+      m_Menu->retranslateUI();
+    }
+  }
+  SETTING_CONFIG_SET(CFG_GROUP_PROGRAM, CFG_PROGRAM_LANGUAGE, language);
 }
 
 void MainWindow::initMsgBar() {

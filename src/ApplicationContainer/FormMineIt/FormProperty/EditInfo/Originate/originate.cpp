@@ -15,12 +15,12 @@ void Originate::init() { ui->tBtnSourceEdit->setObjectName("edit"); }
 
 void Originate::setOriginate(const QJsonObject &data) {
   QJsonObject objOriginate = data[ORIGINATE].toObject();
-  ui->lineEditSource->setText(objOriginate.value(SOURCE).toString());
+  ui->lineEditSource->setText(objOriginate.value(RESOURCE).toString());
 }
 
 QJsonObject Originate::getOriginate() {
   QJsonObject objOriginate;
-  objOriginate.insert(SOURCE, ui->lineEditSource->text());
+  objOriginate.insert(RESOURCE, ui->lineEditSource->text());
   return objOriginate;
 }
 

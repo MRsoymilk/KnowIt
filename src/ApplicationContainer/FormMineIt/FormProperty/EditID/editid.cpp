@@ -18,7 +18,8 @@ bool EditID::check() {
   updateID();
   QJsonObject objCheck;
   objCheck.insert(ID, m_id);
-  QJsonObject res = MY_HTTP->post_sync("http://192.168.123.233:5020/dataset/check", objCheck);
+  QString url = QString("%1%2").arg(MY_GLOBAL->get<QString>(URL_SERVER), MY_GLOBAL->get<QString>(PATH_DATASET_CHECK));
+  QJsonObject res = MY_HTTP->post_sync(url, objCheck);
   if (res["status"].toBool()) {
     MY_GLOBAL->set<QString>(ID, m_id);
     return true;

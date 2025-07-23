@@ -223,3 +223,5 @@ void FormPlot::wheelEvent(QWheelEvent *event) {
     QWidget::wheelEvent(event);
   }
 }
+
+void FormPlot::retranslateUI() { ui->retranslateUi(this); }

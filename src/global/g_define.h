@@ -9,7 +9,7 @@ const QString BASIC_INFORMATION = "Basic Information";
 const QString SPECTRAL_DATA = "Spectral Data";
 const QString SPECTRAL_ACQUISITION_CONDITIONS = "Spectral Acquisition Conditions";
 const QString SAMPLE_INFOMATION = "Sample Information";
-const QString ANNOTATIONS_AND_TAGS = "Annotations and Tags";
+const QString ANNOTATIONS_AND_TAGS = "Annotations And Tags";
 const QString ORIGINATE = "Originate";
 
 // Basic Information
@@ -34,7 +34,7 @@ const QString CALCULUS_TIMES = "Calculus Times";
 const QString MEASURING_ENVIRONMENT = "Measuring Environment";
 const QString MEASURING_TEMPERATURE = "Measuring Temperature";
 // Sample Information
-const QString ORIGIN = "Origin";
+const QString PRODUCED_FROM = "Produced From";
 const QString STORAGE = "Storage";
 const QString DERIVATIVE_STATE = "Derivative State";
 // Annotations and Tags
@@ -43,7 +43,7 @@ const QString APPLICATION_AREA = "Application Area";
 const QString DATA_VERSION = "Data Version";
 const QString LAST_MODIFIED = "Last Modified";
 // Originate
-const QString SOURCE = "Source";
+const QString RESOURCE = "Resource";
 
 // Server
 const QString GROUP_SERVER = "SERVER";
@@ -86,6 +86,7 @@ const QString DFT_CALIBRATION_0 = "(0, 0)";
 
 const QString CFG_GROUP_PROGRAM = "Program";
 const QString CFG_PROGRAM_THEME = "theme";
+const QString CFG_PROGRAM_LANGUAGE = "language";
 
 // function
 #include "mysetting.h"

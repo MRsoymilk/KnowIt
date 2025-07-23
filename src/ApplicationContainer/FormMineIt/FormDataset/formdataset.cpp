@@ -12,6 +12,8 @@ FormDataset::FormDataset(QWidget *parent) : QWidget(parent), ui(new Ui::FormData
 
 FormDataset::~FormDataset() { delete ui; }
 
+void FormDataset::retranslateUI() { ui->retranslateUi(this); }
+
 void FormDataset::init() {
   m_model = new QStandardItemModel(this);
   m_model->setHorizontalHeaderLabels(QStringList() << tr("ID"));

@@ -16,7 +16,7 @@ class FormDataset : public QWidget {
  public:
   explicit FormDataset(QWidget *parent = nullptr);
   ~FormDataset();
-
+  void retranslateUI();
  signals:
   void itInfo(const QJsonObject &data);
   void itPlot(const QJsonObject &data);

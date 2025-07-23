@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(KnowIt VERSION 0.1.0 LANGUAGES CXX)
+project(KnowIt VERSION 0.1.1 LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -105,6 +105,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         res.qrc
     )
+
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET KnowIt APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)

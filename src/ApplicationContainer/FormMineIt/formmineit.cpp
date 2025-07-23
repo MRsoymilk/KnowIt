@@ -28,3 +28,16 @@ void FormMineIt::init() {
   connect(m_dataset, &FormDataset::itStructure, m_plot, &FormPlot::onItSpectral);
   connect(m_dataset, &FormDataset::itSpectral, m_property, &FormProperty::onItStructure);
 }
+
+void FormMineIt::retranslateUI() {
+  ui->retranslateUi(this);
+  if (m_property) {
+    m_property->retranslateUI();
+  }
+  if (m_plot) {
+    m_plot->retranslateUI();
+  }
+  if (m_dataset) {
+    m_dataset->retranslateUI();
+  }
+}

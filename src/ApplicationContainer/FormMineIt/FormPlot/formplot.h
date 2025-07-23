@@ -20,6 +20,7 @@ class FormPlot : public QWidget {
  public:
   explicit FormPlot(QWidget *parent = nullptr);
   ~FormPlot();
+  void retranslateUI();
 
  public slots:
   void onItPlot(const QJsonObject &data);

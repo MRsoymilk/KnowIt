@@ -5,28 +5,26 @@
 
 #include "DialogAdd/dialogadd.h"
 #include "DialogEdit/dialogedit.h"
+#include "g_define.h"
 #include "ui_formproperty.h"
-#define BASIC_INFORMATION "Basic Information"
-#define SPECTRAL_DATA "Spectral Data"
-#define SPECTRAL_ACQUISITION_CONDITIONS "Spectral Acquisition Conditions"
-#define SAMPLE_INFOMATION "Sample Information"
-#define ANNOTATIONS_AND_TAGS "Annotations and Tags"
-#define ORIGINATE "Originate"
+
 FormProperty::FormProperty(QWidget *parent) : QWidget(parent), ui(new Ui::FormProperty) {
   ui->setupUi(this);
   init();
-  ui->btnAdd->setCheckable(true);
-  ui->btnEdit->setCheckable(true);
-  ui->scrollArea->viewport()->installEventFilter(this);
 }
 
 FormProperty::~FormProperty() { delete ui; }
 
+void FormProperty::retranslateUI() {
+  ui->retranslateUi(this);
+  initProperty();
+  initPropertySelect();
+}
+
 void FormProperty::clearInfo() { m_model->removeRows(0, m_model->rowCount()); }
 
 void FormProperty::showAllProperties() {
-  m_model->clear();
-  m_model->setHorizontalHeaderLabels({"Name", "Value"});
+  clearInfo();
 
   if (m_info.contains("ID")) appendProperty(tr("ID"), m_info["ID"].toString());
 
@@ -36,14 +34,15 @@ void FormProperty::showAllProperties() {
 
     if (category == tr("All Properties")) continue;
 
-    QString jsonKey = m_categoryToJsonKey.value(category, "");
+    QString jsonKey = m_UI2JsonKey.value(category, "");
     if (jsonKey.isEmpty() || !m_info.contains(jsonKey)) continue;
 
     QJsonObject obj = m_info[jsonKey].toObject();
 
     for (const QString &field : fields) {
       if (field == tr("ID")) continue;
-      appendProperty(field, obj[field].toString());
+      QString fieldKey = m_UI2JsonKey.value(field, "");
+      appendProperty(field, obj[fieldKey].toString());
     }
   }
 }
@@ -53,16 +52,6 @@ void FormProperty::onItInfo(const QJsonObject &data) {
 
   m_info = data;
 
-  // category -> JSON key 对应
-  m_categoryToJsonKey = {
-      {tr("Basic Information"), BASIC_INFORMATION},
-      {tr("Spectral Data"), SPECTRAL_DATA},
-      {tr("Spectral Acquisition Conditions"), SPECTRAL_ACQUISITION_CONDITIONS},
-      {tr("Sample Information"), SAMPLE_INFOMATION},
-      {tr("Annotations and Tags"), ANNOTATIONS_AND_TAGS},
-      {tr("Originate"), ORIGINATE},
-  };
-
   // 单独处理 ID
   if (m_info.contains("ID")) appendProperty(tr("ID"), m_info["ID"].toString());
 
@@ -70,15 +59,19 @@ void FormProperty::onItInfo(const QJsonObject &data) {
     QString category = pair.first;
     const QList<QString> &fields = pair.second;
 
-    QString jsonKey = m_categoryToJsonKey.value(category, "");
-    if (jsonKey.isEmpty() || !m_info.contains(jsonKey)) continue;
+    QString jsonKey = m_UI2JsonKey.value(category, "");
+    if (jsonKey.isEmpty() || !m_info.contains(jsonKey)) {
+      continue;
+    }
 
     QJsonObject obj = m_info[jsonKey].toObject();
 
     for (const QString &field : fields) {
-      if (field == tr("ID")) continue;
-
-      appendProperty(field, obj[field].toString());
+      if (field == tr("ID")) {
+        continue;
+      }
+      QString fieldKey = m_UI2JsonKey.value(field, "");
+      appendProperty(field, obj[fieldKey].toString());
     }
   }
 }
@@ -118,8 +111,16 @@ void FormProperty::setStructure(const QString &path) {
 }
 
 void FormProperty::initPropertySelect() {
+  for (QPushButton *btn : m_categoryButtons) {
+    ui->hLayBtnProperty->removeWidget(btn);
+    btn->deleteLater();
+  }
+  m_categoryButtons.clear();
+
   QStringList categoryNames;
-  for (const auto &pair : m_propertyCategories) categoryNames << pair.first;
+  for (const auto &pair : m_propertyCategories) {
+    categoryNames << pair.first;
+  }
 
   for (const QString &name : categoryNames) {
     QPushButton *btn = new QPushButton(name, ui->scrollAreaWidgetContents);
@@ -129,10 +130,11 @@ void FormProperty::initPropertySelect() {
     m_categoryButtons << btn;
 
     connect(btn, &QPushButton::clicked, this, [=]() {
-      for (QPushButton *otherBtn : m_categoryButtons) otherBtn->setChecked(otherBtn == btn);
+      for (QPushButton *otherBtn : m_categoryButtons) {
+        otherBtn->setChecked(otherBtn == btn);
+      }
 
-      m_model->clear();
-      m_model->setHorizontalHeaderLabels({"Name", "Value"});
+      clearInfo();
 
       if (name == tr("All Properties")) {
         if (m_info.contains("ID")) appendProperty(tr("ID"), m_info["ID"].toString());
@@ -141,31 +143,45 @@ void FormProperty::initPropertySelect() {
           QString category = pair.first;
           const QList<QString> &fields = pair.second;
 
-          if (category == tr("All Properties")) continue;
+          if (category == tr("All Properties")) {
+            continue;
+          }
 
-          QString jsonKey = m_categoryToJsonKey.value(category, "");
-          if (jsonKey.isEmpty() || !m_info.contains(jsonKey)) continue;
+          QString jsonKey = m_UI2JsonKey.value(category, "");
+          if (jsonKey.isEmpty() || !m_info.contains(jsonKey)) {
+            continue;
+          }
 
           QJsonObject obj = m_info[jsonKey].toObject();
           for (const QString &field : fields) {
-            if (field == tr("ID")) continue;
-            appendProperty(field, obj[field].toString());
+            if (field == tr("ID")) {
+              continue;
+            }
+            QString fieldKey = m_UI2JsonKey.value(field, "");
+            appendProperty(field, obj[fieldKey].toString());
           }
         }
       } else {
-        QString jsonKey = m_categoryToJsonKey.value(name, "");
-        if (jsonKey.isEmpty() || !m_info.contains(jsonKey)) return;
+        QString jsonKey = m_UI2JsonKey.value(name, "");
+        if (jsonKey.isEmpty() || !m_info.contains(jsonKey)) {
+          return;
+        }
 
         QJsonObject obj = m_info[jsonKey].toObject();
         for (const QString &field : m_propertyMap[name]) {
-          if (field == tr("ID")) continue;
-          appendProperty(field, obj[field].toString());
+          if (field == tr("ID")) {
+            continue;
+          }
+          QString fieldKey = m_UI2JsonKey.value(field, "");
+          appendProperty(field, obj[fieldKey].toString());
         }
       }
     });
   }
 
-  if (!m_categoryButtons.isEmpty()) m_categoryButtons.first()->click();
+  if (!m_categoryButtons.isEmpty()) {
+    m_categoryButtons.first()->click();
+  }
 }
 
 void FormProperty::initProperty() {
@@ -211,13 +227,13 @@ void FormProperty::initProperty() {
       {
           tr("Sample Information"),
           {
-              tr("Origin"),
+              tr("Produced From"),
               tr("Storage"),
               tr("Derivative State"),
           },
       },
       {
-          tr("Annotations and Tags"),
+          tr("Annotations And Tags"),
           {
               tr("Category"),
               tr("Application Area"),
@@ -228,42 +244,80 @@ void FormProperty::initProperty() {
       {
           tr("Originate"),
           {
-              tr("Source"),
+              tr("Resource"),
           },
       },
   };
 
+  m_propertyMap.clear();
   for (const auto &pair : m_propertyCategories) {
     m_propertyMap[pair.first] = pair.second;
   }
+
+  // category -> JSON key
+  m_UI2JsonKey = {
+      {tr("Annotations And Tags"), ANNOTATIONS_AND_TAGS},
+      {tr("Basic Information"), BASIC_INFORMATION},
+      {tr("Originate"), ORIGINATE},
+      {tr("Spectral Data"), SPECTRAL_DATA},
+      {tr("Spectral Acquisition Conditions"), SPECTRAL_ACQUISITION_CONDITIONS},
+      {tr("Sample Information"), SAMPLE_INFOMATION},
+
+      {tr("ID"), ID},
+      {tr("Compound Name(en)"), COMPOUND_NAME_EN},
+      {tr("Compound Name(zh)"), COMPOUND_NAME_ZH},
+      {tr("Molecular Formula"), MOLECULAR_FORMULA},
+      {tr("Molecular Weight"), MOLECULAR_WEIGHT},
+      {tr("CAS Number"), CAS_NUMBER},
+      {tr("Compound Type"), COMPOUND_TYPE},
+      {tr("Structure Picture"), STRUCTURE_PICTURE},
+      {tr("State"), STATE},
+      {tr("Peak(Main)"), PEAK_MAIN},
+      {tr("Peak(Assistance)"), PEAK_ASSISTANCE},
+      {tr("Spectral Picture"), SPECTRAL_PICTURE},
+      {tr("Instrument Model"), INSTRUMENT_MODEL},
+      {tr("Laser Wavelength"), LASER_WAVELENGTH},
+      {tr("Laser Power"), LASER_POWER},
+      {tr("Calculus Times"), CALCULUS_TIMES},
+      {tr("Measuring Environment"), MEASURING_ENVIRONMENT},
+      {tr("Measuring Temperature"), MEASURING_TEMPERATURE},
+      {tr("Produced From"), PRODUCED_FROM},
+      {tr("Storage"), STORAGE},
+      {tr("Derivative State"), DERIVATIVE_STATE},
+      {tr("Category"), CATEGORY},
+      {tr("Application Area"), APPLICATION_AREA},
+      {tr("Data Version"), DATA_VERSION},
+      {tr("Last Modified"), LAST_MODIFIED},
+      {tr("Resource"), RESOURCE},
+  };
 }
 
-void FormProperty::setBasicInformation(const QJsonObject &data) {
-  QJsonObject BasicInformation = data[BASIC_INFORMATION].toObject();
-}
+// void FormProperty::setBasicInformation(const QJsonObject &data) {
+//   QJsonObject BasicInformation = data[BASIC_INFORMATION].toObject();
+// }
 
-void FormProperty::setSpectralData(const QJsonObject &data) {
-  QJsonObject objSpectralData = data[SPECTRAL_DATA].toObject();
-}
+// void FormProperty::setSpectralData(const QJsonObject &data) {
+//   QJsonObject objSpectralData = data[SPECTRAL_DATA].toObject();
+// }
 
-void FormProperty::setSpectralAcquisitionConditions(const QJsonObject &data) {
-  QJsonObject objSpectralAcquisitionConditions = data[SPECTRAL_ACQUISITION_CONDITIONS].toObject();
-}
+// void FormProperty::setSpectralAcquisitionConditions(const QJsonObject &data) {
+//   QJsonObject objSpectralAcquisitionConditions = data[SPECTRAL_ACQUISITION_CONDITIONS].toObject();
+// }
 
-void FormProperty::setSampleInformation(const QJsonObject &data) {
-  QJsonObject objSampleInformation = data[SAMPLE_INFOMATION].toObject();
-}
+// void FormProperty::setSampleInformation(const QJsonObject &data) {
+//   QJsonObject objSampleInformation = data[SAMPLE_INFOMATION].toObject();
+// }
 
-void FormProperty::setAnnotationsAndTags(const QJsonObject &data) {
-  QJsonObject objAnnotationsAndTags = data[ANNOTATIONS_AND_TAGS].toObject();
-}
+// void FormProperty::setAnnotationsAndTags(const QJsonObject &data) {
+//   QJsonObject objAnnotationsAndTags = data[ANNOTATIONS_AND_TAGS].toObject();
+// }
 
-void FormProperty::setOriginate(const QJsonObject &data) { QJsonObject objOriginate = data[ORIGINATE].toObject(); }
+// void FormProperty::setOriginate(const QJsonObject &data) { QJsonObject objOriginate = data[ORIGINATE].toObject(); }
 
 void FormProperty::init() {
   initProperty();
   m_model = new QStandardItemModel;
-  m_model->setHorizontalHeaderLabels({"Name", "Value"});
+  m_model->setHorizontalHeaderLabels({tr("Name"), tr("Value")});
   ui->tableViewProperty->verticalHeader()->setVisible(false);
   ui->tableViewProperty->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
   ui->tableViewProperty->setModel(m_model);
@@ -273,6 +327,10 @@ void FormProperty::init() {
   ui->btnAdd->setObjectName("add");
   ui->btnDelete->setObjectName("delete");
   ui->btnEdit->setObjectName("edit");
+
+  ui->btnAdd->setCheckable(true);
+  ui->btnEdit->setCheckable(true);
+  ui->scrollArea->viewport()->installEventFilter(this);
 }
 
 void FormProperty::appendProperty(const QString &name, const QString &value) {

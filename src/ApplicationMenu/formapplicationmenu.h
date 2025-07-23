@@ -13,6 +13,7 @@ class FormApplicationMenu : public QWidget {
  public:
   explicit FormApplicationMenu(QWidget *parent = nullptr);
   ~FormApplicationMenu();
+  void retranslateUI();
 
  private:
   void init();

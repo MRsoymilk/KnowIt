@@ -18,6 +18,7 @@ class FormMineIt : public QWidget {
   explicit FormMineIt(QWidget *parent = nullptr);
   ~FormMineIt();
   void init();
+  void retranslateUI();
 
  private:
   Ui::FormMineIt *ui;

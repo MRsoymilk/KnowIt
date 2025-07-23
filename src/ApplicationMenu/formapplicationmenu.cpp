@@ -9,6 +9,8 @@ FormApplicationMenu::FormApplicationMenu(QWidget *parent) : QWidget(parent), ui(
 
 FormApplicationMenu::~FormApplicationMenu() { delete ui; }
 
+void FormApplicationMenu::retranslateUI() { ui->retranslateUi(this); }
+
 void FormApplicationMenu::init() {
   ui->tBtnMineIt->setToolTip("MineIt");
   ui->tBtnMineIt->setObjectName("MineIt");

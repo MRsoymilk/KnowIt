@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" sourcelanguage="en">
+<TS version="2.1" language="en_US" sourcelanguage="en_US">
 <context>
     <name>AnnotationsAndTags</name>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/AnnotationsAndTags/annotationsandtags.ui" line="14"/>
         <source>AnnotationsAndTags</source>
-        <translation type="unfinished"></translation>
+        <translation>AnnotationsAndTags</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/AnnotationsAndTags/annotationsandtags.ui" line="20"/>
         <source>Category</source>
-        <translation type="unfinished"></translation>
+        <translation>Category</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/AnnotationsAndTags/annotationsandtags.ui" line="30"/>
         <source>Application Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Application Area</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/AnnotationsAndTags/annotationsandtags.ui" line="40"/>
         <source>Data Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Data Version</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/AnnotationsAndTags/annotationsandtags.ui" line="50"/>
         <source>Last Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Last Modified</translation>
     </message>
 </context>
 <context>
@@ -34,68 +34,68 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="14"/>
         <source>BasicInformation</source>
-        <translation type="unfinished"></translation>
+        <translation>BasicInformation</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="20"/>
         <source>Compound Name(en)</source>
-        <translation type="unfinished"></translation>
+        <translation>Compound Name(en)</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="30"/>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="47"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="37"/>
         <source>Compound Name(zh)</source>
-        <translation type="unfinished"></translation>
+        <translation>Compound Name(zh)</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="54"/>
         <source>Molecular Formula</source>
-        <translation type="unfinished"></translation>
+        <translation>Molecular Formula</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="64"/>
         <source>Molecular Weight</source>
-        <translation type="unfinished"></translation>
+        <translation>Molecular Weight</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="74"/>
         <source>CAS Number</source>
-        <translation type="unfinished"></translation>
+        <translation>CAS Number</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="84"/>
         <source>Compound Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Compound Type</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="97"/>
         <source>Structure Picture</source>
-        <translation type="unfinished"></translation>
+        <translation>Structure Picture</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="107"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Upload</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="114"/>
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation>State</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.cpp" line="99"/>
         <source>Choose Picture</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose Picture</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.cpp" line="100"/>
         <source>Picture (*.png *.jpg *.jpeg *.bmp *.gif)</source>
-        <translation type="unfinished"></translation>
+        <translation>Picture (*.png *.jpg *.jpeg *.bmp *.gif)</translation>
     </message>
 </context>
 <context>
@@ -103,27 +103,27 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/DialogAdd/dialogadd.ui" line="14"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Add</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/DialogAdd/dialogadd.ui" line="25"/>
         <source>&lt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/DialogAdd/dialogadd.ui" line="45"/>
         <source>&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&gt;</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/DialogAdd/dialogadd.ui" line="54"/>
         <source>ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/DialogAdd/dialogadd.ui" line="61"/>
         <source>status</source>
-        <translation type="unfinished"></translation>
+        <translation>status</translation>
     </message>
 </context>
 <context>
@@ -131,12 +131,12 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/DialogEdit/dialogedit.ui" line="14"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/DialogEdit/dialogedit.ui" line="30"/>
         <source>ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID</translation>
     </message>
 </context>
 <context>
@@ -144,12 +144,12 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/EditContainer/editcontainer.ui" line="14"/>
         <source>EditContainer</source>
-        <translation type="unfinished"></translation>
+        <translation>EditContainer</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/EditContainer/editcontainer.ui" line="45"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Add</translation>
     </message>
 </context>
 <context>
@@ -157,43 +157,43 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="14"/>
         <source>EditID</source>
-        <translation type="unfinished"></translation>
+        <translation>EditID</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="51"/>
         <source>Spectral Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Spectral Type</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="61"/>
         <source>Chemical Category</source>
-        <translation type="unfinished"></translation>
+        <translation>Chemical Category</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="71"/>
         <source>Specific Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Specific Number</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="81"/>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="88"/>
         <source>_</source>
-        <translation type="unfinished"></translation>
+        <translation>_</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="104"/>
         <source>-</source>
-        <translation type="unfinished"></translation>
+        <translation>-</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.cpp" line="26"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.cpp" line="27"/>
         <source>warning</source>
-        <translation type="unfinished"></translation>
+        <translation>warning</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.cpp" line="26"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.cpp" line="27"/>
         <source>ID %1 already exists, please re-enter!</source>
-        <translation type="unfinished"></translation>
+        <translation>ID %1 already exists, please re-enter!</translation>
     </message>
 </context>
 <context>
@@ -201,37 +201,37 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/editinfo.ui" line="14"/>
         <source>EditInfo</source>
-        <translation type="unfinished"></translation>
+        <translation>EditInfo</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/editinfo.ui" line="32"/>
         <source>Basic Information</source>
-        <translation type="unfinished"></translation>
+        <translation>Basic Information</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/editinfo.ui" line="50"/>
         <source>Spectral Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Spectral Data</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/editinfo.ui" line="68"/>
         <source>Spectral Acquisition Conditions</source>
-        <translation type="unfinished"></translation>
+        <translation>Spectral Acquisition Conditions</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/editinfo.ui" line="86"/>
         <source>Sample Information</source>
-        <translation type="unfinished"></translation>
+        <translation>Sample Information</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/editinfo.ui" line="104"/>
         <source>Annotations and Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Annotations and Tags</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/editinfo.ui" line="122"/>
         <source>Originate</source>
-        <translation type="unfinished"></translation>
+        <translation>Originate</translation>
     </message>
 </context>
 <context>
@@ -239,7 +239,7 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="14"/>
         <source>EditURL</source>
-        <translation type="unfinished"></translation>
+        <translation>EditURL</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="20"/>
@@ -273,17 +273,17 @@
     <message>
         <location filename="../../src/ApplicationMenu/formapplicationmenu.ui" line="14"/>
         <source>ApplicationMenu</source>
-        <translation type="unfinished"></translation>
+        <translation>ApplicationMenu</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationMenu/formapplicationmenu.ui" line="32"/>
         <source>Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Data</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationMenu/formapplicationmenu.ui" line="38"/>
         <source>MineIt</source>
-        <translation type="unfinished"></translation>
+        <translation>MineIt</translation>
     </message>
 </context>
 <context>
@@ -291,22 +291,22 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormDataset/formdataset.ui" line="14"/>
         <source>Dataset</source>
-        <translation type="unfinished"></translation>
+        <translation>Dataset</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormDataset/formdataset.ui" line="24"/>
         <source>Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Table</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormDataset/formdataset.ui" line="34"/>
         <source>Plot</source>
-        <translation type="unfinished"></translation>
+        <translation>Plot</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormDataset/formdataset.cpp" line="17"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormDataset/formdataset.cpp" line="19"/>
         <source>ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID</translation>
     </message>
 </context>
 <context>
@@ -315,7 +315,7 @@
         <location filename="../../src/ApplicationContainer/FormMineIt/formmineit.ui" line="14"/>
         <location filename="../../src/ApplicationContainer/FormMineIt/formmineit.ui" line="20"/>
         <source>MineIt</source>
-        <translation type="unfinished"></translation>
+        <translation>MineIt</translation>
     </message>
 </context>
 <context>
@@ -323,52 +323,52 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="14"/>
         <source>Plot</source>
-        <translation type="unfinished"></translation>
+        <translation>Plot</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="27"/>
         <source>Raman</source>
-        <translation type="unfinished"></translation>
+        <translation>Raman</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="97"/>
         <source>IR</source>
-        <translation type="unfinished"></translation>
+        <translation>IR</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="120"/>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="163"/>
         <source>peak assistance</source>
-        <translation type="unfinished"></translation>
+        <translation>peak assistance</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="127"/>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="158"/>
         <source>auto scale</source>
-        <translation type="unfinished"></translation>
+        <translation>auto scale</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="134"/>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="153"/>
         <source>crop</source>
-        <translation type="unfinished"></translation>
+        <translation>crop</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="141"/>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="148"/>
         <source>xaxis invert</source>
-        <translation type="unfinished"></translation>
+        <translation>xaxis invert</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="148"/>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="143"/>
         <source>original image</source>
-        <translation type="unfinished"></translation>
+        <translation>original image</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="64"/>
         <source>Spectral</source>
-        <translation type="unfinished"></translation>
+        <translation>Spectral</translation>
     </message>
 </context>
 <context>
@@ -376,209 +376,257 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.ui" line="14"/>
         <source>Property</source>
-        <translation type="unfinished"></translation>
+        <translation>Property</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.ui" line="20"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="88"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="81"/>
         <source>Structure</source>
-        <translation type="unfinished"></translation>
+        <translation>Structure</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.ui" line="61"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Add</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.ui" line="68"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.ui" line="75"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Delete</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="31"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="45"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="67"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="79"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="138"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="151"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="161"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="176"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="29"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="43"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="56"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="70"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="140"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="157"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="172"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="192"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="266"/>
         <source>ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="37"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="137"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="144"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="174"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="35"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="139"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="146"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="190"/>
         <source>All Properties</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="58"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="180"/>
-        <source>Basic Information</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="59"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="193"/>
-        <source>Spectral Data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="60"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="201"/>
-        <source>Spectral Acquisition Conditions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="61"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="212"/>
-        <source>Sample Information</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="62"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="220"/>
-        <source>Annotations and Tags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="63"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="229"/>
-        <source>Originate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="182"/>
-        <source>Compound Name(en)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="183"/>
-        <source>Compound Name(zh)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="184"/>
-        <source>Molecular Formula</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="185"/>
-        <source>Molecular Weight</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="186"/>
-        <source>Compound Type</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="187"/>
-        <source>CAS Number</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="188"/>
-        <source>Structure Picture</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="189"/>
-        <source>State</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="195"/>
-        <source>Peak(Main)</source>
-        <translation type="unfinished"></translation>
+        <translation>All Properties</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="196"/>
-        <source>Peak(Assistance)</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="260"/>
+        <source>Basic Information</source>
+        <translation>Basic Information</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="197"/>
-        <source>Spectral Picture</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="209"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="262"/>
+        <source>Spectral Data</source>
+        <translation>Spectral Data</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="217"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="263"/>
+        <source>Spectral Acquisition Conditions</source>
+        <translation>Spectral Acquisition Conditions</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="228"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="264"/>
+        <source>Sample Information</source>
+        <translation>Sample Information</translation>
+    </message>
+    <message>
+        <source>Annotations and Tags</source>
+        <translation type="vanished">Annotations and Tags</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="245"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="261"/>
+        <source>Originate</source>
+        <translation>Originate</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="198"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="267"/>
+        <source>Compound Name(en)</source>
+        <translation>Compound Name(en)</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="199"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="268"/>
+        <source>Compound Name(zh)</source>
+        <translation>Compound Name(zh)</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="200"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="269"/>
+        <source>Molecular Formula</source>
+        <translation>Molecular Formula</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="201"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="270"/>
+        <source>Molecular Weight</source>
+        <translation>Molecular Weight</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="202"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="272"/>
+        <source>Compound Type</source>
+        <translation>Compound Type</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="203"/>
-        <source>Instrument Model</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="271"/>
+        <source>CAS Number</source>
+        <translation>CAS Number</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="204"/>
-        <source>Laser Wavelength</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="273"/>
+        <source>Structure Picture</source>
+        <translation>Structure Picture</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="205"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="274"/>
+        <source>State</source>
+        <translation>State</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="211"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="275"/>
+        <source>Peak(Main)</source>
+        <translation>Peak(Main)</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="212"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="276"/>
+        <source>Peak(Assistance)</source>
+        <translation>Peak(Assistance)</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="213"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="277"/>
+        <source>Spectral Picture</source>
+        <translation>Spectral Picture</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="219"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="278"/>
+        <source>Instrument Model</source>
+        <translation>Instrument Model</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="220"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="279"/>
+        <source>Laser Wavelength</source>
+        <translation>Laser Wavelength</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="221"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="280"/>
         <source>Laser Power</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="206"/>
-        <source>Calculus Times</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="207"/>
-        <source>Measuring Environment</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="208"/>
-        <source>Measuring Temperature</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="214"/>
-        <source>Origin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="215"/>
-        <source>Storage</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="216"/>
-        <source>Derivative State</source>
-        <translation type="unfinished"></translation>
+        <translation>Laser Power</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="222"/>
-        <source>Category</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="281"/>
+        <source>Calculus Times</source>
+        <translation>Calculus Times</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="223"/>
-        <source>Application Area</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="282"/>
+        <source>Measuring Environment</source>
+        <translation>Measuring Environment</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="224"/>
-        <source>Data Version</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="283"/>
+        <source>Measuring Temperature</source>
+        <translation>Measuring Temperature</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="225"/>
-        <source>Last Modified</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="230"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="284"/>
+        <source>Produced From</source>
+        <translation>Produced From</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="247"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="291"/>
+        <source>Resource</source>
+        <translation>Resource</translation>
+    </message>
+    <message>
+        <source>Origin</source>
+        <translation type="vanished">Origin</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="231"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="285"/>
+        <source>Storage</source>
+        <translation>Storage</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="232"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="286"/>
+        <source>Derivative State</source>
+        <translation>Derivative State</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="236"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="259"/>
+        <source>Annotations And Tags</source>
+        <translation>Annotations And Tags</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="238"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="287"/>
+        <source>Category</source>
+        <translation>Category</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="239"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="288"/>
+        <source>Application Area</source>
+        <translation>Application Area</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="240"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="289"/>
+        <source>Data Version</source>
+        <translation>Data Version</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="241"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="290"/>
+        <source>Last Modified</source>
+        <translation>Last Modified</translation>
+    </message>
+    <message>
         <source>Source</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Source</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="320"/>
+        <source>Name</source>
+        <translation>Name</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="320"/>
+        <source>Value</source>
+        <translation>Value</translation>
     </message>
 </context>
 <context>
@@ -586,7 +634,7 @@
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/formsetting.ui" line="14"/>
         <source>Setting</source>
-        <translation type="unfinished"></translation>
+        <translation>Setting</translation>
     </message>
 </context>
 <context>
@@ -594,42 +642,62 @@
     <message>
         <location filename="../../src/main/mainwindow.ui" line="14"/>
         <source>KnowIt</source>
-        <translation type="unfinished"></translation>
+        <translation>KnowIt</translation>
     </message>
     <message>
         <location filename="../../src/main/mainwindow.ui" line="88"/>
         <source>Setting</source>
-        <translation type="unfinished"></translation>
+        <translation>Setting</translation>
     </message>
     <message>
         <location filename="../../src/main/mainwindow.ui" line="107"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Theme</translation>
     </message>
     <message>
-        <location filename="../../src/main/mainwindow.ui" line="119"/>
+        <location filename="../../src/main/mainwindow.ui" line="116"/>
+        <source>Language</source>
+        <translation>Language</translation>
+    </message>
+    <message>
+        <location filename="../../src/main/mainwindow.ui" line="128"/>
         <source>Lite</source>
-        <translation type="unfinished"></translation>
+        <translation>Lite</translation>
     </message>
     <message>
-        <location filename="../../src/main/mainwindow.ui" line="124"/>
+        <location filename="../../src/main/mainwindow.ui" line="133"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>Dark</translation>
     </message>
     <message>
-        <location filename="../../src/main/mainwindow.ui" line="129"/>
+        <location filename="../../src/main/mainwindow.ui" line="138"/>
         <source>OSX_Lite</source>
-        <translation type="unfinished"></translation>
+        <translation>OSX_Lite</translation>
     </message>
     <message>
-        <location filename="../../src/main/mainwindow.ui" line="134"/>
+        <location filename="../../src/main/mainwindow.ui" line="143"/>
         <source>OSX_Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>OSX_Dark</translation>
     </message>
     <message>
-        <location filename="../../src/main/mainwindow.cpp" line="26"/>
+        <location filename="../../src/main/mainwindow.ui" line="148"/>
+        <source>en</source>
+        <translation>en</translation>
+    </message>
+    <message>
+        <location filename="../../src/main/mainwindow.ui" line="153"/>
+        <source>zh_simple</source>
+        <translation>zh_simple</translation>
+    </message>
+    <message>
+        <location filename="../../src/main/mainwindow.ui" line="158"/>
+        <source>zh_traditional</source>
+        <translation>zh_traditional</translation>
+    </message>
+    <message>
+        <location filename="../../src/main/mainwindow.cpp" line="27"/>
         <source>settings</source>
-        <translation type="unfinished"></translation>
+        <translation>settings</translation>
     </message>
 </context>
 <context>
@@ -637,17 +705,17 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/Originate/originate.ui" line="14"/>
         <source>Originate</source>
-        <translation type="unfinished"></translation>
+        <translation>Originate</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/Originate/originate.ui" line="20"/>
         <source>Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Source</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/Originate/originate.ui" line="30"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit</translation>
     </message>
 </context>
 <context>
@@ -655,22 +723,22 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/EditContainer/PeakInfo/peakinfo.ui" line="14"/>
         <source>PeakInfo</source>
-        <translation type="unfinished"></translation>
+        <translation>PeakInfo</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/EditContainer/PeakInfo/peakinfo.ui" line="22"/>
         <source>Wavelength</source>
-        <translation type="unfinished"></translation>
+        <translation>Wavelength</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/EditContainer/PeakInfo/peakinfo.ui" line="36"/>
         <source>Intensity</source>
-        <translation type="unfinished"></translation>
+        <translation>Intensity</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/EditContainer/PeakInfo/peakinfo.ui" line="52"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Delete</translation>
     </message>
 </context>
 <context>
@@ -678,17 +746,17 @@
     <message>
         <location filename="../../src/main/main.cpp" line="22"/>
         <source>init config</source>
-        <translation type="unfinished"></translation>
+        <translation>init config</translation>
     </message>
     <message>
         <location filename="../../src/main/main.cpp" line="26"/>
         <source>init connect</source>
-        <translation type="unfinished"></translation>
+        <translation>init connect</translation>
     </message>
     <message>
         <location filename="../../src/main/main.cpp" line="30"/>
         <source>init GUI</source>
-        <translation type="unfinished"></translation>
+        <translation>init GUI</translation>
     </message>
 </context>
 <context>
@@ -696,22 +764,22 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SampleInformation/sampleinformation.ui" line="14"/>
         <source>SampleInformation</source>
-        <translation type="unfinished"></translation>
+        <translation>SampleInformation</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SampleInformation/sampleinformation.ui" line="20"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Origin</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SampleInformation/sampleinformation.ui" line="30"/>
         <source>Storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Storage</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SampleInformation/sampleinformation.ui" line="40"/>
         <source>Derivative State</source>
-        <translation type="unfinished"></translation>
+        <translation>Derivative State</translation>
     </message>
 </context>
 <context>
@@ -719,72 +787,72 @@
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="14"/>
         <source>ServerSetting</source>
-        <translation type="unfinished"></translation>
+        <translation>ServerSetting</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="20"/>
         <source>Server</source>
-        <translation type="unfinished"></translation>
+        <translation>Server</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="26"/>
         <source>url</source>
-        <translation type="unfinished"></translation>
+        <translation>url</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="36"/>
         <source>path ping</source>
-        <translation type="unfinished"></translation>
+        <translation>path ping</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="46"/>
         <source>path upload img</source>
-        <translation type="unfinished"></translation>
+        <translation>path upload img</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="56"/>
         <source>path load img</source>
-        <translation type="unfinished"></translation>
+        <translation>path load img</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="66"/>
         <source>path dataset check</source>
-        <translation type="unfinished"></translation>
+        <translation>path dataset check</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="76"/>
         <source>path dataset set</source>
-        <translation type="unfinished"></translation>
+        <translation>path dataset set</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="89"/>
         <source>path dataset get</source>
-        <translation type="unfinished"></translation>
+        <translation>path dataset get</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="96"/>
         <source>path dataset del</source>
-        <translation type="unfinished"></translation>
+        <translation>path dataset del</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="103"/>
         <source>path html analysis</source>
-        <translation type="unfinished"></translation>
+        <translation>path html analysis</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="116"/>
         <source>path cv find crop</source>
-        <translation type="unfinished"></translation>
+        <translation>path cv find crop</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="123"/>
         <source>path cv find curve</source>
-        <translation type="unfinished"></translation>
+        <translation>path cv find curve</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="130"/>
         <source>path cv find peak</source>
-        <translation type="unfinished"></translation>
+        <translation>path cv find peak</translation>
     </message>
 </context>
 <context>
@@ -792,12 +860,12 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/EditContainer/SingleLineInfo/singlelineinfo.ui" line="14"/>
         <source>SingleLineInfo</source>
-        <translation type="unfinished"></translation>
+        <translation>SingleLineInfo</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/EditContainer/SingleLineInfo/singlelineinfo.ui" line="23"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Delete</translation>
     </message>
 </context>
 <context>
@@ -805,37 +873,37 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralAcquisitionConditions/spectralacquisitionconditions.ui" line="14"/>
         <source>SpectralAcquisitionConditions</source>
-        <translation type="unfinished"></translation>
+        <translation>SpectralAcquisitionConditions</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralAcquisitionConditions/spectralacquisitionconditions.ui" line="20"/>
         <source>Instrument Model</source>
-        <translation type="unfinished"></translation>
+        <translation>Instrument Model</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralAcquisitionConditions/spectralacquisitionconditions.ui" line="30"/>
         <source>Laser Wavelength</source>
-        <translation type="unfinished"></translation>
+        <translation>Laser Wavelength</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralAcquisitionConditions/spectralacquisitionconditions.ui" line="40"/>
         <source>Laser Power</source>
-        <translation type="unfinished"></translation>
+        <translation>Laser Power</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralAcquisitionConditions/spectralacquisitionconditions.ui" line="50"/>
         <source>Calculus Times</source>
-        <translation type="unfinished"></translation>
+        <translation>Calculus Times</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralAcquisitionConditions/spectralacquisitionconditions.ui" line="60"/>
         <source>Measuring Environment</source>
-        <translation type="unfinished"></translation>
+        <translation>Measuring Environment</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralAcquisitionConditions/spectralacquisitionconditions.ui" line="70"/>
         <source>Measuring Temperature</source>
-        <translation type="unfinished"></translation>
+        <translation>Measuring Temperature</translation>
     </message>
 </context>
 <context>
@@ -843,101 +911,101 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="14"/>
         <source>SpectralData</source>
-        <translation type="unfinished"></translation>
+        <translation>SpectralData</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="35"/>
         <source>redo crop</source>
-        <translation type="unfinished"></translation>
+        <translation>redo crop</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="42"/>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="35"/>
         <source>fitting curve</source>
-        <translation type="unfinished"></translation>
+        <translation>fitting curve</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="49"/>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="33"/>
         <source>find peak</source>
-        <translation type="unfinished"></translation>
+        <translation>find peak</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="60"/>
         <source>start</source>
-        <translation type="unfinished"></translation>
+        <translation>start</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="67"/>
         <source>2000</source>
-        <translation type="unfinished"></translation>
+        <translation>2000</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="74"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="81"/>
         <source>4000</source>
-        <translation type="unfinished"></translation>
+        <translation>4000</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="133"/>
         <source>Peak(Main)</source>
-        <translation type="unfinished"></translation>
+        <translation>Peak(Main)</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="149"/>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="172"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="156"/>
         <source>Peak(Assistance)</source>
-        <translation type="unfinished"></translation>
+        <translation>Peak(Assistance)</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="179"/>
         <source>Spectral Picture</source>
-        <translation type="unfinished"></translation>
+        <translation>Spectral Picture</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="195"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Upload</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="394"/>
         <source>warning</source>
-        <translation type="unfinished"></translation>
+        <translation>warning</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="394"/>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="440"/>
         <source>%1 is empty!</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 is empty!</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="485"/>
         <source>Choose Picture</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose Picture</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="486"/>
         <source>Picture (*.png *.jpg *.jpeg *.bmp *.gif)</source>
-        <translation type="unfinished"></translation>
+        <translation>Picture (*.png *.jpg *.jpeg *.bmp *.gif)</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="494"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="494"/>
         <source>Failed to load image.</source>
-        <translation type="unfinished"></translation>
+        <translation>Failed to load image.</translation>
     </message>
 </context>
 <context>
@@ -945,12 +1013,12 @@
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="14"/>
         <source>SpectralSetting</source>
-        <translation type="unfinished"></translation>
+        <translation>SpectralSetting</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="20"/>
         <source>Spectral</source>
-        <translation type="unfinished"></translation>
+        <translation>Spectral</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="43"/>
@@ -958,7 +1026,7 @@
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="121"/>
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="167"/>
         <source>x</source>
-        <translation type="unfinished"></translation>
+        <translation>x</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="50"/>
@@ -966,27 +1034,27 @@
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="128"/>
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="181"/>
         <source>y</source>
-        <translation type="unfinished"></translation>
+        <translation>y</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="71"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Start</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="110"/>
         <source>4000</source>
-        <translation type="unfinished"></translation>
+        <translation>4000</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="149"/>
         <source>2000</source>
-        <translation type="unfinished"></translation>
+        <translation>2000</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="188"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
 </context>
 <context>
@@ -994,22 +1062,22 @@
     <message>
         <location filename="../../src/main/SplashScreen/splashscreen.ui" line="14"/>
         <source>SplashScreen</source>
-        <translation type="unfinished"></translation>
+        <translation>SplashScreen</translation>
     </message>
     <message>
         <location filename="../../src/main/SplashScreen/splashscreen.ui" line="32"/>
         <source>LOGO</source>
-        <translation type="unfinished"></translation>
+        <translation>LOGO</translation>
     </message>
     <message>
         <location filename="../../src/main/SplashScreen/splashscreen.ui" line="39"/>
         <source>Software Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Software Info</translation>
     </message>
     <message>
         <location filename="../../src/main/SplashScreen/splashscreen.ui" line="62"/>
         <source>status</source>
-        <translation type="unfinished"></translation>
+        <translation>status</translation>
     </message>
 </context>
 </TS>

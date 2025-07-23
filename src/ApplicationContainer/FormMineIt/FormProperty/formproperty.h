@@ -16,7 +16,7 @@ class FormProperty : public QWidget {
  public:
   explicit FormProperty(QWidget *parent = nullptr);
   ~FormProperty();
-
+  void retranslateUI();
  signals:
   void selectedDataDelete();
   void dataAdd();
@@ -35,12 +35,12 @@ class FormProperty : public QWidget {
   void initPropertySelect();
   void setStructure(const QString &path);
   void initProperty();
-  void setBasicInformation(const QJsonObject &data);
-  void setSpectralData(const QJsonObject &data);
-  void setSpectralAcquisitionConditions(const QJsonObject &data);
-  void setSampleInformation(const QJsonObject &data);
-  void setAnnotationsAndTags(const QJsonObject &data);
-  void setOriginate(const QJsonObject &data);
+  // void setBasicInformation(const QJsonObject &data);
+  // void setSpectralData(const QJsonObject &data);
+  // void setSpectralAcquisitionConditions(const QJsonObject &data);
+  // void setSampleInformation(const QJsonObject &data);
+  // void setAnnotationsAndTags(const QJsonObject &data);
+  // void setOriginate(const QJsonObject &data);
   void clearInfo();
   void showAllProperties();
 
@@ -56,7 +56,7 @@ class FormProperty : public QWidget {
   QMap<QString, QStringList> m_propertyMap;                 // 分类查找（便于筛选）
   QList<QPushButton *> m_categoryButtons;                   // 按钮引用（用于切换状态）
   QJsonObject m_info;
-  QMap<QString, QString> m_categoryToJsonKey;
+  QMap<QString, QString> m_UI2JsonKey;
 };
 
 #endif  // FORMPROPERTY_H

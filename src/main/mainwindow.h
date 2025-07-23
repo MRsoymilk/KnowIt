@@ -21,6 +21,7 @@ class MainWindow : public QMainWindow {
 
  private slots:
   void on_tBtnSetting_clicked();
+  void menuLanguageSelect(QAction *selectedAction);
 
  private:
   void init();
@@ -28,6 +29,8 @@ class MainWindow : public QMainWindow {
   void setTheme(const QString &theme);
   void menuThemeSelect(QAction *selectedTheme);
   void initMsgBar();
+  void initLanguage();
+  void setLanguage(const QString &language);
 
  private:
   Ui::MainWindow *ui;
