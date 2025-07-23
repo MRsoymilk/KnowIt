@@ -35,6 +35,7 @@ class BasicInformation : public QWidget {
   void on_tBtnCategoryAdd_clicked();
   void on_tBtnApplicationAreaAdd_clicked();
   void on_comboBoxCategory_currentTextChanged(const QString &category);
+  void on_comboBoxApplicationArea_currentTextChanged(const QString &area);
 
  private:
   Ui::BasicInformation *ui;

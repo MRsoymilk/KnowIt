@@ -25,6 +25,8 @@ void BasicInformation::init() {
   ui->tBtnUploadStructure->setObjectName("upload");
   ui->tBtnName_en_Edit->setObjectName("edit");
   ui->tBtnName_zh_Edit->setObjectName("edit");
+  ui->tBtnApplicationAreaEdit->setObjectName("edit");
+  ui->tBtnCategoryEdit->setObjectName("edit");
   ui->comboBoxState->addItems({"", tr("Liquid"), tr("Powder"), tr("Grain"), tr("Gas")});
 
   auto map_MajorMinor = MY_GLOBAL->get<QMap<QString, QStringList>>(CHEMICAL_CATEGORY_MAJOR_MINOR);
@@ -187,7 +189,35 @@ void BasicInformation::on_tBtnApplicationAreaAdd_clicked() {
 }
 
 void BasicInformation::on_comboBoxCategory_currentTextChanged(const QString &category) {
+  if (category.isEmpty()) {
+    return;
+  }
+
   auto map_MajorMinor = MY_GLOBAL->get<QMap<QString, QStringList>>(CHEMICAL_CATEGORY_MAJOR_MINOR);
   ui->comboBoxApplicationArea->clear();
   ui->comboBoxApplicationArea->addItems(map_MajorMinor.value(category));
+
+  QString text = ui->lineEditCategory->text();
+  QStringList list = text.split(DELIMITER, Qt::SkipEmptyParts);
+  list.removeAll("");
+  if (!list.contains(category)) {
+    list << category;
+    ui->lineEditCategory->setText(list.join(DELIMITER));
+  }
+}
+
+void BasicInformation::on_comboBoxApplicationArea_currentTextChanged(const QString &area) {
+  if (area.isEmpty()) {
+    return;
+  }
+
+  QString text = ui->lineEditApplicationArea->text();
+
+  QStringList list = text.split(DELIMITER, Qt::SkipEmptyParts);
+  list.removeAll("");
+
+  if (!list.contains(area)) {
+    list << area;
+    ui->lineEditApplicationArea->setText(list.join(DELIMITER));
+  }
 }
