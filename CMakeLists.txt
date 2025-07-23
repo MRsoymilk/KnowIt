@@ -83,6 +83,9 @@ set(PROJECT_SOURCES
         src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.h
         src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.cpp
         src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui
+        src/IndependentWindow/HoverPopup/hoverpopup.h
+        src/IndependentWindow/HoverPopup/hoverpopup.cpp
+        src/IndependentWindow/HoverPopup/hoverpopup.ui
         src/ApplicationMenu/formapplicationmenu.h
         src/ApplicationMenu/formapplicationmenu.cpp
         src/ApplicationMenu/formapplicationmenu.ui

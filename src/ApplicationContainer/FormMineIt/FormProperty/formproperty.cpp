@@ -5,6 +5,7 @@
 
 #include "DialogAdd/dialogadd.h"
 #include "DialogEdit/dialogedit.h"
+#include "HoverPopup/hoverpopup.h"
 #include "g_define.h"
 #include "myglobal.h"
 #include "ui_formproperty.h"
@@ -365,4 +366,17 @@ void FormProperty::on_spinBoxCrop_valueChanged(int pixel) {
   updateCroppedStructurePixmap(pixel);
 }
 
-void FormProperty::on_tableViewProperty_clicked(const QModelIndex &index) {}
+void FormProperty::on_tableViewProperty_clicked(const QModelIndex &index) {
+  int row = index.row();
+
+  QString name = m_model->data(m_model->index(row, 0)).toString();
+  QString value = m_model->data(m_model->index(row, 1)).toString();
+  QStringList values = value.split(DELIMITER, Qt::SkipEmptyParts);
+
+  HoverPopup *popup = new HoverPopup();
+  popup->setData(name, value);
+
+  QPoint globalPos = QCursor::pos();
+  popup->move(globalPos + QPoint(10, 10));
+  popup->show();
+}

@@ -45,6 +45,8 @@ class FormProperty : public QWidget {
   void on_btnDelete_clicked();
   void on_spinBoxCrop_valueChanged(int pixel);
 
+  void on_tableViewProperty_clicked(const QModelIndex &index);
+
  private:
   Ui::FormProperty *ui;
   QStandardItemModel *m_model;
