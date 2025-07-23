@@ -190,5 +190,5 @@ if (WIN32)
     set(APP_ICON_RC "${CMAKE_CURRENT_BINARY_DIR}/app_icon.rc")
     file(WRITE ${APP_ICON_RC} "IDI_ICON1 ICON \"${APP_ICON_PATH}\"\n")
 
-    target_sources(MyApp PRIVATE ${APP_ICON_RC})
+    target_sources(${PROJECT_NAME} PRIVATE ${APP_ICON_RC})
 endif()
