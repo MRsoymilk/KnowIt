@@ -26,7 +26,7 @@ void EditContainer::setData(const QString &data) {
         double x = match.captured(1).toDouble();
         double y = match.captured(2).toDouble();
 
-        auto *info = new PeakInfo(this, x, y);
+        auto *info = new PeakInfo(x, y, this);
         ui->vLay->addWidget(info);
       }
     } break;
@@ -77,7 +77,7 @@ const QString EditContainer::getData() {
 void EditContainer::on_tBtnAdd_clicked() {
   switch (m_type) {
     case EditContainer::PEAK: {
-      auto *info = new PeakInfo(this, 0, 0);
+      auto *info = new PeakInfo(0, 0, this);
       ui->vLay->addWidget(info);
     } break;
     case EditContainer::SINGLE_LINE: {

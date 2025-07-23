@@ -11,7 +11,7 @@ class PeakInfo : public QWidget {
   Q_OBJECT
 
  public:
-  explicit PeakInfo(QWidget *parent = nullptr, const double &wavelength = 0.0, const double &intensity = 0.0);
+  explicit PeakInfo(const double &wavelength = 0.0, const double &intensity = 0.0, QWidget *parent = nullptr);
   ~PeakInfo();
   double getWavelength();
   double getIntensity();

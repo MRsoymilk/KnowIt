@@ -2,7 +2,7 @@
 
 #include "ui_peakinfo.h"
 
-PeakInfo::PeakInfo(QWidget *parent, const double &wavelength, const double &intensity)
+PeakInfo::PeakInfo(const double &wavelength, const double &intensity, QWidget *parent)
     : QWidget(parent), ui(new Ui::PeakInfo) {
   ui->setupUi(this);
   ui->doubleSpinBoxWavelength->setValue(wavelength);
