@@ -20,7 +20,13 @@ SplashScreen::SplashScreen(QWidget *parent) : QWidget(parent), ui(new Ui::Splash
   effect->setBlurRadius(20);
   effect->setColor(QColor(0, 0, 0, 160));
   this->setGraphicsEffect(effect);
+
+  ui->labelStatus->setStyleSheet("QLabel { background-color: white; color: black; }");
   ui->labelStatus->setText("starting...");
+
+  ui->labelSoftwareInfo->setStyleSheet("QLabel { background-color: white; color: black; }");
+
+  ui->progressBar->setValue(0);
 }
 
 SplashScreen::~SplashScreen() { delete ui; }
@@ -29,3 +35,5 @@ void SplashScreen::setStatusText(const QString &text) {
   ui->labelStatus->setText(text);
   QApplication::processEvents();
 }
+
+void SplashScreen::setProgress(const double &progress) { ui->progressBar->setValue(progress * 100); }

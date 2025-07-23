@@ -14,6 +14,7 @@ class SplashScreen : public QWidget {
   explicit SplashScreen(QWidget *parent = nullptr);
   ~SplashScreen();
   void setStatusText(const QString &text);
+  void setProgress(const double &progress);
 
  private:
   Ui::SplashScreen *ui;

@@ -21,12 +21,16 @@ int main(int argc, char *argv[]) {
 
   splash.setStatusText(QObject::tr("init config"));
   initConfig();
+  splash.setProgress(1.0 / 3.0);
 
   splash.setStatusText(QObject::tr("init connect"));
   splash.setStatusText(initConnect());
+  splash.setProgress(2.0 / 3.0);
 
+  splash.setStatusText(QObject::tr("init GUI"));
   MainWindow w;
   w.show();
+  splash.setProgress(3.0 / 3.0);
 
   splash.close();
   return a.exec();
