@@ -29,43 +29,7 @@
    </item>
    <item row="0" column="0" colspan="2">
     <layout class="QGridLayout" name="gLayID">
-     <item row="1" column="2">
-      <widget class="QComboBox" name="comboBoxMajor"/>
-     </item>
-     <item row="1" column="6">
-      <widget class="QSpinBox" name="spinBoxSpecificNumber">
-       <property name="minimum">
-        <number>1</number>
-       </property>
-       <property name="maximum">
-        <number>9999</number>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="4">
-      <widget class="QComboBox" name="comboBoxMinor"/>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="labelSpectralType">
-       <property name="text">
-        <string>Spectral Type</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignmentFlag::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2" colspan="3">
-      <widget class="QLabel" name="labelChemicalCategory">
-       <property name="text">
-        <string>Chemical Category</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignmentFlag::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="6">
+     <item row="0" column="2">
       <widget class="QLabel" name="labelSpecificNumber">
        <property name="text">
         <string>Specific Number</string>
@@ -75,33 +39,33 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="5">
-      <widget class="QLabel" name="label_2">
+     <item row="1" column="1">
+      <widget class="QLabel" name="label_delimiter">
        <property name="text">
         <string>_</string>
        </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
       </widget>
      </item>
-     <item row="1" column="1">
-      <widget class="QLabel" name="label_">
-       <property name="text">
-        <string>_</string>
+     <item row="1" column="2">
+      <widget class="QSpinBox" name="spinBoxSpecificNumber">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>9999</number>
        </property>
       </widget>
      </item>
      <item row="1" column="0">
       <widget class="QComboBox" name="comboBoxSpectralType"/>
      </item>
-     <item row="1" column="3">
-      <widget class="QLabel" name="label">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelSpectralType">
        <property name="text">
-        <string>-</string>
+        <string>Spectral Type</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignmentFlag::AlignCenter</set>

@@ -19,13 +19,13 @@ class EditID : public QWidget {
   void init();
   void updateID();
 
- private slots:
-  void on_comboBoxMajor_currentTextChanged(const QString &major);
+  // private slots:
+  //  void on_comboBoxMajor_currentTextChanged(const QString &major);
 
  private:
   Ui::EditID *ui;
   QString m_id;
-  QMap<QString, QStringList> m_mapMajorMinor;
+  // QMap<QString, QStringList> m_mapMajorMinor;
 };
 
 #endif  // EDITID_H

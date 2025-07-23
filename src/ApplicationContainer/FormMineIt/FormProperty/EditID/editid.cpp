@@ -29,31 +29,9 @@ bool EditID::check() {
   }
 }
 
-void EditID::init() {
-  ui->comboBoxSpectralType->addItems({"RAM", "NIR", "MIR", "UV"});
-  m_mapMajorMinor = {
-      {"PP", {"MON", "BAS", "IND"}},
-      {"OC", {"BAS", "SOL", "GAS"}},
-      {"IC", {"ADD", "MAT", "INT", "PET", "SOL"}},
-      {"BA", {"ANC", "PHA", "STE", "PCA"}},
-      {"CI", {"DRU", "TOX", "FES", "COA", "CAB", "FAD", "STE"}},
-      {"EP", {"INS", "WGP"}},
-      {"IO", {"INO", "MOC", "MIN"}},
-  };
-
-  ui->comboBoxMajor->addItems(m_mapMajorMinor.keys());
-  QString defaultMajor = ui->comboBoxMajor->currentText();
-  ui->comboBoxMinor->addItems(m_mapMajorMinor.value(defaultMajor));
-}
+void EditID::init() { ui->comboBoxSpectralType->addItems({"RAM", "NIR", "MIR", "UV"}); }
 
 void EditID::updateID() {
-  m_id = QString("%1_%2-%3_%4")
-             .arg(ui->comboBoxSpectralType->currentText(), ui->comboBoxMajor->currentText(),
-                  ui->comboBoxMinor->currentText(),
-                  QString("%1").arg(ui->spinBoxSpecificNumber->value(), 4, 10, QChar('0')));
-}
-
-void EditID::on_comboBoxMajor_currentTextChanged(const QString &major) {
-  ui->comboBoxMinor->clear();
-  ui->comboBoxMinor->addItems(m_mapMajorMinor.value(major));
+  m_id = QString("%1_%2").arg(ui->comboBoxSpectralType->currentText(),
+                              QString("%1").arg(ui->spinBoxSpecificNumber->value(), 4, 10, QChar('0')));
 }

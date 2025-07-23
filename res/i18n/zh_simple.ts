@@ -187,29 +187,22 @@
         <translation>编辑ID</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="51"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="68"/>
         <source>Spectral Type</source>
         <translation>光谱类型</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="61"/>
         <source>Chemical Category</source>
-        <translation>化学类别</translation>
+        <translation type="vanished">化学类别</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="71"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="35"/>
         <source>Specific Number</source>
         <translation>具体编号</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="81"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="88"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="45"/>
         <source>_</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="104"/>
-        <source>-</source>
         <translation></translation>
     </message>
     <message>

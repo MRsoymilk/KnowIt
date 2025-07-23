@@ -175,29 +175,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="51"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="68"/>
         <source>Spectral Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="61"/>
-        <source>Chemical Category</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="71"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="35"/>
         <source>Specific Number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="81"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="88"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="45"/>
         <source>_</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui" line="104"/>
-        <source>-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
