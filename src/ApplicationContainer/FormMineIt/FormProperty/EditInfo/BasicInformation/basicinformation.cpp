@@ -25,6 +25,7 @@ void BasicInformation::init() {
   ui->tBtnUploadStructure->setObjectName("upload");
   ui->tBtnName_en_Edit->setObjectName("edit");
   ui->tBtnName_zh_Edit->setObjectName("edit");
+  ui->comboBoxState->addItems({"", tr("Liquid"), tr("Powder"), tr("Grain"), tr("Gas")});
 }
 
 bool BasicInformation::handleGraphicsViewStructure(QEvent *event) {
@@ -61,7 +62,7 @@ void BasicInformation::setBasicInformation(const QJsonObject &data) {
   ui->lineEditCategory->setText(BasicInformation.value(CATEGORY).toString());
   ui->lineEditApplicationArea->setText(BasicInformation.value(APPLICATION_AREA).toString());
   ui->lineEditStructurePicturePath->setText(BasicInformation.value(STRUCTURE_PICTURE).toString());
-  ui->lineEditState->setText(BasicInformation.value(STATE).toString());
+  ui->comboBoxState->setCurrentText(BasicInformation.value(STATE).toString());
 
   QString url_get_img = QString("%1%2/%3/%4")
                             .arg(MY_GLOBAL->get<QString>(URL_SERVER), MY_GLOBAL->get<QString>(PATH_LOAD_IMG), m_id,
@@ -143,6 +144,6 @@ QJsonObject BasicInformation::getBasicInformation() {
   objBasicInformation.insert(CATEGORY, ui->lineEditCategory->text());
   objBasicInformation.insert(APPLICATION_AREA, ui->lineEditApplicationArea->text());
   objBasicInformation.insert(STRUCTURE_PICTURE, ui->lineEditStructurePicturePath->text());
-  objBasicInformation.insert(STATE, ui->lineEditState->text());
+  objBasicInformation.insert(STATE, ui->comboBoxState->currentText());
   return objBasicInformation;
 }
