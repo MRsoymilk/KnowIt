@@ -22,6 +22,13 @@ QString MySetting::getValue(SETTING s, const QString &group, const QString &key,
 
 QStringList MySetting::getGroups(SETTING s) { return m_settings[s]->childGroups(); }
 
+QStringList MySetting::getGroupKeys(SETTING s, const QString &group) {
+  m_settings[s]->beginGroup(group);
+  QStringList keys = m_settings[s]->allKeys();
+  m_settings[s]->endGroup();
+  return keys;
+}
+
 void MySetting::sync(SETTING s) { m_settings[s]->sync(); }
 
 MySetting::MySetting() { m_settings[SETTING::CONFIG] = new QSettings("config/config.ini", QSettings::IniFormat); }

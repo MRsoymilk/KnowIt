@@ -13,18 +13,11 @@
   <property name="windowTitle">
    <string>BasicInformation</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="3">
-    <widget class="QToolButton" name="tBtnName_en_Edit">
+  <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0,0,0,0,0,0,0" columnstretch="0,0,0,0" columnminimumwidth="0,0,0,0">
+   <item row="9" column="0" colspan="2">
+    <widget class="QLabel" name="labelStructurePicture">
      <property name="text">
-      <string>Edit</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0" colspan="2">
-    <widget class="QLabel" name="labelCompoundName_zh">
-     <property name="text">
-      <string>Compound Name(zh)</string>
+      <string>Structure Picture</string>
      </property>
     </widget>
    </item>
@@ -38,17 +31,30 @@
    <item row="9" column="2">
     <widget class="QLineEdit" name="lineEditStructurePicturePath"/>
    </item>
-   <item row="4" column="0">
-    <widget class="QLabel" name="labelCASNumber">
+   <item row="10" column="2">
+    <widget class="QComboBox" name="comboBoxState"/>
+   </item>
+   <item row="0" column="3">
+    <widget class="QToolButton" name="tBtnName_en_Edit">
      <property name="text">
-      <string>CAS Number</string>
+      <string>Edit</string>
      </property>
     </widget>
    </item>
-   <item row="1" column="3">
-    <widget class="QToolButton" name="tBtnName_zh_Edit">
+   <item row="8" column="0" colspan="4">
+    <widget class="QGraphicsView" name="graphicsViewStructure"/>
+   </item>
+   <item row="10" column="0" colspan="2">
+    <widget class="QLabel" name="labelState">
      <property name="text">
-      <string>Edit</string>
+      <string>State</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="labelApplicationArea">
+     <property name="text">
+      <string>Application Area</string>
      </property>
     </widget>
    </item>
@@ -66,10 +72,10 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="0">
-    <widget class="QLabel" name="labelMolecularFormula">
+   <item row="4" column="0">
+    <widget class="QLabel" name="labelCASNumber">
      <property name="text">
-      <string>Molecular Formula</string>
+      <string>CAS Number</string>
      </property>
     </widget>
    </item>
@@ -80,61 +86,69 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="2">
-    <widget class="QLineEdit" name="lineEditCompoundName_zh"/>
+   <item row="2" column="0">
+    <widget class="QLabel" name="labelMolecularFormula">
+     <property name="text">
+      <string>Molecular Formula</string>
+     </property>
+    </widget>
    </item>
-   <item row="8" column="0" colspan="4">
-    <widget class="QGraphicsView" name="graphicsViewStructure"/>
+   <item row="1" column="3">
+    <widget class="QToolButton" name="tBtnName_zh_Edit">
+     <property name="text">
+      <string>Edit</string>
+     </property>
+    </widget>
    </item>
-   <item row="0" column="0" colspan="2">
+   <item row="6" column="1" colspan="2">
+    <widget class="QComboBox" name="comboBoxCategory"/>
+   </item>
+   <item row="7" column="1" colspan="2">
+    <widget class="QComboBox" name="comboBoxApplicationArea"/>
+   </item>
+   <item row="0" column="0">
     <widget class="QLabel" name="labelCompoundName_en">
      <property name="text">
       <string>Compound Name(en)</string>
      </property>
     </widget>
    </item>
-   <item row="0" column="2">
+   <item row="1" column="0">
+    <widget class="QLabel" name="labelCompoundName_zh">
+     <property name="text">
+      <string>Compound Name(zh)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="2">
     <widget class="QLineEdit" name="lineEditCompoundName_en"/>
    </item>
-   <item row="7" column="0">
-    <widget class="QLabel" name="labelApplicationArea">
-     <property name="text">
-      <string>Application Area</string>
-     </property>
-    </widget>
+   <item row="1" column="1" colspan="2">
+    <widget class="QLineEdit" name="lineEditCompoundName_zh"/>
    </item>
-   <item row="10" column="2">
-    <widget class="QComboBox" name="comboBoxState"/>
-   </item>
-   <item row="2" column="2">
+   <item row="2" column="1" colspan="2">
     <widget class="QLineEdit" name="lineEditMolecularFormula"/>
    </item>
-   <item row="3" column="2">
+   <item row="3" column="1" colspan="2">
     <widget class="QLineEdit" name="lineEditMolecularWeight"/>
    </item>
-   <item row="4" column="2">
+   <item row="4" column="1" colspan="2">
     <widget class="QLineEdit" name="lineEditCASNumber"/>
    </item>
-   <item row="5" column="2">
+   <item row="5" column="1" colspan="2">
     <widget class="QLineEdit" name="lineEditCompoundType"/>
    </item>
-   <item row="6" column="2">
-    <widget class="QLineEdit" name="lineEditCategory"/>
-   </item>
-   <item row="7" column="2">
-    <widget class="QLineEdit" name="lineEditApplicationArea"/>
-   </item>
-   <item row="9" column="0" colspan="2">
-    <widget class="QLabel" name="labelStructurePicture">
+   <item row="6" column="3">
+    <widget class="QToolButton" name="tBtnCategoryAdd">
      <property name="text">
-      <string>Structure Picture</string>
+      <string>Add</string>
      </property>
     </widget>
    </item>
-   <item row="10" column="0" colspan="2">
-    <widget class="QLabel" name="labelState">
+   <item row="7" column="3">
+    <widget class="QToolButton" name="tBtnApplicationAreaAdd">
      <property name="text">
-      <string>State</string>
+      <string>Add</string>
      </property>
     </widget>
    </item>

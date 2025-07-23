@@ -71,6 +71,13 @@ void initConfig() {
   MY_GLOBAL->set<int>(
       CFG_PROPERTY_STRUCTURE_CROP,
       SETTING_CONFIG_GET(CFG_GROUP_PROPERTY, CFG_PROPERTY_STRUCTURE_CROP, DFT_CFG_PROPERTY_STRUCTURE_CROP).toInt());
+
+  QMap<QString, QStringList> m_MajorMinor;
+  QStringList list = SETTING_CONFIG_GROUP_KEYS(CFG_GROUP_CHEMICAL_CATEGORY);
+  for (auto key : list) {
+    m_MajorMinor[key] = SETTING_CONFIG_GET(CFG_GROUP_CHEMICAL_CATEGORY, key).split(DELIMITER);
+  }
+  MY_GLOBAL->set<QMap<QString, QStringList>>(CHEMICAL_CATEGORY_MAJOR_MINOR, m_MajorMinor);
 }
 
 QString initConnect() {

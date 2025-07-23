@@ -26,6 +26,12 @@ void BasicInformation::init() {
   ui->tBtnName_en_Edit->setObjectName("edit");
   ui->tBtnName_zh_Edit->setObjectName("edit");
   ui->comboBoxState->addItems({"", tr("Liquid"), tr("Powder"), tr("Grain"), tr("Gas")});
+
+  auto map_MajorMinor = MY_GLOBAL->get<QMap<QString, QStringList>>(CHEMICAL_CATEGORY_MAJOR_MINOR);
+  ui->comboBoxCategory->addItems(map_MajorMinor.keys());
+  QString defaultMajor = ui->comboBoxCategory->currentText();
+  ui->comboBoxApplicationArea->clear();
+  ui->comboBoxApplicationArea->addItems(map_MajorMinor.value(defaultMajor));
 }
 
 bool BasicInformation::handleGraphicsViewStructure(QEvent *event) {
@@ -59,8 +65,8 @@ void BasicInformation::setBasicInformation(const QJsonObject &data) {
   ui->lineEditMolecularWeight->setText(BasicInformation.value(MOLECULAR_WEIGHT).toString());
   ui->lineEditCASNumber->setText(BasicInformation.value(CAS_NUMBER).toString());
   ui->lineEditCompoundType->setText(BasicInformation.value(COMPOUND_TYPE).toString());
-  ui->lineEditCategory->setText(BasicInformation.value(CATEGORY).toString());
-  ui->lineEditApplicationArea->setText(BasicInformation.value(APPLICATION_AREA).toString());
+  ui->comboBoxCategory->setCurrentText(BasicInformation.value(CATEGORY).toString());
+  ui->comboBoxApplicationArea->setCurrentText(BasicInformation.value(APPLICATION_AREA).toString());
   ui->lineEditStructurePicturePath->setText(BasicInformation.value(STRUCTURE_PICTURE).toString());
   ui->comboBoxState->setCurrentText(BasicInformation.value(STATE).toString());
 
@@ -141,9 +147,47 @@ QJsonObject BasicInformation::getBasicInformation() {
   objBasicInformation.insert(MOLECULAR_WEIGHT, ui->lineEditMolecularWeight->text());
   objBasicInformation.insert(CAS_NUMBER, ui->lineEditCASNumber->text());
   objBasicInformation.insert(COMPOUND_TYPE, ui->lineEditCompoundType->text());
-  objBasicInformation.insert(CATEGORY, ui->lineEditCategory->text());
-  objBasicInformation.insert(APPLICATION_AREA, ui->lineEditApplicationArea->text());
+  objBasicInformation.insert(CATEGORY, ui->comboBoxCategory->currentText());
+  objBasicInformation.insert(APPLICATION_AREA, ui->comboBoxApplicationArea->currentText());
   objBasicInformation.insert(STRUCTURE_PICTURE, ui->lineEditStructurePicturePath->text());
   objBasicInformation.insert(STATE, ui->comboBoxState->currentText());
   return objBasicInformation;
+}
+
+void BasicInformation::on_tBtnCategoryAdd_clicked() {
+  EditContainer edit(EditContainer::TYPE::SINGLE_LINE);
+  QStringList items;
+  for (int i = 0; i < ui->comboBoxCategory->count(); ++i) {
+    items << ui->comboBoxCategory->itemText(i);
+  }
+  edit.setData(items.join(DELIMITER));
+  edit.exec();
+  ui->comboBoxCategory->clear();
+  ui->comboBoxCategory->addItems(edit.getData().split(DELIMITER));
+}
+
+void BasicInformation::on_tBtnApplicationAreaAdd_clicked() {
+  EditContainer edit(EditContainer::TYPE::SINGLE_LINE);
+  QStringList items;
+  for (int i = 0; i < ui->comboBoxApplicationArea->count(); ++i) {
+    items << ui->comboBoxApplicationArea->itemText(i);
+  }
+  edit.setData(items.join(DELIMITER));
+  edit.exec();
+  QString value = edit.getData();
+  ui->comboBoxApplicationArea->clear();
+  ui->comboBoxApplicationArea->addItems(value.split(DELIMITER));
+  QString key = ui->comboBoxCategory->currentText();
+  if (!key.isEmpty()) {
+    SETTING_CONFIG_SET(CFG_GROUP_CHEMICAL_CATEGORY, key, value);
+    auto map_MajorMinor = MY_GLOBAL->get<QMap<QString, QStringList>>(CHEMICAL_CATEGORY_MAJOR_MINOR);
+    map_MajorMinor[key] = value.split(DELIMITER);
+    MY_GLOBAL->set<QMap<QString, QStringList>>(CHEMICAL_CATEGORY_MAJOR_MINOR, map_MajorMinor);
+  }
+}
+
+void BasicInformation::on_comboBoxCategory_currentTextChanged(const QString &category) {
+  auto map_MajorMinor = MY_GLOBAL->get<QMap<QString, QStringList>>(CHEMICAL_CATEGORY_MAJOR_MINOR);
+  ui->comboBoxApplicationArea->clear();
+  ui->comboBoxApplicationArea->addItems(map_MajorMinor.value(category));
 }

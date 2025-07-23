@@ -16,6 +16,13 @@ EditContainer::EditContainer(TYPE type, QWidget *parent) : QDialog(parent), ui(n
 EditContainer::~EditContainer() { delete ui; }
 
 void EditContainer::setData(const QString &data) {
+  QLayoutItem *child;
+  while ((child = ui->vLay->takeAt(0)) != nullptr) {
+    if (child->widget()) {
+      delete child->widget();  // 删除 widget（同时从 layout 中移除）
+    }
+    delete child;  // 删除 layoutItem 本身（例如 spacer）
+  }
   switch (m_type) {
     case EditContainer::PEAK: {
       QRegularExpression re(R"(\(\s*([+-]?\d*\.?\d+)\s*,\s*([+-]?\d*\.?\d+)\s*\))");
@@ -28,6 +35,10 @@ void EditContainer::setData(const QString &data) {
 
         auto *info = new PeakInfo(x, y, this);
         ui->vLay->addWidget(info);
+        QObject::connect(info, &PeakInfo::requestDelete, this, [=](PeakInfo *w) {
+          ui->vLay->removeWidget(w);
+          w->deleteLater();
+        });
       }
     } break;
     case EditContainer::SINGLE_LINE: {
@@ -35,6 +46,10 @@ void EditContainer::setData(const QString &data) {
       for (auto x : list) {
         auto *info = new SingleLineInfo(x);
         ui->vLay->addWidget(info);
+        QObject::connect(info, &SingleLineInfo::requestDelete, this, [=](SingleLineInfo *w) {
+          ui->vLay->removeWidget(w);
+          w->deleteLater();
+        });
       }
     } break;
   }

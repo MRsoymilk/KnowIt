@@ -19,7 +19,7 @@ class MyGlobal : public QObject {
 
   template <typename T>
   T get(const QString &key, const T &defaultValue = T()) const {
-    return m_data.value(key, defaultValue).template value<T>();
+    return m_data.value(key, QVariant::fromValue(defaultValue)).template value<T>();
   }
 
   void setValue(const QString &key, const QVariant &value);

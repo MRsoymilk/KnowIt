@@ -35,63 +35,69 @@
         <translation>基本信息</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="92"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="112"/>
         <source>Compound Name(en)</source>
         <translation>化合物名称（英文）</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="20"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="51"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="40"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="99"/>
         <source>Edit</source>
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="27"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="119"/>
         <source>Compound Name(zh)</source>
         <translation>化合物名称（中文）</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="72"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="92"/>
         <source>Molecular Formula</source>
         <translation>分子式</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="34"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="27"/>
         <source>Molecular Weight</source>
         <translation>分子量</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="44"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="78"/>
         <source>CAS Number</source>
         <translation>CAS编号</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="79"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="85"/>
         <source>Compound Type</source>
         <translation>化合物类型</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="65"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="144"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="151"/>
+        <source>Add</source>
+        <translation type="unfinished">添加</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="71"/>
         <source>Category</source>
         <translation type="unfinished">类别</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="102"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="57"/>
         <source>Application Area</source>
         <translation type="unfinished">应用领域</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="130"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="20"/>
         <source>Structure Picture</source>
         <translation>结构图</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="58"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="64"/>
         <source>Upload</source>
         <translation>上传</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="137"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="50"/>
         <source>State</source>
         <translation>状态</translation>
     </message>
@@ -116,7 +122,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.cpp" line="103"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.cpp" line="109"/>
         <source>Choose Picture</source>
         <translation>选择图片</translation>
     </message>

@@ -14,6 +14,7 @@ class MySetting {
   void setValue(SETTING s, const QString &group, const QString &key, const QString &val);
   QString getValue(SETTING s, const QString &group, const QString &key, const QString &val_dft = "");
   QStringList getGroups(SETTING s);
+  QStringList getGroupKeys(SETTING s, const QString &group);
   void sync(SETTING s);
 
  private:

@@ -12,4 +12,4 @@ SingleLineInfo::~SingleLineInfo() { delete ui; }
 
 QString SingleLineInfo::getInfo() { return ui->lineEdit->text(); }
 
-void SingleLineInfo::on_tBtnDelete_clicked() { this->close(); }
+void SingleLineInfo::on_tBtnDelete_clicked() { emit requestDelete(this); }

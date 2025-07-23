@@ -16,4 +16,4 @@ double PeakInfo::getWavelength() { return ui->doubleSpinBoxWavelength->value(); 
 
 double PeakInfo::getIntensity() { return ui->doubleSpinBoxIntensity->value(); }
 
-void PeakInfo::on_tBtnDelete_clicked() { this->close(); }
+void PeakInfo::on_tBtnDelete_clicked() { emit requestDelete(this); }

@@ -364,3 +364,5 @@ void FormProperty::on_spinBoxCrop_valueChanged(int pixel) {
   SETTING_CONFIG_SET(CFG_GROUP_PROPERTY, CFG_PROPERTY_STRUCTURE_CROP, QString::number(pixel));
   updateCroppedStructurePixmap(pixel);
 }
+
+void FormProperty::on_tableViewProperty_clicked(const QModelIndex &index) {}

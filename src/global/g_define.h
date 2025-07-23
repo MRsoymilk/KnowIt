@@ -90,12 +90,14 @@ const QString CFG_PROGRAM_LANGUAGE = "language";
 const QString CFG_GROUP_PROPERTY = "Property";
 const QString CFG_PROPERTY_STRUCTURE_CROP = "structure_crop";
 const QString DFT_CFG_PROPERTY_STRUCTURE_CROP = "100";
-
+const QString CFG_GROUP_CHEMICAL_CATEGORY = "ChemicalCategory";
+const QString CHEMICAL_CATEGORY_MAJOR_MINOR = "ChemicalCategory_MajorMinor";
 // function
 #include "mysetting.h"
 #define SETTING_CONFIG_GET(group, key, ...) MY_SETTING.getValue(MySetting::SETTING::CONFIG, group, key, ##__VA_ARGS__)
 #define SETTING_CONFIG_SET(group, key, value) MY_SETTING.setValue(MySetting::SETTING::CONFIG, group, key, value)
 #define SETTING_CONFIG_GROUPS() MY_SETTING.getGroups(MySetting::SETTING::CONFIG)
+#define SETTING_CONFIG_GROUP_KEYS(group) MY_SETTING.getGroupKeys(MySetting::SETTING::CONFIG, group)
 #define SETTING_CONFIG_SYNC() MY_SETTING.sync(MySetting::SETTING::CONFIG)
 
 #include "mylog.h"
