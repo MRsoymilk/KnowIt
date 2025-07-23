@@ -37,38 +37,38 @@
         <translation>BasicInformation</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="20"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="66"/>
         <source>Compound Name(en)</source>
         <translation>Compound Name(en)</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="30"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="47"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="23"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="43"/>
         <source>Edit</source>
         <translation>Edit</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="37"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="76"/>
         <source>Compound Name(zh)</source>
         <translation>Compound Name(zh)</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="54"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="83"/>
         <source>Molecular Formula</source>
         <translation>Molecular Formula</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="64"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="30"/>
         <source>Molecular Weight</source>
         <translation>Molecular Weight</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="74"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="53"/>
         <source>CAS Number</source>
         <translation>CAS Number</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="84"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="90"/>
         <source>Compound Type</source>
         <translation>Compound Type</translation>
     </message>
@@ -78,12 +78,12 @@
         <translation>Structure Picture</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="107"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="114"/>
         <source>Upload</source>
         <translation>Upload</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="114"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="104"/>
         <source>State</source>
         <translation>State</translation>
     </message>
@@ -744,17 +744,17 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../src/main/main.cpp" line="22"/>
+        <location filename="../../src/main/main.cpp" line="29"/>
         <source>init config</source>
         <translation>init config</translation>
     </message>
     <message>
-        <location filename="../../src/main/main.cpp" line="26"/>
+        <location filename="../../src/main/main.cpp" line="33"/>
         <source>init connect</source>
         <translation>init connect</translation>
     </message>
     <message>
-        <location filename="../../src/main/main.cpp" line="30"/>
+        <location filename="../../src/main/main.cpp" line="37"/>
         <source>init GUI</source>
         <translation>init GUI</translation>
     </message>

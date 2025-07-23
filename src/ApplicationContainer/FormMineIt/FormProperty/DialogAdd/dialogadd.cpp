@@ -1,5 +1,7 @@
 #include "dialogadd.h"
 
+#include <QScreen>
+
 #include "../EditID/editid.h"
 #include "../EditInfo/editinfo.h"
 #include "../EditURL/editurl.h"
@@ -16,6 +18,8 @@ DialogAdd::DialogAdd(QWidget *parent) : QDialog(parent), ui(new Ui::DialogAdd) {
 DialogAdd::~DialogAdd() { delete ui; }
 
 void DialogAdd::init() {
+  setWindowState(Qt::WindowMaximized);
+
   m_editID = new EditID;
   // m_editURL = new EditURL;
   m_editInfo = new EditInfo;

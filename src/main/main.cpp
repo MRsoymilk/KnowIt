@@ -1,5 +1,6 @@
 #include <QApplication>
 #include <QMessageBox>
+#include <QScreen>
 
 #include "SplashScreen/splashscreen.h"
 #include "g_define.h"
@@ -17,6 +18,12 @@ int main(int argc, char *argv[]) {
   a.setWindowIcon(QIcon(":/res/icons/KnowIt.png"));
 
   SplashScreen splash;
+  QScreen *screen = QGuiApplication::primaryScreen();
+  QRect screenGeometry = screen->geometry();
+  int x = screenGeometry.center().x() - splash.width() / 2;
+  int y = screenGeometry.center().y() - splash.height() / 2;
+  splash.move(x, y);
+  splash.show();
   splash.show();
 
   splash.setStatusText(QObject::tr("init config"));
@@ -29,7 +36,7 @@ int main(int argc, char *argv[]) {
 
   splash.setStatusText(QObject::tr("init GUI"));
   MainWindow w;
-  w.show();
+  w.showMaximized();
   splash.setProgress(3.0 / 3.0);
 
   splash.close();

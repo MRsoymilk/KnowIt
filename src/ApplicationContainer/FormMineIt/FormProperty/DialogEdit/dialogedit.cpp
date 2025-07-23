@@ -14,6 +14,7 @@ DialogEdit::DialogEdit(const QJsonObject &data, QWidget *parent) : QDialog(paren
 DialogEdit::~DialogEdit() { delete ui; }
 
 void DialogEdit::init(const QJsonObject &data) {
+  setWindowState(Qt::WindowMaximized);
   m_editInfo = new EditInfo(data);
   ui->labelID->setText(data["ID"].toString());
   ui->gLayEdit->addWidget(m_editInfo);
