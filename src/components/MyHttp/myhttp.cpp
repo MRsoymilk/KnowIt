@@ -101,6 +101,12 @@ void MyHttp::postImage(const QString &url, const QString &imagePath, const QJson
     multiPart->append(textPart);
   }
 
+  QString filename = QFileInfo(imagePath).fileName();  // 可能是中文
+  QHttpPart filenamePart;
+  filenamePart.setHeader(QNetworkRequest::ContentDispositionHeader, QVariant("form-data; name=\"filename\""));
+  filenamePart.setBody(filename.toUtf8());  // UTF-8 中文名传给 Flask
+  multiPart->append(filenamePart);
+
   QUrl qurl(url);
   QNetworkRequest request(qurl);
   QNetworkReply *reply = m_manager->post(request, multiPart);
