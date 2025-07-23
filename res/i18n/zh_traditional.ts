@@ -88,13 +88,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.cpp" line="99"/>
-        <source>Choose Picture</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.cpp" line="100"/>
-        <source>Picture (*.png *.jpg *.jpeg *.bmp *.gif)</source>
+        <source>Choose Picture</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -976,13 +971,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="485"/>
-        <source>Choose Picture</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="486"/>
-        <source>Picture (*.png *.jpg *.jpeg *.bmp *.gif)</source>
+        <source>Choose Picture</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

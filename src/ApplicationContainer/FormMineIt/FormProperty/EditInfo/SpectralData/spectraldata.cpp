@@ -482,8 +482,8 @@ void SpectralData::on_tBtnFindPeak_clicked() {
 }
 
 void SpectralData::on_tBtnUploadSpectral_clicked() {
-  QString path = QFileDialog::getOpenFileName(this, tr("Choose Picture"), QString(),
-                                              tr("Picture (*.png *.jpg *.jpeg *.bmp *.gif)"));
+  QString path =
+      QFileDialog::getOpenFileName(this, tr("Choose Picture"), QString(), "Picture (*.png *.jpg *.jpeg *.bmp *.gif)");
 
   if (path.isEmpty()) {
     return;

@@ -88,14 +88,13 @@
         <translation>状态</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.cpp" line="99"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.cpp" line="100"/>
         <source>Choose Picture</source>
         <translation>选择图片</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.cpp" line="100"/>
         <source>Picture (*.png *.jpg *.jpeg *.bmp *.gif)</source>
-        <translation>图片（*.png *.jpg *.jpeg *.bmp *.gif）</translation>
+        <translation type="vanished">图片（*.png *.jpg *.jpeg *.bmp *.gif）</translation>
     </message>
 </context>
 <context>
@@ -988,14 +987,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="485"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="486"/>
         <source>Choose Picture</source>
         <translation>选择图片</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="486"/>
         <source>Picture (*.png *.jpg *.jpeg *.bmp *.gif)</source>
-        <translation>图片（*.png *.jpg *.jpeg *.bmp *.gif）</translation>
+        <translation type="vanished">图片（*.png *.jpg *.jpeg *.bmp *.gif）</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="494"/>

@@ -96,8 +96,8 @@ void BasicInformation::on_tBtnName_zh_Edit_clicked() {
 }
 
 void BasicInformation::on_tBtnUploadStructure_clicked() {
-  QString path = QFileDialog::getOpenFileName(this, tr("Choose Picture"), QString(),
-                                              tr("Picture (*.png *.jpg *.jpeg *.bmp *.gif)"));
+  QString path =
+      QFileDialog::getOpenFileName(this, tr("Choose Picture"), QString(), "Picture (*.png *.jpg *.jpeg *.bmp *.gif)");
 
   if (path.isEmpty()) {
     return;
