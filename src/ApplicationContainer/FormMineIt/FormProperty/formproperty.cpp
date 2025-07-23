@@ -6,6 +6,7 @@
 #include "DialogAdd/dialogadd.h"
 #include "DialogEdit/dialogedit.h"
 #include "g_define.h"
+#include "myglobal.h"
 #include "ui_formproperty.h"
 
 FormProperty::FormProperty(QWidget *parent) : QWidget(parent), ui(new Ui::FormProperty) {
@@ -76,13 +77,31 @@ void FormProperty::onItInfo(const QJsonObject &data) {
   }
 }
 
-void FormProperty::onItStructure(const QPixmap &pix) {
-  if (pix.isNull()) {
+void FormProperty::updateCroppedStructurePixmap(int margin) {
+  if (m_structurePixmap.isNull()) {
     ui->labelStructure->setText(tr("Structure"));
-  } else {
-    ui->labelStructure->setPixmap(
-        pix.scaled(ui->labelStructure->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    return;
   }
+
+  int w = m_structurePixmap.width();
+  int h = m_structurePixmap.height();
+
+  // 限制 margin 不越界
+  int left = qBound(0, margin, w / 2);
+  int top = qBound(0, margin, h / 2);
+  int right = w - left;
+  int bottom = h - top;
+
+  QRect cropRect(left, top, right - left, bottom - top);
+  QPixmap cropped = m_structurePixmap.copy(cropRect);
+
+  QPixmap scaled = cropped.scaled(ui->labelStructure->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+  ui->labelStructure->setPixmap(scaled);
+}
+
+void FormProperty::onItStructure(const QPixmap &pix) {
+  m_structurePixmap = pix;  // 保存原图
+  updateCroppedStructurePixmap(ui->spinBoxCrop->value());
 }
 
 bool FormProperty::eventFilter(QObject *obj, QEvent *event) {
@@ -292,30 +311,9 @@ void FormProperty::initProperty() {
   };
 }
 
-// void FormProperty::setBasicInformation(const QJsonObject &data) {
-//   QJsonObject BasicInformation = data[BASIC_INFORMATION].toObject();
-// }
-
-// void FormProperty::setSpectralData(const QJsonObject &data) {
-//   QJsonObject objSpectralData = data[SPECTRAL_DATA].toObject();
-// }
-
-// void FormProperty::setSpectralAcquisitionConditions(const QJsonObject &data) {
-//   QJsonObject objSpectralAcquisitionConditions = data[SPECTRAL_ACQUISITION_CONDITIONS].toObject();
-// }
-
-// void FormProperty::setSampleInformation(const QJsonObject &data) {
-//   QJsonObject objSampleInformation = data[SAMPLE_INFOMATION].toObject();
-// }
-
-// void FormProperty::setAnnotationsAndTags(const QJsonObject &data) {
-//   QJsonObject objAnnotationsAndTags = data[ANNOTATIONS_AND_TAGS].toObject();
-// }
-
-// void FormProperty::setOriginate(const QJsonObject &data) { QJsonObject objOriginate = data[ORIGINATE].toObject(); }
-
 void FormProperty::init() {
   initProperty();
+
   m_model = new QStandardItemModel;
   m_model->setHorizontalHeaderLabels({tr("Name"), tr("Value")});
   ui->tableViewProperty->verticalHeader()->setVisible(false);
@@ -331,6 +329,8 @@ void FormProperty::init() {
   ui->btnAdd->setCheckable(true);
   ui->btnEdit->setCheckable(true);
   ui->scrollArea->viewport()->installEventFilter(this);
+
+  ui->spinBoxCrop->setValue(MY_GLOBAL->get<int>(CFG_PROPERTY_STRUCTURE_CROP));
 }
 
 void FormProperty::appendProperty(const QString &name, const QString &value) {
@@ -358,3 +358,9 @@ void FormProperty::on_btnEdit_clicked() {
 }
 
 void FormProperty::on_btnDelete_clicked() { emit selectedDataDelete(); }
+
+void FormProperty::on_spinBoxCrop_valueChanged(int pixel) {
+  MY_GLOBAL->set<int>(CFG_PROPERTY_STRUCTURE_CROP, pixel);
+  SETTING_CONFIG_SET(CFG_GROUP_PROPERTY, CFG_PROPERTY_STRUCTURE_CROP, QString::number(pixel));
+  updateCroppedStructurePixmap(pixel);
+}

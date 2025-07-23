@@ -35,19 +35,15 @@ class FormProperty : public QWidget {
   void initPropertySelect();
   void setStructure(const QString &path);
   void initProperty();
-  // void setBasicInformation(const QJsonObject &data);
-  // void setSpectralData(const QJsonObject &data);
-  // void setSpectralAcquisitionConditions(const QJsonObject &data);
-  // void setSampleInformation(const QJsonObject &data);
-  // void setAnnotationsAndTags(const QJsonObject &data);
-  // void setOriginate(const QJsonObject &data);
   void clearInfo();
   void showAllProperties();
+  void updateCroppedStructurePixmap(int margin);
 
  private slots:
   void on_btnAdd_clicked();
   void on_btnEdit_clicked();
   void on_btnDelete_clicked();
+  void on_spinBoxCrop_valueChanged(int pixel);
 
  private:
   Ui::FormProperty *ui;
@@ -57,6 +53,7 @@ class FormProperty : public QWidget {
   QList<QPushButton *> m_categoryButtons;                   // 按钮引用（用于切换状态）
   QJsonObject m_info;
   QMap<QString, QString> m_UI2JsonKey;
+  QPixmap m_structurePixmap;
 };
 
 #endif  // FORMPROPERTY_H

@@ -87,6 +87,9 @@ const QString DFT_CALIBRATION_0 = "(0, 0)";
 const QString CFG_GROUP_PROGRAM = "Program";
 const QString CFG_PROGRAM_THEME = "theme";
 const QString CFG_PROGRAM_LANGUAGE = "language";
+const QString CFG_GROUP_PROPERTY = "Property";
+const QString CFG_PROPERTY_STRUCTURE_CROP = "structure_crop";
+const QString DFT_CFG_PROPERTY_STRUCTURE_CROP = "100";
 
 // function
 #include "mysetting.h"
