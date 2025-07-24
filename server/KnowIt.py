@@ -284,7 +284,7 @@ def dataset_set():
         return jsonify({"status": False, "message": "Missing 'ID' in JSON"}), 400
 
     dataset_id = data["ID"]
-    uuid = data["uuid"]
+    uuid = data["UUID"]
 
     dir_uuid = os.path.join("uploads", uuid)
     save_path = os.path.join("datasets", dataset_id)
@@ -418,36 +418,32 @@ def allowed_file(filename):
 
 @app.route("/upload/img", methods=["POST"])
 def upload_file():
-    # 获取文件
     file = request.files.get('file')
     if not file or file.filename == '':
         return jsonify({'error': 'No file uploaded'}), 400
 
-    # 校验格式
-    if not allowed_file(file.filename):
-        return jsonify({'error': 'Invalid file type'}), 400
-
-    # 获取 UUID 字段
     uuid = request.form.get("UUID", "")
     if not uuid:
         return jsonify({'error': 'UUID is required'}), 400
 
-    # 创建 UUID 对应的子目录
+    real_filename = request.form.get("filename")
+    print("image name: ", real_filename)
+    if not real_filename:
+        print("Missing filename")
+        return jsonify({'error': 'Missing filename'}), 400
+
     uuid_dir = os.path.join(app.config['UPLOAD_FOLDER'], uuid)
     os.makedirs(uuid_dir, exist_ok=True)
+    save_path = os.path.join(uuid_dir, real_filename)
 
-    # 保存文件到 UUID 目录
-    filename = secure_filename(file.filename)
-    save_path = os.path.join(uuid_dir, filename)
     file.save(save_path)
 
     return jsonify({
         'status': True,
-        'filename': filename,
+        'filename': real_filename,
         'uuid': uuid,
-        'path': f"{uuid}/{filename}"
+        'path': f"{uuid}/{real_filename}"
     }), 200
-
 
 @app.route("/load/img/<dataset_id>/original/<filename>")
 def load_image(dataset_id, filename):
@@ -552,18 +548,31 @@ def cv_find_crop():
 def cv_find_curve():
     uuid = request.json.get("UUID")
     if not uuid:
-        print("Missing uuid")
-        return jsonify({'error': 'Missing uuid'}), 400
+        print("Missing UUID")
+        return jsonify({'error': 'Missing UUID'}), 400
 
-    uuid_path = os.path.join(app.config['UPLOAD_FOLDER'], uuid)
-    if not os.path.isdir(uuid_path):
-        print("UUID directory not found")
-        return jsonify({'error': 'UUID directory not found'}), 404
+    # 首选 uuid 路径
+    target_path = os.path.join(app.config['UPLOAD_FOLDER'], uuid)
+    if os.path.isdir(target_path):
+        print("Using UUID path:", target_path)
+    else:
+        data_id = request.json.get("ID")
+        if not data_id:
+            print("Missing ID")
+            return jsonify({'error': 'Missing ID'}), 400
+        # 尝试使用 ID 路径
+        fallback_path = os.path.join("./datasets", data_id, "original")
+        if os.path.isdir(fallback_path):
+            target_path = fallback_path
+            print("UUID path not found, fallback to ID path:", fallback_path)
+        else:
+            print("Neither UUID nor ID directory found")
+            return jsonify({'error': 'Neither UUID nor ID directory found'}), 404
 
     file = request.json.get("file")
 
     # Always load the original image to avoid cumulative modifications
-    img_path = os.path.join(uuid_path, file)
+    img_path = os.path.join(target_path, file)
     pil_image = Image.open(img_path).convert("RGB")
     img = cv2.cvtColor(np.array(pil_image), cv2.COLOR_RGB2BGR)
 
@@ -584,7 +593,7 @@ def cv_find_curve():
     x_middle = int(middle_2000["x"]) if middle_2000 else None
 
     # Load previous coordinates for comparison (if available)
-    coord_path = os.path.join(uuid_path, "last_coords.json")
+    coord_path = os.path.join(target_path, "last_coords.json")
     prev_coords = {}
     if os.path.exists(coord_path):
         with open(coord_path, 'r') as f:
@@ -638,7 +647,7 @@ def cv_find_curve():
 
     # 保存裁剪区域
     cropped = img[crop_y_start:crop_y_end + 1, crop_x_start:crop_x_end + 1]
-    cv2.imwrite(os.path.join(uuid_path, "cropped_region.png"), cropped)
+    cv2.imwrite(os.path.join(target_path, "cropped_region.png"), cropped)
 
     # 在裁剪图像上进行中点查找
     gray = cv2.cvtColor(cropped, cv2.COLOR_BGR2GRAY)
@@ -696,9 +705,9 @@ def cv_find_curve():
     for point in curve_points:
         cv2.circle(img, tuple(point), 1, (0, 0, 255), -1)
 
-    result_path = os.path.join(uuid_path, "result_curve.png")
+    result_path = os.path.join(target_path, "result_curve.png")
     cv2.imwrite(result_path, img)
-    np.save(os.path.join(uuid_path, "curve_points.npy"), np.array(curve_points))
+    np.save(os.path.join(target_path, "curve_points.npy"), np.array(curve_points))
 
     # Log output summary
     print(f"Total points detected: {len(curve_points)}")
@@ -713,16 +722,29 @@ def cv_find_curve():
 def cv_find_peak():
     uuid = request.json.get("UUID")
     if not uuid:
-        print("Missing uuid")
-        return jsonify({'error': 'Missing uuid'}), 400
+        print("Missing UUID")
+        return jsonify({'error': 'Missing UUID'}), 400
 
-    uuid_path = os.path.join(app.config['UPLOAD_FOLDER'], uuid)
-    if not os.path.isdir(uuid_path):
-        print("UUID directory not found")
-        return jsonify({'error': 'UUID directory not found'}), 404
+    # 首选 uuid 路径
+    target_path = os.path.join(app.config['UPLOAD_FOLDER'], uuid)
+    if os.path.isdir(target_path):
+        print("Using UUID path:", target_path)
+    else:
+        data_id = request.json.get("ID")
+        if not data_id:
+            print("Missing ID")
+            return jsonify({'error': 'Missing ID'}), 400
+        # 尝试使用 ID 路径
+        fallback_path = os.path.join("./datasets", data_id, "original")
+        if os.path.isdir(fallback_path):
+            target_path = fallback_path
+            print("UUID path not found, fallback to ID path:", fallback_path)
+        else:
+            print("Neither UUID nor ID directory found")
+            return jsonify({'error': 'Neither UUID nor ID directory found'}), 404
 
     # 读取 result_curve.png
-    img_path = os.path.join(uuid_path, "result_curve.png")
+    img_path = os.path.join(target_path, "result_curve.png")
     if not os.path.exists(img_path):
         print("result_curve.png not found")
         return jsonify({'error': 'result_curve.png not found'}), 404
@@ -732,7 +754,7 @@ def cv_find_peak():
     img = cv2.cvtColor(np.array(pil_image), cv2.COLOR_RGB2BGR)
 
     # 读取点文件
-    points_path = os.path.join(uuid_path, "curve_points.npy")
+    points_path = os.path.join(target_path, "curve_points.npy")
     if not os.path.exists(points_path):
         print("curve_points.npy not found")
         return jsonify({'error': 'curve_points.npy not found'}), 404
@@ -760,7 +782,7 @@ def cv_find_peak():
     x_middle = int(middle_2000["x"]) if middle_2000 else None
 
     # Load previous coordinates for comparison
-    coord_path = os.path.join(uuid_path, "last_coords.json")
+    coord_path = os.path.join(target_path, "last_coords.json")
     prev_coords = {}
     if os.path.exists(coord_path):
         with open(coord_path, 'r') as f:
@@ -837,7 +859,7 @@ def cv_find_peak():
         print(f"Peak x_real range: {min(x_reals):.2f} to {max(x_reals):.2f}")
 
     # 保存图像
-    result_peak_path = os.path.join(uuid_path, "result_with_peaks.png")
+    result_peak_path = os.path.join(target_path, "result_with_peaks.png")
     cv2.imwrite(result_peak_path, img)
 
     return jsonify({
