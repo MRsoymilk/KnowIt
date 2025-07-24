@@ -12,7 +12,10 @@ FormDataset::FormDataset(QWidget *parent) : QWidget(parent), ui(new Ui::FormData
 
 FormDataset::~FormDataset() { delete ui; }
 
-void FormDataset::retranslateUI() { ui->retranslateUi(this); }
+void FormDataset::retranslateUI() {
+  ui->retranslateUi(this);
+  ui->tBtnRefresh->setToolTip(tr("refresh"));
+}
 
 void FormDataset::init() {
   m_model = new QStandardItemModel(this);
@@ -24,6 +27,8 @@ void FormDataset::init() {
   ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
   onUpdateData();
+
+  ui->tBtnRefresh->setObjectName("refresh");
 }
 
 void FormDataset::on_tableView_clicked(const QModelIndex &index) {
@@ -33,19 +38,19 @@ void FormDataset::on_tableView_clicked(const QModelIndex &index) {
   QString id = idIndex.data().toString();
 
   QString url = QString("%1%2").arg(MY_GLOBAL->get<QString>(URL_SERVER), MY_GLOBAL->get<QString>(PATH_DATASET_GET));
-  QJsonObject obj{{"ID", id}};
+  QJsonObject obj{{ID, id}};
   QJsonObject res = MY_HTTP->post_sync(url, obj);
   LOG_INFO("{}", res);
   QJsonObject objInfo = res["data"].toObject();
-  QJsonObject objSpectralData = objInfo["Spectral Data"].toObject();
-  QJsonObject objBasicInfo = objInfo["Basic Information"].toObject();
+  QJsonObject objSpectralData = objInfo[SPECTRAL_DATA].toObject();
+  QJsonObject objBasicInfo = objInfo[BASIC_INFORMATION].toObject();
 
   emit itInfo(objInfo);
   emit itPlot(objSpectralData);
 
   QString url_get_img_spectral = QString("%1%2/%3/%4")
                                      .arg(MY_GLOBAL->get<QString>(URL_SERVER), MY_GLOBAL->get<QString>(PATH_LOAD_IMG),
-                                          objInfo["ID"].toString(), objBasicInfo["Structure Picture"].toString());
+                                          objInfo[ID].toString(), objSpectralData[SPECTRAL_PICTURE].toString());
   MY_HTTP->getImage(
       url_get_img_spectral, [=](QPixmap pix) { emit itSpectral(pix); },
       [=](QString err) {
@@ -56,7 +61,7 @@ void FormDataset::on_tableView_clicked(const QModelIndex &index) {
 
   QString url_get_img_structure = QString("%1%2/%3/%4")
                                       .arg(MY_GLOBAL->get<QString>(URL_SERVER), MY_GLOBAL->get<QString>(PATH_LOAD_IMG),
-                                           objInfo[ID].toString(), objSpectralData[SPECTRAL_PICTURE].toString());
+                                           objInfo[ID].toString(), objBasicInfo[STRUCTURE_PICTURE].toString());
   MY_HTTP->getImage(
       url_get_img_structure, [=](QPixmap pix) { emit itStructure(pix); },
       [=](QString err) {

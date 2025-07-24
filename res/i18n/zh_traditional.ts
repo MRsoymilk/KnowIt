@@ -311,11 +311,12 @@
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormDataset/formdataset.ui" line="57"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormDataset/formdataset.cpp" line="17"/>
         <source>refresh</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormDataset/formdataset.cpp" line="19"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormDataset/formdataset.cpp" line="22"/>
         <source>ID</source>
         <translation type="unfinished"></translation>
     </message>
@@ -348,36 +349,36 @@
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="120"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="163"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="230"/>
         <source>peak assistance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="127"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="158"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="229"/>
         <source>auto scale</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="134"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="153"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="228"/>
         <source>crop</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="141"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="148"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="227"/>
         <source>xaxis invert</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="148"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="143"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="226"/>
         <source>original image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="64"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="66"/>
         <source>Spectral</source>
         <translation type="unfinished"></translation>
     </message>
@@ -391,7 +392,7 @@
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.ui" line="69"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="83"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="93"/>
         <source>Structure</source>
         <translation type="unfinished"></translation>
     </message>
@@ -416,219 +417,219 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="31"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="45"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="58"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="72"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="160"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="177"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="192"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="212"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="286"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="32"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="51"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="67"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="82"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="170"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="187"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="202"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="222"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="296"/>
         <source>ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="37"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="159"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="166"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="210"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="39"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="169"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="176"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="220"/>
         <source>All Properties</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="216"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="280"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="226"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="290"/>
         <source>Basic Information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="231"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="282"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="241"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="292"/>
         <source>Spectral Data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="239"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="283"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="249"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="293"/>
         <source>Spectral Acquisition Conditions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="250"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="284"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="260"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="294"/>
         <source>Sample Information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="265"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="281"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="275"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="291"/>
         <source>Originate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="218"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="287"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="228"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="297"/>
         <source>Compound Name(en)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="219"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="288"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="229"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="298"/>
         <source>Compound Name(zh)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="220"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="289"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="230"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="299"/>
         <source>Molecular Formula</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="221"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="290"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="231"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="300"/>
         <source>Molecular Weight</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="222"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="292"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="232"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="302"/>
         <source>Compound Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="225"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="291"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="235"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="301"/>
         <source>CAS Number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="226"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="293"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="236"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="303"/>
         <source>Structure Picture</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="227"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="294"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="237"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="304"/>
         <source>State</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="233"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="295"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="243"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="305"/>
         <source>Peak(Main)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="234"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="296"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="244"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="306"/>
         <source>Peak(Assistance)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="235"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="297"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="245"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="307"/>
         <source>Spectral Picture</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="241"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="298"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="251"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="308"/>
         <source>Instrument Model</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="242"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="299"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="252"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="309"/>
         <source>Laser Wavelength</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="243"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="300"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="253"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="310"/>
         <source>Laser Power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="244"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="301"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="254"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="311"/>
         <source>Calculus Times</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="245"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="302"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="255"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="312"/>
         <source>Measuring Environment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="246"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="303"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="256"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="313"/>
         <source>Measuring Temperature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="252"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="304"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="262"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="314"/>
         <source>Produced From</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="267"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="311"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="277"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="321"/>
         <source>Resource</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="253"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="305"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="263"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="315"/>
         <source>Storage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="254"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="306"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="264"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="316"/>
         <source>Derivative State</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="258"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="279"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="268"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="289"/>
         <source>Annotations And Tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="223"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="307"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="233"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="317"/>
         <source>Category</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="224"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="308"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="234"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="318"/>
         <source>Application Area</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="260"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="309"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="270"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="319"/>
         <source>Data Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="261"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="310"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="271"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="320"/>
         <source>Last Modified</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="319"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="329"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="319"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="329"/>
         <source>Value</source>
         <translation type="unfinished"></translation>
     </message>
@@ -994,28 +995,28 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="394"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="419"/>
         <source>warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="394"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="440"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="419"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="465"/>
         <source>%1 is empty!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="486"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="511"/>
         <source>Choose Picture</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="494"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="519"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="494"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="519"/>
         <source>Failed to load image.</source>
         <translation type="unfinished"></translation>
     </message>

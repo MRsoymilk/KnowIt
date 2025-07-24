@@ -25,8 +25,8 @@ void FormMineIt::init() {
   connect(m_property, &FormProperty::selectedDataDelete, m_dataset, &FormDataset::onSelectedDataDelete);
   connect(m_property, &FormProperty::dataAdd, m_dataset, &FormDataset::onUpdateData);
 
-  connect(m_dataset, &FormDataset::itStructure, m_plot, &FormPlot::onItSpectral);
-  connect(m_dataset, &FormDataset::itSpectral, m_property, &FormProperty::onItStructure);
+  connect(m_dataset, &FormDataset::itSpectral, m_plot, &FormPlot::onItSpectral);
+  connect(m_dataset, &FormDataset::itStructure, m_property, &FormProperty::onItStructure);
 }
 
 void FormMineIt::retranslateUI() {

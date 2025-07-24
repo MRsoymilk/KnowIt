@@ -1,5 +1,6 @@
 #include "formplot.h"
 
+#include "g_define.h"
 #include "mychartview.h"
 #include "ui_formplot.h"
 
@@ -9,12 +10,13 @@ FormPlot::FormPlot(QWidget *parent) : QWidget(parent), ui(new Ui::FormPlot) {
 }
 
 FormPlot::~FormPlot() { delete ui; }
+
 void FormPlot::onItPlot(const QJsonObject &data) {
   m_rawMainData.clear();
   m_rawAssistanceData.clear();
 
-  QString peakStr = data["Peak(Main)"].toString();
-  QString peakAssistanceStr = data["Peak(Assistance)"].toString();
+  QString peakStr = data[PEAK_MAIN].toString();
+  QString peakAssistanceStr = data[PEAK_ASSISTANCE].toString();
 
   {
     QRegularExpression re(R"(\((\d+),\s*(\d+)\))");
@@ -140,27 +142,22 @@ void FormPlot::initChart() {
 }
 
 void FormPlot::initToolButtons() {
-  ui->tBtnOriginalImage->setToolTip(tr("original image"));
   ui->tBtnOriginalImage->setObjectName("OriginalImage");
   ui->tBtnOriginalImage->setIconSize(QSize(24, 24));
   ui->tBtnOriginalImage->setCheckable(true);
 
-  ui->tBtnXaxisInvert->setToolTip(tr("xaxis invert"));
   ui->tBtnXaxisInvert->setObjectName("XaxisInvert");
   ui->tBtnXaxisInvert->setIconSize(QSize(24, 24));
   ui->tBtnXaxisInvert->setCheckable(true);
 
-  ui->tBtnCrop->setToolTip(tr("crop"));
   ui->tBtnCrop->setObjectName("Crop");
   ui->tBtnCrop->setIconSize(QSize(24, 24));
   ui->tBtnCrop->setCheckable(true);
 
-  ui->tBtnAutoScale->setToolTip(tr("auto scale"));
   ui->tBtnAutoScale->setObjectName("AutoScale");
   ui->tBtnAutoScale->setIconSize(QSize(24, 24));
   ui->tBtnAutoScale->setCheckable(true);
 
-  ui->tBtnPeakAssistance->setToolTip(tr("peak assistance"));
   ui->tBtnPeakAssistance->setObjectName("PeakAssistance");
   ui->tBtnPeakAssistance->setIconSize(QSize(24, 24));
   ui->tBtnPeakAssistance->setCheckable(true);
@@ -224,4 +221,11 @@ void FormPlot::wheelEvent(QWheelEvent *event) {
   }
 }
 
-void FormPlot::retranslateUI() { ui->retranslateUi(this); }
+void FormPlot::retranslateUI() {
+  ui->retranslateUi(this);
+  ui->tBtnOriginalImage->setToolTip(tr("original image"));
+  ui->tBtnXaxisInvert->setToolTip(tr("xaxis invert"));
+  ui->tBtnCrop->setToolTip(tr("crop"));
+  ui->tBtnAutoScale->setToolTip(tr("auto scale"));
+  ui->tBtnPeakAssistance->setToolTip(tr("peak assistance"));
+}

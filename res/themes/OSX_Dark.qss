@@ -1229,4 +1229,7 @@ QToolButton#find_peak {
 QToolButton#fitting_curve {
   qproperty-icon: url(:/res/icons/white/fitting_curve.png);
 }
+QToolButton#refresh {
+  qproperty-icon: url(:/res/icons/white/refresh.png);
+}
 /*# sourceMappingURL=OSX%20Dark.qss.map */

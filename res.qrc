@@ -53,5 +53,7 @@
         <file>res/i18n/zh_simple.qm</file>
         <file>res/i18n/en.qm</file>
         <file>res/i18n/zh_traditional.qm</file>
+        <file>res/icons/black/refresh.png</file>
+        <file>res/icons/white/refresh.png</file>
     </qresource>
 </RCC>

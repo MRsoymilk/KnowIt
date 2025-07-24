@@ -28,21 +28,29 @@ void FormProperty::clearInfo() { m_model->removeRows(0, m_model->rowCount()); }
 void FormProperty::showAllProperties() {
   clearInfo();
 
-  if (m_info.contains("ID")) appendProperty(tr("ID"), m_info["ID"].toString());
+  if (m_info.contains("ID")) {
+    appendProperty(tr("ID"), m_info["ID"].toString());
+  }
 
   for (const auto &pair : m_propertyCategories) {
     QString category = pair.first;
     const QList<QString> &fields = pair.second;
 
-    if (category == tr("All Properties")) continue;
+    if (category == tr("All Properties")) {
+      continue;
+    }
 
     QString jsonKey = m_UI2JsonKey.value(category, "");
-    if (jsonKey.isEmpty() || !m_info.contains(jsonKey)) continue;
+    if (jsonKey.isEmpty() || !m_info.contains(jsonKey)) {
+      continue;
+    }
 
     QJsonObject obj = m_info[jsonKey].toObject();
 
     for (const QString &field : fields) {
-      if (field == tr("ID")) continue;
+      if (field == tr("ID")) {
+        continue;
+      }
       QString fieldKey = m_UI2JsonKey.value(field, "");
       appendProperty(field, obj[fieldKey].toString());
     }
@@ -55,7 +63,9 @@ void FormProperty::onItInfo(const QJsonObject &data) {
   m_info = data;
 
   // 单独处理 ID
-  if (m_info.contains("ID")) appendProperty(tr("ID"), m_info["ID"].toString());
+  if (m_info.contains("ID")) {
+    appendProperty(tr("ID"), m_info["ID"].toString());
+  }
 
   for (const auto &pair : m_propertyCategories) {
     QString category = pair.first;

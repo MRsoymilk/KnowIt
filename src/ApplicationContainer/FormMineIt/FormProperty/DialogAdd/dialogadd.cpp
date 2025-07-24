@@ -53,7 +53,7 @@ void DialogAdd::on_btnNext_clicked() {
   // }
   else if (auto edit = qobject_cast<EditInfo *>(m_editWidgets[index])) {
     QJsonObject obj = edit->getData();
-    obj.insert("ID", ui->labelID->text());
+    obj.insert(ID, ui->labelID->text());
     QString url = QString("%1/%2").arg(MY_GLOBAL->get<QString>(URL_SERVER), MY_GLOBAL->get<QString>(PATH_DATASET_SET));
     QJsonObject res = MY_HTTP->post_sync(url, obj);
     this->close();

@@ -16,13 +16,13 @@ DialogEdit::~DialogEdit() { delete ui; }
 void DialogEdit::init(const QJsonObject &data) {
   setWindowState(Qt::WindowMaximized);
   m_editInfo = new EditInfo(data);
-  ui->labelID->setText(data["ID"].toString());
+  ui->labelID->setText(data[ID].toString());
   ui->gLayEdit->addWidget(m_editInfo);
 }
 
 void DialogEdit::on_buttonBox_accepted() {
   QJsonObject obj = m_editInfo->getData();
-  obj.insert("ID", ui->labelID->text());
+  obj.insert(ID, ui->labelID->text());
   QString url = QString("%1/%2").arg(MY_GLOBAL->get<QString>(URL_SERVER), MY_GLOBAL->get<QString>(PATH_DATASET_SET));
   QJsonObject res = MY_HTTP->post_sync(url, obj);
   qDebug() << res;
