@@ -67,8 +67,8 @@ void BasicInformation::setBasicInformation(const QJsonObject &data) {
   ui->lineEditMolecularWeight->setText(BasicInformation.value(MOLECULAR_WEIGHT).toString());
   ui->lineEditCASNumber->setText(BasicInformation.value(CAS_NUMBER).toString());
   ui->lineEditCompoundType->setText(BasicInformation.value(COMPOUND_TYPE).toString());
-  ui->comboBoxCategory->setCurrentText(BasicInformation.value(CATEGORY).toString());
-  ui->comboBoxApplicationArea->setCurrentText(BasicInformation.value(APPLICATION_AREA).toString());
+  ui->lineEditCategory->setText(BasicInformation.value(CATEGORY).toString());
+  ui->lineEditApplicationArea->setText(BasicInformation.value(APPLICATION_AREA).toString());
   ui->lineEditStructurePicturePath->setText(BasicInformation.value(STRUCTURE_PICTURE).toString());
   ui->comboBoxState->setCurrentText(BasicInformation.value(STATE).toString());
 
@@ -149,8 +149,8 @@ QJsonObject BasicInformation::getBasicInformation() {
   objBasicInformation.insert(MOLECULAR_WEIGHT, ui->lineEditMolecularWeight->text());
   objBasicInformation.insert(CAS_NUMBER, ui->lineEditCASNumber->text());
   objBasicInformation.insert(COMPOUND_TYPE, ui->lineEditCompoundType->text());
-  objBasicInformation.insert(CATEGORY, ui->comboBoxCategory->currentText());
-  objBasicInformation.insert(APPLICATION_AREA, ui->comboBoxApplicationArea->currentText());
+  objBasicInformation.insert(CATEGORY, ui->lineEditCategory->text());
+  objBasicInformation.insert(APPLICATION_AREA, ui->lineEditApplicationArea->text());
   objBasicInformation.insert(STRUCTURE_PICTURE, ui->lineEditStructurePicturePath->text());
   objBasicInformation.insert(STATE, ui->comboBoxState->currentText());
   return objBasicInformation;
