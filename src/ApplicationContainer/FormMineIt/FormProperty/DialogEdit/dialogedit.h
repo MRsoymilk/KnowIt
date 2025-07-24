@@ -16,6 +16,9 @@ class DialogEdit : public QDialog {
   explicit DialogEdit(const QJsonObject &data = {}, QWidget *parent = nullptr);
   ~DialogEdit();
 
+ signals:
+  void updateEditInfo(const QJsonObject &info);
+
  private:
   void init(const QJsonObject &data = {});
 

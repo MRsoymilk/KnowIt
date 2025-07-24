@@ -25,7 +25,13 @@ void DialogEdit::on_buttonBox_accepted() {
   obj.insert(ID, ui->labelID->text());
   QString url = QString("%1/%2").arg(MY_GLOBAL->get<QString>(URL_SERVER), MY_GLOBAL->get<QString>(PATH_DATASET_SET));
   QJsonObject res = MY_HTTP->post_sync(url, obj);
-  qDebug() << res;
+
+  {
+    QString url = QString("%1%2").arg(MY_GLOBAL->get<QString>(URL_SERVER), MY_GLOBAL->get<QString>(PATH_DATASET_GET));
+    QJsonObject obj{{ID, ui->labelID->text()}};
+    QJsonObject res = MY_HTTP->post_sync(url, obj);
+    emit updateEditInfo(res["data"].toObject());
+  }
   this->close();
 }
 

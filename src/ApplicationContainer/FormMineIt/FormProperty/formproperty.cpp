@@ -28,8 +28,8 @@ void FormProperty::clearInfo() { m_model->removeRows(0, m_model->rowCount()); }
 void FormProperty::showAllProperties() {
   clearInfo();
 
-  if (m_info.contains("ID")) {
-    appendProperty(tr("ID"), m_info["ID"].toString());
+  if (m_info.contains(ID)) {
+    appendProperty(tr("ID"), m_info[ID].toString());
   }
 
   for (const auto &pair : m_propertyCategories) {
@@ -63,8 +63,8 @@ void FormProperty::onItInfo(const QJsonObject &data) {
   m_info = data;
 
   // 单独处理 ID
-  if (m_info.contains("ID")) {
-    appendProperty(tr("ID"), m_info["ID"].toString());
+  if (m_info.contains(ID)) {
+    appendProperty(tr("ID"), m_info[ID].toString());
   }
 
   for (const auto &pair : m_propertyCategories) {
@@ -364,6 +364,7 @@ void FormProperty::on_btnAdd_clicked() {
 void FormProperty::on_btnEdit_clicked() {
   ui->btnEdit->setChecked(true);
   DialogEdit *edit = new DialogEdit(m_info);
+  connect(edit, &DialogEdit::updateEditInfo, this, &FormProperty::onItInfo);
   edit->exec();
   ui->btnEdit->setChecked(false);
 }
