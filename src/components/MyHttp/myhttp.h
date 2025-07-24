@@ -27,6 +27,10 @@ class MyHttp : public QObject {
                  std::function<void(QJsonObject)> onSuccess, std::function<void(QString)> onError);
   void getImage(const QString &url, std::function<void(QPixmap)> onSuccess, std::function<void(QString)> onError);
 
+  void downloadBinary(const QString &url, std::function<void(QByteArray)> onSuccess,
+                      std::function<void(QString)> onError,
+                      std::function<void(qint64 bytesReceived, qint64 bytesTotal)> onProgress = nullptr);
+
  private:
   explicit MyHttp(QObject *parent = nullptr);
   MyHttp(const MyHttp &) = delete;
@@ -66,4 +70,19 @@ MY_HTTP->getImage(QUrl("http://localhost:8000/image.png"),
     [=](QPixmap pix) { ui->labelImage->setPixmap(pix); },
     [=](QString err) { qDebug() << "Download Error:" << err; });
 
+MY_HTTP->downloadBinary("http://192.168.123.233:8010/latest/KnowIt.exe",
+ [](QByteArray data) {
+     QFile file("KnowIt_Downloaded.exe");
+     if (file.open(QIODevice::WriteOnly)) {
+         file.write(data);
+         file.close();
+         qDebug() << "✅ 下载完成并保存成功";
+     }
+ },
+ [](QString err) {
+     qWarning() << "❌ 下载失败：" << err;
+ },
+ [](qint64 received, qint64 total) {
+     qDebug() << "📥 下载进度：" << received << "/" << total;
+ });
 */

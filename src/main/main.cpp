@@ -78,6 +78,8 @@ void initConfig() {
     m_MajorMinor[key] = SETTING_CONFIG_GET(CFG_GROUP_CHEMICAL_CATEGORY, key).split(DELIMITER);
   }
   MY_GLOBAL->set<QMap<QString, QStringList>>(CHEMICAL_CATEGORY_MAJOR_MINOR, m_MajorMinor);
+  MY_GLOBAL->set<QString>(URL_AUTO_UPDATE,
+                          SETTING_CONFIG_GET(CFG_GROUP_AUTO_UPDATE, URL_AUTO_UPDATE, DFT_URL_AUTO_UPDATE));
 }
 
 QString initConnect() {

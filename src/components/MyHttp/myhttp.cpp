@@ -154,6 +154,31 @@ void MyHttp::getImage(const QString &url, std::function<void(QPixmap)> onSuccess
   });
 }
 
+void MyHttp::downloadBinary(const QString &url, std::function<void(QByteArray)> onSuccess,
+                            std::function<void(QString)> onError, std::function<void(qint64, qint64)> onProgress) {
+  QUrl qurl(url);
+  QNetworkRequest request(qurl);
+  QNetworkReply *reply = m_manager->get(request);
+
+  if (onProgress) {
+    connect(reply, &QNetworkReply::downloadProgress, reply,
+            [reply, onProgress](qint64 received, qint64 total) { onProgress(received, total); });
+  }
+
+  connect(reply, &QNetworkReply::finished, reply, [reply, onSuccess, onError]() {
+    reply->deleteLater();
+    if (reply->error() != QNetworkReply::NoError) {
+      onError(reply->errorString());
+      return;
+    }
+    QByteArray data = reply->readAll();
+    onSuccess(data);
+  });
+
+  connect(reply, QOverload<QNetworkReply::NetworkError>::of(&QNetworkReply::errorOccurred), reply,
+          [reply, onError](QNetworkReply::NetworkError) { onError(reply->errorString()); });
+}
+
 QJsonObject MyHttp::get_sync(const QString &url) {
   QUrl qurl(url);
   QNetworkRequest request(qurl);

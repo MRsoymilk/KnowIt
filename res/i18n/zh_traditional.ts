@@ -20,6 +20,60 @@
     </message>
 </context>
 <context>
+    <name>AutoUpdate</name>
+    <message>
+        <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="14"/>
+        <source>AutoUpdate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="77"/>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="83"/>
+        <source>URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="97"/>
+        <source>Target Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="109"/>
+        <source>Timestamp</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="120"/>
+        <source>Current Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="27"/>
+        <source>Description</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="20"/>
+        <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="54"/>
+        <source>Update</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="60"/>
+        <source>Exe Only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="67"/>
+        <source>Full</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>BasicInformation</name>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/BasicInformation/basicinformation.ui" line="14"/>
@@ -1090,6 +1144,34 @@
     <message>
         <location filename="../../src/main/SplashScreen/splashscreen.ui" line="62"/>
         <source>status</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>UpdateSetting</name>
+    <message>
+        <location filename="../../src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.ui" line="20"/>
+        <source>UpdateSetting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.ui" line="32"/>
+        <source>Update</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.ui" line="39"/>
+        <source>URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.ui" line="49"/>
+        <source>Auto Update</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.ui" line="56"/>
+        <source>Start Update</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

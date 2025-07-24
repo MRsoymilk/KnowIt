@@ -26,7 +26,6 @@ void MainWindow::init() {
 
   ui->tBtnSetting->setToolTip(tr("settings"));
   ui->tBtnSetting->setObjectName("settings");
-  // ui->tBtnSetting->setIcon(QIcon(":/res/icons/black/settings.png"));
   ui->tBtnSetting->setIconSize(QSize(24, 24));
   ui->tBtnSetting->setCheckable(true);
   ui->tBtnSetting->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);

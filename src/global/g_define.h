@@ -48,6 +48,7 @@ const QString RESOURCE = "Resource";
 // Server
 const QString GROUP_SERVER = "SERVER";
 const QString URL_SERVER = "url_server";
+const QString URL_AUTO_UPDATE = "url_auto_update";
 const QString PATH_PING = "path_ping";
 const QString PATH_UPLOAD_IMG = "path_upload_img";
 const QString PATH_LOAD_IMG = "path_load_img";
@@ -68,6 +69,7 @@ const QString CALIBRATION_2000 = "2000";
 const QString CALIBRATION_0 = "0";
 
 const QString DFT_URL_SERVER = "http://192.168.123.233:5020";
+const QString DFT_URL_AUTO_UPDATE = "http://192.168.123.233:8010";
 const QString DFT_PATH_PING = "/ping";
 const QString DFT_PATH_UPLOAD_IMG = "/upload/img";
 const QString DFT_PATH_LOAD_IMG = "/load/img";
@@ -84,6 +86,7 @@ const QString DFT_CALIBRATION_4000 = "(0, 0)";
 const QString DFT_CALIBRATION_2000 = "(0, 0)";
 const QString DFT_CALIBRATION_0 = "(0, 0)";
 
+const QString CFG_GROUP_AUTO_UPDATE = "AutoUpdate";
 const QString CFG_GROUP_PROGRAM = "Program";
 const QString CFG_PROGRAM_THEME = "theme";
 const QString CFG_PROGRAM_LANGUAGE = "language";

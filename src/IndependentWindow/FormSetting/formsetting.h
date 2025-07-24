@@ -5,6 +5,7 @@
 
 class ServerSetting;
 class SpectralSetting;
+class UpdateSetting;
 
 namespace Ui {
 class FormSetting;
@@ -22,10 +23,13 @@ class FormSetting : public QWidget {
   void on_buttonBox_rejected();
 
  private:
-  Ui::FormSetting *ui;
   void init();
+
+ private:
+  Ui::FormSetting *ui;
   ServerSetting *m_serverSetting;
   SpectralSetting *m_spectralSetting;
+  UpdateSetting *m_updateSetting;
 };
 
 #endif  // FORMSETTING_H
