@@ -586,32 +586,48 @@ QAbstractScrollArea::corner {
   height: 0;
   width: 0;
   border-radius: 0;
-  border-top: 1px solid #1c1c1c;
-  border-left: 1px solid #1c1c1c;
   background: #191919;
 }
 
-QLineEdit,
+QLineEdit {
+  color: #d8d8d8;
+  padding: 4px;
+  min-height: 1em;
+  border: none;
+  border-bottom: 2px solid #2e2e2e;
+  background-color: #191919;
+}
+
+QLineEdit:focus {
+  border-bottom: 2px solid #3e4f5e;
+  background-color: #191919;
+}
+
+QLineEdit:hover {
+  border-bottom: 2px solid #555;
+  background-color: #191919;
+}
+
+QLineEdit:focus:hover {
+  border-bottom: 2px solid #485d6f;
+  background-color: #191919;
+}
+
+QLineEdit:disabled {
+  border-bottom: 2px solid transparent;
+  background-color: #282828;
+}
+
 QComboBox,
 QSpinBox,
 QAbstractSpinBox {
   color: #d8d8d8;
   padding: 4px;
   min-height: 1em;
-}
-
-QComboBox,
-QSpinBox,
-QAbstractSpinBox {
   border: 1px solid #444;
   background-color: #444;
 }
 
-QLineEdit,
-QTextEdit,
-QPlainTextEdit,
-QSpinBox,
-QAbstractSpinBox,
 QComboBox:editable {
   border: 1px solid #2e2e2e;
   background-color: #191919;
@@ -624,7 +640,6 @@ QAbstractSpinBox {
 }
 
 QPushButton:disabled,
-QLineEdit:disabled,
 QTextEdit:disabled,
 QPlainTextEdit:disabled,
 QListWidget:disabled,
@@ -868,38 +883,37 @@ QComboBox:hover {
   border-color: #555;
 }
 
-QLineEdit:focus,
-QSpinBox:focus,
-QAbstractSpinBox:focus,
 QComboBox:editable:focus {
+  border-color: #3e4f5e;
   background-color: #191919;
 }
 
-QLineEdit:focus:hover,
-QSpinBox:focus:hover,
-QAbstractSpinBox:focus:hover,
 QComboBox:editable:focus:hover {
   border-color: #485d6f;
 }
 
-QLineEdit:hover,
-QSpinBox:hover,
-QAbstractSpinBox:hover,
 QComboBox:editable:hover {
+  border-color: #555;
   background-color: #191919;
+}
+
+QSpinBox:focus,
+QAbstractSpinBox:focus {
+  border-color: #3e4f5e;
+}
+
+QSpinBox:focus:hover,
+QAbstractSpinBox:focus:hover {
+  border-color: #485d6f;
+}
+
+QSpinBox:hover,
+QAbstractSpinBox:hover {
   border-color: #555;
 }
 
-QCheckBox::indicator:focus,
-QTreeView::indicator:focus,
-QRadioButton::indicator:focus,
-QComboBox:focus,
-QLineEdit:focus,
 QTextEdit:focus,
-QPlainTextEdit:focus,
-QSpinBox:focus,
-QAbstractSpinBox:focus,
-QComboBox:editable:focus {
+QPlainTextEdit:focus {
   border-color: #3e4f5e;
 }
 
@@ -1095,133 +1109,89 @@ TalkingUI > QFrame {
   border-color: #1c1c1c;
   border-radius: 2px;
 }
-QToolBox {
-  background-color: #1D1D1D;
-  border: 1px solid #1c1c1c;
-  border-radius: 2px;
-}
 
-QToolBox::tab {
-  background-color: #2e2e2e;
-  border: 1px solid #1c1c1c;
-  border-bottom: 0;
-  color: #d8d8d8;
-  padding: 6px 16px;
-  font-size: 10pt;
-}
-
-QToolBox::tab:first {
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-}
-
-QToolBox::tab:hover {
-  background-color: #3e4f5e;
-}
-
-QToolBox::tab:selected {
-  background-color: #2d2d2d;
-  color: #d8d8d8;
-  border-bottom: 1px solid #2d2d2d;
-}
-
-QToolBox::tab:disabled {
-  color: #484848;
-}
-
-QToolBox > QWidget {
-  background-color: #2d2d2d;
-  border: 1px solid #1c1c1c;
-  border-top: 0;
-  border-radius: 0;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-}
-QPushButton#add,
-QPushButton#delete,
-QPushButton#edit {
-  background-color: #444;
-  border: 1px solid #444;
-  color: #d8d8d8;
-  font-size: 12pt;
-  padding: 3px 20px;
-  border-radius: 2px;
-}
-
-QPushButton#add:focus,
-QPushButton#delete:focus,
-QPushButton#edit:focus {
-  background-color: #3e4f5e;
-  border-color: #3e4f5e;
-}
-
-QPushButton#add:hover,
-QPushButton#delete:hover,
-QPushButton#edit:hover {
-  background-color: #595959;
-  border-color: #555;
-}
-
-QPushButton#add:hover:focus,
-QPushButton#delete:hover:focus,
-QPushButton#edit:hover:focus {
-  background-color: #485d6f;
-  border-color: #485d6f;
-}
-
-QPushButton#add:pressed,
-QPushButton#delete:pressed,
-QPushButton#edit:pressed,
-QPushButton#add:pressed:focus,
-QPushButton#delete:pressed:focus,
-QPushButton#edit:pressed:focus {
-  background-color: #298ce1;
-  border-color: #298ce1;
-  color: #FFF;
-}
-
-QPushButton#add:disabled,
-QPushButton#delete:disabled,
-QPushButton#edit:disabled {
-  background-color: #282828;
-  border: 1px solid transparent;
-  color: #484848;
-}
-QToolButton#MineIt {
-  border: none;
-  background: transparent;
-}
-QToolButton#edit {
-  qproperty-icon: url(:/res/icons/white/edit.png);
-}
-QToolButton#upload {
-  qproperty-icon: url(:/res/icons/white/upload.png);
-}
-QToolButton#settings {
-  qproperty-icon: url(:/res/icons/white/settings.png);
-}
-QToolButton#OriginalImage {
-  qproperty-icon: url(:/res/icons/white/original_image.png);
-}
-QToolButton#XaxisInvert {
-  qproperty-icon: url(:/res/icons/white/xaxis_invert.png);
-}
-QToolButton#Crop {
-  qproperty-icon: url(:/res/icons/white/crop.png);
-}
-QToolButton#AutoScale {
-  qproperty-icon: url(:/res/icons/white/auto_scale.png);
-}
-QToolButton#PeakAssistance {
-  qproperty-icon: url(:/res/icons/white/peak_assistance.png);
-}
-QToolButton#find_peak {
-  qproperty-icon: url(:/res/icons/white/find_peak.png);
-}
-QToolButton#fitting_curve {
-  qproperty-icon: url(:/res/icons/white/fitting_curve.png);
-}
 QToolButton#refresh {
   qproperty-icon: url(:/res/icons/white/refresh.png);
 }
+
+QToolButton#zoom {
+  qproperty-icon: url(:/res/icons/white/zoom.png);
+}
+
+QToolButton#data {
+  qproperty-icon: url(:/res/icons/white/data.png);
+}
+
+QToolButton#3d {
+  qproperty-icon: url(:/res/icons/white/3d.png);
+}
+
+QToolButton#history {
+  qproperty-icon: url(:/res/icons/white/history.png);
+}
+
+QToolButton#simulate {
+  qproperty-icon: url(:/res/icons/white/simulate.png);
+}
+
+QToolButton#correction {
+  qproperty-icon: url(:/res/icons/white/correction.png);
+}
+
+QToolButton#img_save {
+  qproperty-icon: url(:/res/icons/white/img_save.png);
+}
+
+QToolButton#go-prev {
+  qproperty-icon: url(:/res/icons/white/go-prev.png);
+}
+
+QToolButton#go-next {
+  qproperty-icon: url(:/res/icons/white/go-next.png);
+}
+
+QToolButton#usb-off {
+  qproperty-icon: url(:/res/icons/white/usb-off.png);
+}
+
+QToolButton#data-off {
+  qproperty-icon: url(:/res/icons/white/data-off.png);
+}
+
+QToolButton#log-off {
+  qproperty-icon: url(:/res/icons/white/log-off.png);
+}
+
+QToolButton#plot-off {
+  qproperty-icon: url(:/res/icons/white/plot-off.png);
+}
+
+QToolButton#setting-off {
+  qproperty-icon: url(:/res/icons/white/setting-off.png);
+}
+
+QToolButton#usb-on {
+  qproperty-icon: url(:/res/icons/usb-on.png);
+}
+
+QToolButton#data-on {
+  qproperty-icon: url(:/res/icons/data-on.png);
+}
+
+QToolButton#log-on {
+  qproperty-icon: url(:/res/icons/log-on.png);
+}
+
+QToolButton#plot-on {
+  qproperty-icon: url(:/res/icons/plot-on.png);
+}
+
+QToolButton#setting-on {
+  qproperty-icon: url(:/res/icons/setting-on.png);
+}
+
+QToolButton#crop {
+  qproperty-icon: url(:/res/icons/white/crop.png);
+}
+
 /*# sourceMappingURL=Dark.qss.map */

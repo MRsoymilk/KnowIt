@@ -122,9 +122,9 @@ QTextEdit {
 }
 
 QToolBar {
-  background-color: #2e2e2e;
+  background-color: transparent;
+  border: 0px;
   spacing: 0;
-  padding: 2px;
 }
 
 QToolButton {
@@ -135,17 +135,19 @@ QToolButton {
 }
 
 QToolButton:on {
-  background-color: #444;
-  border: 1px solid #444;
+  background-color: transparent;
 }
 
 QToolButton:hover {
-  background-color: #3e4f5e;
-  border: 1px solid #3e4f5e;
+  background-color: transparent;
 }
 
 QToolButton:pressed {
-  background-color: #484848;
+  background-color: transparent;
+}
+
+QToolButton:on:pressed {
+  background-color: transparent;
 }
 
 QToolBar::separator {
@@ -575,32 +577,49 @@ QAbstractScrollArea::corner {
   height: 0;
   width: 0;
   border-radius: 0;
-  border-top: 1px solid #1c1c1c;
-  border-left: 1px solid #1c1c1c;
   background: #191919;
 }
 
-QLineEdit,
+QLineEdit {
+  color: #d8d8d8;
+  padding: 4px;
+  min-height: 1em;
+  border: none;
+  border-bottom: 2px solid #2e2e2e;
+  background-color: #191919;
+}
+
+QLineEdit:focus {
+  border-bottom: 2px solid #3e4f5e;
+  background-color: #191919;
+}
+
+QLineEdit:hover {
+  border-bottom: 2px solid #555;
+  background-color: #191919;
+}
+
+QLineEdit:focus:hover {
+  border-bottom: 2px solid #3e4f5e;
+  background-color: #191919;
+}
+
+QLineEdit:disabled {
+  border-bottom: 2px solid transparent;
+  background-color: #282828;
+  color: #484848;
+}
+
 QComboBox,
 QSpinBox,
 QAbstractSpinBox {
   color: #d8d8d8;
   padding: 4px;
   min-height: 1em;
-}
-
-QComboBox,
-QSpinBox,
-QAbstractSpinBox {
   border: 1px solid #444;
   background-color: #444;
 }
 
-QLineEdit,
-QTextEdit,
-QPlainTextEdit,
-QSpinBox,
-QAbstractSpinBox,
 QComboBox:editable {
   border: 1px solid #2e2e2e;
   background-color: #191919;
@@ -613,7 +632,6 @@ QAbstractSpinBox {
 }
 
 QPushButton:disabled,
-QLineEdit:disabled,
 QTextEdit:disabled,
 QPlainTextEdit:disabled,
 QListWidget:disabled,
@@ -854,38 +872,37 @@ QComboBox:hover {
   border-color: #555;
 }
 
-QLineEdit:focus,
-QSpinBox:focus,
-QAbstractSpinBox:focus,
 QComboBox:editable:focus {
+  border-color: #3e4f5e;
   background-color: #191919;
 }
 
-QLineEdit:focus:hover,
-QSpinBox:focus:hover,
-QAbstractSpinBox:focus:hover,
 QComboBox:editable:focus:hover {
   border-color: #485d6f;
 }
 
-QLineEdit:hover,
-QSpinBox:hover,
-QAbstractSpinBox:hover,
 QComboBox:editable:hover {
+  border-color: #555;
   background-color: #191919;
+}
+
+QSpinBox:focus,
+QAbstractSpinBox:focus {
+  border-color: #3e4f5e;
+}
+
+QSpinBox:focus:hover,
+QAbstractSpinBox:focus:hover {
+  border-color: #485d6f;
+}
+
+QSpinBox:hover,
+QAbstractSpinBox:hover {
   border-color: #555;
 }
 
-QCheckBox::indicator:focus,
-QTreeView::indicator:focus,
-QRadioButton::indicator:focus,
-QComboBox:focus,
-QLineEdit:focus,
 QTextEdit:focus,
-QPlainTextEdit:focus,
-QSpinBox:focus,
-QAbstractSpinBox:focus,
-QComboBox:editable:focus {
+QPlainTextEdit:focus {
   border-color: #3e4f5e;
 }
 
@@ -1082,27 +1099,6 @@ TalkingUI > QFrame {
   border-radius: 2px;
 }
 
-QToolBar {
-  background-color: transparent;
-  border: 0px;
-  spacing: 0;
-}
-
-QToolButton:hover {
-  background-color: transparent;
-}
-
-QToolButton:pressed {
-  background-color: transparent;
-}
-
-QToolButton:on {
-  background-color: transparent;
-}
-
-QToolButton:on:pressed {
-  background-color: transparent;
-}
 QToolBox {
   background-color: #1D1D1D;
   border: 1px solid #1c1c1c;
@@ -1145,6 +1141,7 @@ QToolBox > QWidget {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
+
 QPushButton#add,
 QPushButton#delete,
 QPushButton#edit {
@@ -1195,41 +1192,54 @@ QPushButton#edit:disabled {
   border: 1px solid transparent;
   color: #484848;
 }
+
 QToolButton#MineIt {
   border: none;
   background: transparent;
 }
+
 QToolButton#edit {
   qproperty-icon: url(:/res/icons/white/edit.png);
 }
+
 QToolButton#upload {
   qproperty-icon: url(:/res/icons/white/upload.png);
 }
+
 QToolButton#settings {
   qproperty-icon: url(:/res/icons/white/settings.png);
 }
+
 QToolButton#OriginalImage {
   qproperty-icon: url(:/res/icons/white/original_image.png);
 }
+
 QToolButton#XaxisInvert {
   qproperty-icon: url(:/res/icons/white/xaxis_invert.png);
 }
+
 QToolButton#Crop {
   qproperty-icon: url(:/res/icons/white/crop.png);
 }
+
 QToolButton#AutoScale {
   qproperty-icon: url(:/res/icons/white/auto_scale.png);
 }
+
 QToolButton#PeakAssistance {
   qproperty-icon: url(:/res/icons/white/peak_assistance.png);
 }
+
 QToolButton#find_peak {
   qproperty-icon: url(:/res/icons/white/find_peak.png);
 }
+
 QToolButton#fitting_curve {
   qproperty-icon: url(:/res/icons/white/fitting_curve.png);
 }
+
 QToolButton#refresh {
   qproperty-icon: url(:/res/icons/white/refresh.png);
 }
+
 /*# sourceMappingURL=OSX%20Dark.qss.map */

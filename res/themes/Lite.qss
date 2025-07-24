@@ -581,32 +581,49 @@ QAbstractScrollArea::corner {
   height: 0;
   width: 0;
   border-radius: 0;
-  border-top: 1px solid #D6D6D6;
-  border-left: 1px solid #D6D6D6;
   background: #FFF;
 }
 
-QLineEdit,
+QLineEdit {
+  color: #111;
+  padding: 4px;
+  min-height: 1em;
+  border: none;
+  border-bottom: 2px solid #C4C4C4;
+  background-color: #FFF;
+}
+
+QLineEdit:focus {
+  border-bottom: 2px solid #7ea8cc;
+  background-color: #FFF;
+}
+
+QLineEdit:hover {
+  border-bottom: 2px solid #AAA;
+  background-color: #FFF;
+}
+
+QLineEdit:focus:hover {
+  border-bottom: 2px solid #7ea8cc;
+  background-color: #FFF;
+}
+
+QLineEdit:disabled {
+  border-bottom: 2px solid transparent;
+  background-color: #F2F2F2;
+  color: #BBB;
+}
+
 QComboBox,
 QSpinBox,
 QAbstractSpinBox {
   color: #111;
   padding: 4px;
   min-height: 1em;
-}
-
-QComboBox,
-QSpinBox,
-QAbstractSpinBox {
   border: 1px solid #C4C4C4;
   background-color: #FFF;
 }
 
-QLineEdit,
-QTextEdit,
-QPlainTextEdit,
-QSpinBox,
-QAbstractSpinBox,
 QComboBox:editable {
   border: 1px solid #C4C4C4;
   background-color: #FFF;
@@ -619,7 +636,6 @@ QAbstractSpinBox {
 }
 
 QPushButton:disabled,
-QLineEdit:disabled,
 QTextEdit:disabled,
 QPlainTextEdit:disabled,
 QListWidget:disabled,
@@ -863,38 +879,37 @@ QComboBox:hover {
   border-color: #AAA;
 }
 
-QLineEdit:focus,
-QSpinBox:focus,
-QAbstractSpinBox:focus,
 QComboBox:editable:focus {
+  border-color: #7ea8cc;
   background-color: #FFF;
 }
 
-QLineEdit:focus:hover,
-QSpinBox:focus:hover,
-QAbstractSpinBox:focus:hover,
 QComboBox:editable:focus:hover {
   border-color: #7ea8cc;
 }
 
-QLineEdit:hover,
-QSpinBox:hover,
-QAbstractSpinBox:hover,
 QComboBox:editable:hover {
+  border-color: #AAA;
   background-color: #FFF;
+}
+
+QSpinBox:focus,
+QAbstractSpinBox:focus {
+  border-color: #7ea8cc;
+}
+
+QSpinBox:focus:hover,
+QAbstractSpinBox:focus:hover {
+  border-color: #7ea8cc;
+}
+
+QSpinBox:hover,
+QAbstractSpinBox:hover {
   border-color: #AAA;
 }
 
-QCheckBox::indicator:focus,
-QTreeView::indicator:focus,
-QRadioButton::indicator:focus,
-QComboBox:focus,
-QLineEdit:focus,
 QTextEdit:focus,
-QPlainTextEdit:focus,
-QSpinBox:focus,
-QAbstractSpinBox:focus,
-QComboBox:editable:focus {
+QPlainTextEdit:focus {
   border-color: #7ea8cc;
 }
 
@@ -1090,6 +1105,7 @@ TalkingUI > QFrame {
   border-color: #D2D2D2;
   border-radius: 2px;
 }
+
 QToolBox {
   background-color: #F2F2F2;
   border: 1px solid #D2D2D2;
@@ -1132,6 +1148,7 @@ QToolBox > QWidget {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
+
 QPushButton#add,
 QPushButton#delete,
 QPushButton#edit {
@@ -1182,41 +1199,54 @@ QPushButton#edit:disabled {
   border: 1px solid transparent;
   color: #BBB;
 }
+
 QToolButton#MineIt {
   border: none;
   background: transparent;
 }
+
 QToolButton#edit {
   qproperty-icon: url(:/res/icons/black/edit.png);
 }
+
 QToolButton#upload {
   qproperty-icon: url(:/res/icons/black/upload.png);
 }
+
 QToolButton#settings {
   qproperty-icon: url(:/res/icons/black/settings.png);
 }
+
 QToolButton#OriginalImage {
   qproperty-icon: url(:/res/icons/black/original_image.png);
 }
+
 QToolButton#XaxisInvert {
   qproperty-icon: url(:/res/icons/black/xaxis_invert.png);
 }
+
 QToolButton#Crop {
   qproperty-icon: url(:/res/icons/black/crop.png);
 }
+
 QToolButton#AutoScale {
   qproperty-icon: url(:/res/icons/black/auto_scale.png);
 }
+
 QToolButton#PeakAssistance {
   qproperty-icon: url(:/res/icons/black/peak_assistance.png);
 }
+
 QToolButton#find_peak {
   qproperty-icon: url(:/res/icons/black/find_peak.png);
 }
+
 QToolButton#fitting_curve {
   qproperty-icon: url(:/res/icons/black/fitting_curve.png);
 }
+
 QToolButton#refresh {
   qproperty-icon: url(:/res/icons/black/refresh.png);
 }
+
 /*# sourceMappingURL=Lite.qss.map */
