@@ -425,8 +425,9 @@ def upload_file():
     uuid = request.form.get("UUID", "")
     if not uuid:
         return jsonify({'error': 'UUID is required'}), 400
-
-    real_filename = request.form.get("filename")
+    file_type = request.form.get("Type", "")
+    file_name = request.form.get("filename")
+    real_filename = file_type + '_' + file_name
     print("image name: ", real_filename)
     if not real_filename:
         print("Missing filename")
