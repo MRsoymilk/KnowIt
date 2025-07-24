@@ -67,28 +67,30 @@ void SpectralData::fillCalibration() {
     if (match.hasMatch()) {
       int x = match.captured(1).toInt();
       int y = match.captured(2).toInt();
-      m_pointData[0].point = QPoint(x, y);
-      PointData &data = m_pointData[0];
-      QString coordText = QString("X: %1, Y: %2").arg(x).arg(y);
-      data.label->setText(coordText);
-      if (ui->graphicsViewSpectral->scene()) {
-        if (data.item) {
-          // 已经画过，删除图元
-          ui->graphicsViewSpectral->scene()->removeItem(data.item);
-          data.item = nullptr;
-          data.label->clear();
+      if (x != 0 && y != 0) {
+        m_pointData[0].point = QPoint(x, y);
+        PointData &data = m_pointData[0];
+        QString coordText = QString("X: %1, Y: %2").arg(x).arg(y);
+        data.label->setText(coordText);
+        if (ui->graphicsViewSpectral->scene()) {
+          if (data.item) {
+            // 已经画过，删除图元
+            ui->graphicsViewSpectral->scene()->removeItem(data.item);
+            data.item = nullptr;
+            data.label->clear();
 
-        } else {
-          // 绘制新点
-          QGraphicsEllipseItem *ellipse = new QGraphicsEllipseItem(-0.5, -0.5, 1, 1);
-          ellipse->setPos(x, y);
-          ellipse->setBrush(Qt::red);
-          ellipse->setPen(Qt::NoPen);
-          ui->graphicsViewSpectral->scene()->addItem(ellipse);
+          } else {
+            // 绘制新点
+            QGraphicsEllipseItem *ellipse = new QGraphicsEllipseItem(-0.5, -0.5, 1, 1);
+            ellipse->setPos(x, y);
+            ellipse->setBrush(Qt::red);
+            ellipse->setPen(Qt::NoPen);
+            ui->graphicsViewSpectral->scene()->addItem(ellipse);
 
-          // 保存数据
-          data.item = ellipse;
-          data.point = QPoint(x, y);
+            // 保存数据
+            data.item = ellipse;
+            data.point = QPoint(x, y);
+          }
         }
       }
     }
@@ -100,28 +102,30 @@ void SpectralData::fillCalibration() {
     if (match.hasMatch()) {
       int x = match.captured(1).toInt();
       int y = match.captured(2).toInt();
-      m_pointData[1].point = QPoint(x, y);
-      PointData &data = m_pointData[1];
-      QString coordText = QString("X: %1, Y: %2").arg(x).arg(y);
-      data.label->setText(coordText);
-      if (ui->graphicsViewSpectral->scene()) {
-        if (data.item) {
-          // 已经画过，删除图元
-          ui->graphicsViewSpectral->scene()->removeItem(data.item);
-          data.item = nullptr;
-          data.label->clear();
+      if (x != 0 && y != 0) {
+        m_pointData[1].point = QPoint(x, y);
+        PointData &data = m_pointData[1];
+        QString coordText = QString("X: %1, Y: %2").arg(x).arg(y);
+        data.label->setText(coordText);
+        if (ui->graphicsViewSpectral->scene()) {
+          if (data.item) {
+            // 已经画过，删除图元
+            ui->graphicsViewSpectral->scene()->removeItem(data.item);
+            data.item = nullptr;
+            data.label->clear();
 
-        } else {
-          // 绘制新点
-          QGraphicsEllipseItem *ellipse = new QGraphicsEllipseItem(-0.5, -0.5, 1, 1);
-          ellipse->setPos(x, y);
-          ellipse->setBrush(Qt::red);
-          ellipse->setPen(Qt::NoPen);
-          ui->graphicsViewSpectral->scene()->addItem(ellipse);
+          } else {
+            // 绘制新点
+            QGraphicsEllipseItem *ellipse = new QGraphicsEllipseItem(-0.5, -0.5, 1, 1);
+            ellipse->setPos(x, y);
+            ellipse->setBrush(Qt::red);
+            ellipse->setPen(Qt::NoPen);
+            ui->graphicsViewSpectral->scene()->addItem(ellipse);
 
-          // 保存数据
-          data.item = ellipse;
-          data.point = QPoint(x, y);
+            // 保存数据
+            data.item = ellipse;
+            data.point = QPoint(x, y);
+          }
         }
       }
     }
@@ -133,28 +137,30 @@ void SpectralData::fillCalibration() {
     if (match.hasMatch()) {
       int x = match.captured(1).toInt();
       int y = match.captured(2).toInt();
-      m_pointData[2].point = QPoint(x, y);
-      PointData &data = m_pointData[2];
-      QString coordText = QString("X: %1, Y: %2").arg(x).arg(y);
-      data.label->setText(coordText);
-      if (ui->graphicsViewSpectral->scene()) {
-        if (data.item) {
-          // 已经画过，删除图元
-          ui->graphicsViewSpectral->scene()->removeItem(data.item);
-          data.item = nullptr;
-          data.label->clear();
+      if (x != 0 && y != 0) {
+        m_pointData[2].point = QPoint(x, y);
+        PointData &data = m_pointData[2];
+        QString coordText = QString("X: %1, Y: %2").arg(x).arg(y);
+        data.label->setText(coordText);
+        if (ui->graphicsViewSpectral->scene()) {
+          if (data.item) {
+            // 已经画过，删除图元
+            ui->graphicsViewSpectral->scene()->removeItem(data.item);
+            data.item = nullptr;
+            data.label->clear();
 
-        } else {
-          // 绘制新点
-          QGraphicsEllipseItem *ellipse = new QGraphicsEllipseItem(-0.5, -0.5, 1, 1);
-          ellipse->setPos(x, y);
-          ellipse->setBrush(Qt::red);
-          ellipse->setPen(Qt::NoPen);
-          ui->graphicsViewSpectral->scene()->addItem(ellipse);
+          } else {
+            // 绘制新点
+            QGraphicsEllipseItem *ellipse = new QGraphicsEllipseItem(-0.5, -0.5, 1, 1);
+            ellipse->setPos(x, y);
+            ellipse->setBrush(Qt::red);
+            ellipse->setPen(Qt::NoPen);
+            ui->graphicsViewSpectral->scene()->addItem(ellipse);
 
-          // 保存数据
-          data.item = ellipse;
-          data.point = QPoint(x, y);
+            // 保存数据
+            data.item = ellipse;
+            data.point = QPoint(x, y);
+          }
         }
       }
     }
@@ -166,28 +172,30 @@ void SpectralData::fillCalibration() {
     if (match.hasMatch()) {
       int x = match.captured(1).toInt();
       int y = match.captured(2).toInt();
-      m_pointData[3].point = QPoint(x, y);
-      PointData &data = m_pointData[3];
-      QString coordText = QString("X: %1, Y: %2").arg(x).arg(y);
-      data.label->setText(coordText);
-      if (ui->graphicsViewSpectral->scene()) {
-        if (data.item) {
-          // 已经画过，删除图元
-          ui->graphicsViewSpectral->scene()->removeItem(data.item);
-          data.item = nullptr;
-          data.label->clear();
+      if (x != 0 && y != 0) {
+        m_pointData[3].point = QPoint(x, y);
+        PointData &data = m_pointData[3];
+        QString coordText = QString("X: %1, Y: %2").arg(x).arg(y);
+        data.label->setText(coordText);
+        if (ui->graphicsViewSpectral->scene()) {
+          if (data.item) {
+            // 已经画过，删除图元
+            ui->graphicsViewSpectral->scene()->removeItem(data.item);
+            data.item = nullptr;
+            data.label->clear();
 
-        } else {
-          // 绘制新点
-          QGraphicsEllipseItem *ellipse = new QGraphicsEllipseItem(-0.5, -0.5, 1, 1);
-          ellipse->setPos(x, y);
-          ellipse->setBrush(Qt::red);
-          ellipse->setPen(Qt::NoPen);
-          ui->graphicsViewSpectral->scene()->addItem(ellipse);
+          } else {
+            // 绘制新点
+            QGraphicsEllipseItem *ellipse = new QGraphicsEllipseItem(-0.5, -0.5, 1, 1);
+            ellipse->setPos(x, y);
+            ellipse->setBrush(Qt::red);
+            ellipse->setPen(Qt::NoPen);
+            ui->graphicsViewSpectral->scene()->addItem(ellipse);
 
-          // 保存数据
-          data.item = ellipse;
-          data.point = QPoint(x, y);
+            // 保存数据
+            data.item = ellipse;
+            data.point = QPoint(x, y);
+          }
         }
       }
     }
@@ -239,6 +247,23 @@ bool SpectralData::drawPoint(const QPointF &scenePos, const int &pixelX, const i
   }
 
   PointData &data = m_pointData[id];
+  QString coordinate = QString("(%1, %2)").arg(pixelX).arg(pixelY);
+  switch (id) {
+    case 0:
+      MY_GLOBAL->set<QString>(CALIBRATION_START, coordinate);
+      break;
+    case 1:
+      MY_GLOBAL->set<QString>(CALIBRATION_4000, coordinate);
+      break;
+    case 2:
+      MY_GLOBAL->set<QString>(CALIBRATION_2000, coordinate);
+      break;
+    case 3:
+      MY_GLOBAL->set<QString>(CALIBRATION_0, coordinate);
+      break;
+    default:
+      break;
+  }
 
   if (data.item) {
     // 已经画过，删除图元
