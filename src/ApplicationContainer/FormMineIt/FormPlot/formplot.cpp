@@ -68,23 +68,26 @@ void FormPlot::updateSpectralPixmap() {
 }
 
 void FormPlot::updateSeries() {
-  QVector<QPointF> points;
-  points.reserve(4001);
+  QVector<QPointF> pointsMain(4001, QPointF(0, 0));
+  QVector<QPointF> pointsAssist(4001, QPointF(0, 0));
 
   for (int x = 0; x <= 4000; ++x) {
-    points.append(QPointF(x, 0));
+    pointsMain[x].setX(x);
+    pointsAssist[x].setX(x);
   }
 
   if (m_isPeakAssistance) {
     for (auto it = m_rawAssistanceData.constBegin(); it != m_rawAssistanceData.constEnd(); ++it) {
-      points[it.key()].setY(it.value());
+      pointsAssist[it.key()].setY(it.value());
     }
   }
+
   for (auto it = m_rawMainData.constBegin(); it != m_rawMainData.constEnd(); ++it) {
-    points[it.key()].setY(it.value());
+    pointsMain[it.key()].setY(it.value());
   }
 
-  m_series->replace(points);
+  m_seriesAssistance->replace(pointsAssist);
+  m_seriesMain->replace(pointsMain);
 
   if (m_isXAxisInverted) {
     m_axisX->setRange(4000, 0);
@@ -96,7 +99,10 @@ void FormPlot::updateSeries() {
 
   if (m_isAutoScale) {
     qreal maxY = 0;
-    for (const auto &pt : points) {
+    for (const auto &pt : pointsMain) {
+      if (pt.y() > maxY) maxY = pt.y();
+    }
+    for (const auto &pt : pointsAssist) {
       if (pt.y() > maxY) maxY = pt.y();
     }
     m_axisY->setRange(0, maxY);
@@ -123,22 +129,34 @@ void FormPlot::init() {
 void FormPlot::initChart() {
   m_chart = new QChart;
 
-  m_series = new QLineSeries();
+  m_seriesMain = new QLineSeries();
+  m_seriesMain->setColor(Qt::red);
+
+  m_seriesAssistance = new QLineSeries();
+  m_seriesAssistance->setColor(Qt::blue);
+
   m_axisX = new QValueAxis;
   m_axisY = new QValueAxis;
 
-  m_chart->addSeries(m_series);
+  m_chart->addSeries(m_seriesAssistance);
+  m_chart->addSeries(m_seriesMain);
+
   m_chart->addAxis(m_axisX, Qt::AlignBottom);
   m_chart->addAxis(m_axisY, Qt::AlignLeft);
 
-  m_chart->legend()->setVisible(false);
-
-  m_series->attachAxis(m_axisX);
-  m_series->attachAxis(m_axisY);
+  m_seriesMain->attachAxis(m_axisX);
+  m_seriesMain->attachAxis(m_axisY);
+  m_seriesAssistance->attachAxis(m_axisX);
+  m_seriesAssistance->attachAxis(m_axisY);
 
   m_chartView = new MyChartView(m_chart);
   m_chartView->setRenderHint(QPainter::Antialiasing);
   ui->gLayPlot->addWidget(m_chartView);
+
+  m_seriesMain->setName("Main");
+  m_seriesAssistance->setName("Assistance");
+  m_chart->legend()->setVisible(true);
+  m_chart->legend()->setAlignment(Qt::AlignBottom);
 }
 
 void FormPlot::initToolButtons() {

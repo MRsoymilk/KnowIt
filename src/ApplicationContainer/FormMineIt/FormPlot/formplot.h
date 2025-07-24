@@ -47,7 +47,8 @@ class FormPlot : public QWidget {
   Ui::FormPlot *ui;
   QChart *m_chart;
   MyChartView *m_chartView = nullptr;
-  QLineSeries *m_series;
+  QLineSeries *m_seriesMain;
+  QLineSeries *m_seriesAssistance;
   QValueAxis *m_axisX;
   QValueAxis *m_axisY;
   QMap<int, int> m_rawMainData;
