@@ -156,7 +156,7 @@ QJsonObject BasicInformation::getBasicInformation() {
   return objBasicInformation;
 }
 
-void BasicInformation::on_tBtnCategoryAdd_clicked() {
+void BasicInformation::on_tBtnCategoryEdit_clicked() {
   EditContainer edit(EditContainer::TYPE::SINGLE_LINE);
   QStringList items;
   for (int i = 0; i < ui->comboBoxCategory->count(); ++i) {
@@ -168,7 +168,7 @@ void BasicInformation::on_tBtnCategoryAdd_clicked() {
   ui->comboBoxCategory->addItems(edit.getData().split(DELIMITER));
 }
 
-void BasicInformation::on_tBtnApplicationAreaAdd_clicked() {
+void BasicInformation::on_tBtnApplicationAreaEdit_clicked() {
   EditContainer edit(EditContainer::TYPE::SINGLE_LINE);
   QStringList items;
   for (int i = 0; i < ui->comboBoxApplicationArea->count(); ++i) {

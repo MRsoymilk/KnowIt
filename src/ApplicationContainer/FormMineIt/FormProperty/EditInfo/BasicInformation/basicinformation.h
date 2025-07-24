@@ -32,8 +32,8 @@ class BasicInformation : public QWidget {
   void on_tBtnName_zh_Edit_clicked();
   void on_tBtnName_en_Edit_clicked();
   void on_tBtnUploadStructure_clicked();
-  void on_tBtnCategoryAdd_clicked();
-  void on_tBtnApplicationAreaAdd_clicked();
+  void on_tBtnCategoryEdit_clicked();
+  void on_tBtnApplicationAreaEdit_clicked();
   void on_comboBoxCategory_currentTextChanged(const QString &category);
   void on_comboBoxApplicationArea_currentTextChanged(const QString &area);
 
