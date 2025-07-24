@@ -102,12 +102,22 @@ Section "MainSection" SEC01
     File /nonfatal /r "D:\work\output\KnowIt\latest\log"
   ${EndIf}
 
+  ; Delete existing desktop shortcut if it exists
+  Delete "$DESKTOP\KnowIt.lnk"
+
+  ; Create desktop shortcut for KnowIt.exe
+  CreateShortCut "$DESKTOP\KnowIt.lnk" "$INSTDIR\KnowIt.exe" "" "$INSTDIR\KnowIt.exe" 0
+
   ; Create uninstaller
   WriteUninstaller "$INSTDIR\uninst.exe"
   WriteRegStr HKLM "${REGKEY}" "${REGVALUE_INSTALLDIR}" "$INSTDIR"
 SectionEnd
 
 Section "Uninstall"
+  ; Remove desktop shortcut
+  Delete "$DESKTOP\KnowIt.lnk"
+
+  ; Remove installation directory
   RMDir /r "$INSTDIR"
   DeleteRegKey HKLM "${REGKEY}"
 SectionEnd
