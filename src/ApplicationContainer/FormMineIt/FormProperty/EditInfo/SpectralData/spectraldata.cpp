@@ -526,12 +526,12 @@ void SpectralData::on_tBtnUploadSpectral_clicked() {
 
   QJsonObject objInfo;
   objInfo.insert("UUID", m_uuid);
+  objInfo.insert("Type", "Spectral");
   MY_HTTP->postImage(
       url_post_img, path, objInfo,
       [=](QJsonObject obj) {
         qDebug() << "Upload OK:" << obj;
-        QFileInfo info(path);
-        ui->lineEditSpectralPicturePath->setText(QString("original/%1").arg(info.fileName()));
+        ui->lineEditSpectralPicturePath->setText(QString("original/%1").arg(obj["filename"].toString()));
       },
       [](QString err) { qDebug() << "Upload Error:" << err; });
 

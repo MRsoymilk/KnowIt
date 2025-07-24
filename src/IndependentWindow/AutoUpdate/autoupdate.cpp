@@ -15,15 +15,42 @@ AutoUpdate::AutoUpdate(QWidget *parent) : QWidget(parent), ui(new Ui::AutoUpdate
 
 AutoUpdate::~AutoUpdate() { delete ui; }
 
-QJsonObject AutoUpdate::onCheckUpdate() {
+QJsonObject AutoUpdate::checkUpdate() {
   m_url = MY_GLOBAL->get<QString>(URL_AUTO_UPDATE);
   QString url_json = QString("%1/%2").arg(m_url, "update.json");
   m_objUpdate = MY_HTTP->get_sync(url_json);
   return m_objUpdate;
 }
 
+bool AutoUpdate::isNewVersion() {
+  checkUpdate();
+
+  QString currentVersion = APP_VERSION;
+  QString newVersion = m_objUpdate["version"].toString();
+
+  QStringList curList = currentVersion.split('.');
+  QStringList newList = newVersion.split('.');
+
+  int maxCount = qMax(curList.size(), newList.size());
+
+  while (curList.size() < maxCount) curList << "0";
+  while (newList.size() < maxCount) newList << "0";
+
+  for (int i = 0; i < maxCount; ++i) {
+    int curPart = curList[i].toInt();
+    int newPart = newList[i].toInt();
+
+    if (newPart > curPart)
+      return true;
+    else if (newPart < curPart)
+      return false;
+  }
+
+  return false;
+}
+
 void AutoUpdate::showEvent(QShowEvent *event) {
-  QJsonObject res = onCheckUpdate();
+  QJsonObject res = checkUpdate();
 
   ui->radioButtonExeOnly->setChecked(true);
   ui->progressBar->setVisible(false);

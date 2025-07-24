@@ -16,17 +16,18 @@ class AutoUpdate : public QWidget {
   ~AutoUpdate();
 
  public slots:
-  QJsonObject onCheckUpdate();
+  bool isNewVersion();
 
  protected:
   void showEvent(QShowEvent *event) override;
 
  private slots:
   void on_btnUpdate_clicked();
-
   void on_radioButtonExeOnly_clicked();
-
   void on_radioButtonFull_clicked();
+
+ private:
+  QJsonObject checkUpdate();
 
  private:
   Ui::AutoUpdate *ui;

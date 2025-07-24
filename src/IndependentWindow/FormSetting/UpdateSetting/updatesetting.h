@@ -13,9 +13,12 @@ class UpdateSetting : public QWidget {
  public:
   explicit UpdateSetting(QWidget *parent = nullptr);
   ~UpdateSetting();
+  void init();
 
  private slots:
   void on_btnStartUpdate_clicked();
+
+  void on_checkBoxAutoUpdate_clicked();
 
  private:
   Ui::UpdateSetting *ui;

@@ -2,6 +2,7 @@
 #include <QMessageBox>
 #include <QScreen>
 
+#include "AutoUpdate/autoupdate.h"
 #include "SplashScreen/splashscreen.h"
 #include "g_define.h"
 #include "mainwindow.h"
@@ -11,6 +12,7 @@
 
 void initConfig();
 QString initConnect();
+void initUpdate();
 
 int main(int argc, char *argv[]) {
   LOG_INFO("version: {}", APP_VERSION);
@@ -28,16 +30,20 @@ int main(int argc, char *argv[]) {
 
   splash.setStatusText(QObject::tr("init config"));
   initConfig();
-  splash.setProgress(1.0 / 3.0);
+  splash.setProgress(1.0 / 4.0);
 
   splash.setStatusText(QObject::tr("init connect"));
   splash.setStatusText(initConnect());
-  splash.setProgress(2.0 / 3.0);
+  splash.setProgress(2.0 / 4.0);
+
+  splash.setStatusText(QObject::tr("init update"));
+  initUpdate();
+  splash.setProgress(3.0 / 4.0);
 
   splash.setStatusText(QObject::tr("init GUI"));
   MainWindow w;
   w.showMaximized();
-  splash.setProgress(3.0 / 3.0);
+  splash.setProgress(4.0 / 4.0);
 
   splash.close();
   return a.exec();
@@ -80,6 +86,8 @@ void initConfig() {
   MY_GLOBAL->set<QMap<QString, QStringList>>(CHEMICAL_CATEGORY_MAJOR_MINOR, m_MajorMinor);
   MY_GLOBAL->set<QString>(URL_AUTO_UPDATE,
                           SETTING_CONFIG_GET(CFG_GROUP_AUTO_UPDATE, URL_AUTO_UPDATE, DFT_URL_AUTO_UPDATE));
+  MY_GLOBAL->set<QString>(CFG_IS_AUTO_UPDATE,
+                          SETTING_CONFIG_GET(CFG_GROUP_AUTO_UPDATE, CFG_IS_AUTO_UPDATE, VAL_DISABLE));
 }
 
 QString initConnect() {
@@ -104,6 +112,15 @@ QString initConnect() {
     int ret = msgBox.exec();
     if (ret == QMessageBox::Cancel) {
       return QString();
+    }
+  }
+}
+
+void initUpdate() {
+  if (MY_GLOBAL->get<QString>(CFG_IS_AUTO_UPDATE) == VAL_ENABLE) {
+    AutoUpdate *update = new AutoUpdate;
+    if (update->isNewVersion()) {
+      update->show();
     }
   }
 }

@@ -120,13 +120,13 @@ void BasicInformation::on_tBtnUploadStructure_clicked() {
 
   QJsonObject objInfo;
   objInfo.insert("UUID", m_uuid);
+  objInfo.insert("Type", "Structure");
   MY_HTTP->postImage(
       url_post_img, path, objInfo,
       [=](QJsonObject obj) {
         qDebug() << "Upload OK:" << obj;
         QFileInfo info(path);
-        QString name = info.fileName();
-        ui->lineEditStructurePicturePath->setText(QString("original/%1").arg(name));
+        ui->lineEditStructurePicturePath->setText(QString("original/%1").arg(obj["filename"].toString()));
       },
       [](QString err) { qDebug() << "Upload Error:" << err; });
 

@@ -86,7 +86,10 @@ const QString DFT_CALIBRATION_4000 = "(0, 0)";
 const QString DFT_CALIBRATION_2000 = "(0, 0)";
 const QString DFT_CALIBRATION_0 = "(0, 0)";
 
+const QString VAL_ENABLE = "enable";
+const QString VAL_DISABLE = "disable";
 const QString CFG_GROUP_AUTO_UPDATE = "AutoUpdate";
+const QString CFG_IS_AUTO_UPDATE = "is_auto_update";
 const QString CFG_GROUP_PROGRAM = "Program";
 const QString CFG_PROGRAM_THEME = "theme";
 const QString CFG_PROGRAM_LANGUAGE = "language";
@@ -95,6 +98,7 @@ const QString CFG_PROPERTY_STRUCTURE_CROP = "structure_crop";
 const QString DFT_CFG_PROPERTY_STRUCTURE_CROP = "100";
 const QString CFG_GROUP_CHEMICAL_CATEGORY = "ChemicalCategory";
 const QString CHEMICAL_CATEGORY_MAJOR_MINOR = "ChemicalCategory_MajorMinor";
+
 // function
 #include "mysetting.h"
 #define SETTING_CONFIG_GET(group, key, ...) MY_SETTING.getValue(MySetting::SETTING::CONFIG, group, key, ##__VA_ARGS__)
