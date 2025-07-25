@@ -32,53 +32,53 @@
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="14"/>
         <source>AutoUpdate</source>
-        <translation type="unfinished"></translation>
+        <translation>AutoUpdate</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="77"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Version</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="83"/>
         <source>URL</source>
-        <translation type="unfinished"></translation>
+        <translation>URL</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="97"/>
         <source>Target Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Target Version</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="109"/>
         <source>Timestamp</source>
-        <translation type="unfinished"></translation>
+        <translation>Timestamp</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="120"/>
         <source>Current Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Current Version</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="27"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Description</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="20"/>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="54"/>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Update</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="60"/>
         <source>Exe Only</source>
-        <translation type="unfinished"></translation>
+        <translation>Exe Only</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="67"/>
         <source>Full</source>
-        <translation type="unfinished"></translation>
+        <translation>Full</translation>
     </message>
 </context>
 <context>
@@ -427,31 +427,31 @@
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="120"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="230"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="248"/>
         <source>peak assistance</source>
         <translation>peak assistance</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="127"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="229"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="247"/>
         <source>auto scale</source>
         <translation>auto scale</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="134"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="228"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="246"/>
         <source>crop</source>
         <translation>crop</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="141"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="227"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="245"/>
         <source>xaxis invert</source>
         <translation>xaxis invert</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="148"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="226"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="244"/>
         <source>original image</source>
         <translation>original image</translation>
     </message>
@@ -852,17 +852,22 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../src/main/main.cpp" line="29"/>
+        <location filename="../../src/main/main.cpp" line="31"/>
         <source>init config</source>
         <translation>init config</translation>
     </message>
     <message>
-        <location filename="../../src/main/main.cpp" line="33"/>
+        <location filename="../../src/main/main.cpp" line="35"/>
         <source>init connect</source>
         <translation>init connect</translation>
     </message>
     <message>
-        <location filename="../../src/main/main.cpp" line="37"/>
+        <location filename="../../src/main/main.cpp" line="39"/>
+        <source>init update</source>
+        <translation>init update</translation>
+    </message>
+    <message>
+        <location filename="../../src/main/main.cpp" line="43"/>
         <source>init GUI</source>
         <translation>init GUI</translation>
     </message>
@@ -1192,27 +1197,27 @@
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.ui" line="20"/>
         <source>UpdateSetting</source>
-        <translation type="unfinished"></translation>
+        <translation>UpdateSetting</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.ui" line="32"/>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Update</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.ui" line="39"/>
         <source>URL</source>
-        <translation type="unfinished"></translation>
+        <translation>URL</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.ui" line="49"/>
         <source>Auto Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Auto Update</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.ui" line="56"/>
         <source>Start Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Start Update</translation>
     </message>
 </context>
 </TS>

@@ -32,53 +32,53 @@
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="14"/>
         <source>AutoUpdate</source>
-        <translation type="unfinished"></translation>
+        <translation>自动更新</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="77"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>版本</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="83"/>
         <source>URL</source>
-        <translation type="unfinished"></translation>
+        <translation>URL</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="97"/>
         <source>Target Version</source>
-        <translation type="unfinished"></translation>
+        <translation>目标版本</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="109"/>
         <source>Timestamp</source>
-        <translation type="unfinished"></translation>
+        <translation>时间戳</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="120"/>
         <source>Current Version</source>
-        <translation type="unfinished"></translation>
+        <translation>当前版本</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="27"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>描述</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="20"/>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="54"/>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>更新</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="60"/>
         <source>Exe Only</source>
-        <translation type="unfinished"></translation>
+        <translation>单独的Exe</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/AutoUpdate/autoupdate.ui" line="67"/>
         <source>Full</source>
-        <translation type="unfinished"></translation>
+        <translation>全量</translation>
     </message>
 </context>
 <context>
@@ -205,7 +205,7 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/DialogAdd/dialogadd.ui" line="54"/>
         <source>ID</source>
-        <translation></translation>
+        <translation>ID</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/DialogAdd/dialogadd.ui" line="61"/>
@@ -423,31 +423,31 @@
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="120"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="230"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="248"/>
         <source>peak assistance</source>
         <translation>辅助峰位</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="127"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="229"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="247"/>
         <source>auto scale</source>
         <translation>自动缩放</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="134"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="228"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="246"/>
         <source>crop</source>
         <translation>裁剪</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="141"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="227"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="245"/>
         <source>xaxis invert</source>
         <translation>x轴反转</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.ui" line="148"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="226"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormPlot/formplot.cpp" line="244"/>
         <source>original image</source>
         <translation>原始图像</translation>
     </message>
@@ -766,37 +766,37 @@
     <message>
         <location filename="../../src/main/mainwindow.ui" line="128"/>
         <source>Lite</source>
-        <translation type="unfinished"></translation>
+        <translation>Lite</translation>
     </message>
     <message>
         <location filename="../../src/main/mainwindow.ui" line="133"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>Dark</translation>
     </message>
     <message>
         <location filename="../../src/main/mainwindow.ui" line="138"/>
         <source>OSX_Lite</source>
-        <translation type="unfinished"></translation>
+        <translation>OSX_Lite</translation>
     </message>
     <message>
         <location filename="../../src/main/mainwindow.ui" line="143"/>
         <source>OSX_Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>OSX_Dark</translation>
     </message>
     <message>
         <location filename="../../src/main/mainwindow.ui" line="148"/>
         <source>en</source>
-        <translation type="unfinished"></translation>
+        <translation>en</translation>
     </message>
     <message>
         <location filename="../../src/main/mainwindow.ui" line="153"/>
         <source>zh_simple</source>
-        <translation type="unfinished"></translation>
+        <translation>zh_simple</translation>
     </message>
     <message>
         <location filename="../../src/main/mainwindow.ui" line="158"/>
         <source>zh_traditional</source>
-        <translation type="unfinished"></translation>
+        <translation>zh_traditional</translation>
     </message>
     <message>
         <location filename="../../src/main/mainwindow.cpp" line="27"/>
@@ -848,17 +848,22 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../src/main/main.cpp" line="29"/>
+        <location filename="../../src/main/main.cpp" line="31"/>
         <source>init config</source>
         <translation>初始化配置</translation>
     </message>
     <message>
-        <location filename="../../src/main/main.cpp" line="33"/>
+        <location filename="../../src/main/main.cpp" line="35"/>
         <source>init connect</source>
         <translation>初始化连接</translation>
     </message>
     <message>
-        <location filename="../../src/main/main.cpp" line="37"/>
+        <location filename="../../src/main/main.cpp" line="39"/>
+        <source>init update</source>
+        <translation>初始化更新</translation>
+    </message>
+    <message>
+        <location filename="../../src/main/main.cpp" line="43"/>
         <source>init GUI</source>
         <translation>初始化GUI</translation>
     </message>
@@ -896,67 +901,67 @@
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="20"/>
         <source>Server</source>
-        <translation type="unfinished"></translation>
+        <translation>服务</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="26"/>
         <source>url</source>
-        <translation type="unfinished"></translation>
+        <translation>url</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="36"/>
         <source>path ping</source>
-        <translation type="unfinished"></translation>
+        <translation>ping路径</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="46"/>
         <source>path upload img</source>
-        <translation type="unfinished"></translation>
+        <translation>upload img路径</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="56"/>
         <source>path load img</source>
-        <translation type="unfinished"></translation>
+        <translation>load img路径</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="66"/>
         <source>path dataset check</source>
-        <translation type="unfinished"></translation>
+        <translation>dataset check路径</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="76"/>
         <source>path dataset set</source>
-        <translation type="unfinished"></translation>
+        <translation>dataset路径</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="89"/>
         <source>path dataset get</source>
-        <translation type="unfinished"></translation>
+        <translation>dataset get路径</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="96"/>
         <source>path dataset del</source>
-        <translation type="unfinished"></translation>
+        <translation>dataset del路径</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="103"/>
         <source>path html analysis</source>
-        <translation type="unfinished"></translation>
+        <translation>html analysis路径</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="116"/>
         <source>path cv find crop</source>
-        <translation type="unfinished"></translation>
+        <translation>cv find crop路径</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="123"/>
         <source>path cv find curve</source>
-        <translation type="unfinished"></translation>
+        <translation>cv find curve路径</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/ServerSetting/serversetting.ui" line="130"/>
         <source>path cv find peak</source>
-        <translation type="unfinished"></translation>
+        <translation>cv find peak路径</translation>
     </message>
 </context>
 <context>
@@ -1037,22 +1042,22 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="60"/>
         <source>start</source>
-        <translation type="unfinished"></translation>
+        <translation>开始</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="67"/>
         <source>2000</source>
-        <translation type="unfinished"></translation>
+        <translation>2000</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="74"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="81"/>
         <source>4000</source>
-        <translation type="unfinished"></translation>
+        <translation>4000</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="133"/>
@@ -1129,7 +1134,7 @@
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="121"/>
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="167"/>
         <source>x</source>
-        <translation type="unfinished"></translation>
+        <translation>x</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="50"/>
@@ -1137,27 +1142,27 @@
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="128"/>
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="181"/>
         <source>y</source>
-        <translation type="unfinished"></translation>
+        <translation>y</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="71"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>开始</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="110"/>
         <source>4000</source>
-        <translation type="unfinished"></translation>
+        <translation>4000</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="149"/>
         <source>2000</source>
-        <translation type="unfinished"></translation>
+        <translation>2000</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/SpectralSetting/spectralsetting.ui" line="188"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
 </context>
 <context>
@@ -1170,7 +1175,7 @@
     <message>
         <location filename="../../src/main/SplashScreen/splashscreen.ui" line="32"/>
         <source>LOGO</source>
-        <translation></translation>
+        <translation>LOGO</translation>
     </message>
     <message>
         <location filename="../../src/main/SplashScreen/splashscreen.ui" line="39"/>
@@ -1188,27 +1193,27 @@
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.ui" line="20"/>
         <source>UpdateSetting</source>
-        <translation type="unfinished"></translation>
+        <translation>更新设置</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.ui" line="32"/>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>更新</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.ui" line="39"/>
         <source>URL</source>
-        <translation type="unfinished"></translation>
+        <translation>URL</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.ui" line="49"/>
         <source>Auto Update</source>
-        <translation type="unfinished"></translation>
+        <translation>自动更新</translation>
     </message>
     <message>
         <location filename="../../src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.ui" line="56"/>
         <source>Start Update</source>
-        <translation type="unfinished"></translation>
+        <translation>开始更新</translation>
     </message>
 </context>
 </TS>
