@@ -351,19 +351,27 @@ def dataset_get():
             logging.error(f"Error reading data.json for ID {dataset_id}: {str(e)}")
             return jsonify({"status": False, "message": f"Error reading data.json: {str(e)}"}), 500
     else:
-        # 获取 dataset 目录下所有子目录
         try:
             if not os.path.exists(dataset_base_dir):
                 logging.error(f"Dataset base directory not found: {dataset_base_dir}")
                 return jsonify({"status": False, "message": "Dataset directory not found"}), 404
 
-            # 列出所有子目录
-            directories = [
-                d for d in os.listdir(dataset_base_dir)
-                if os.path.isdir(os.path.join(dataset_base_dir, d))
-            ]
-            logging.info(f"Found {len(directories)} datasets: {directories}")
-            return jsonify({"status": True, "data": directories})
+            data_list = []
+            for d in os.listdir(dataset_base_dir):
+                dir_path = os.path.join(dataset_base_dir, d)
+                data_path = os.path.join(dir_path, "data.json")
+                if os.path.isdir(dir_path) and os.path.exists(data_path):
+                    try:
+                        with open(data_path, "r", encoding="utf-8") as f:
+                            data = json.load(f)
+                            data_list.append(data)
+                    except Exception as read_err:
+                        logging.warning(f"Failed to read {data_path}: {str(read_err)}")
+                        continue
+
+            logging.info(f"Collected {len(data_list)} valid datasets with data.json")
+            return jsonify({"status": True, "data": data_list})
+
         except Exception as e:
             logging.error(f"Error listing datasets: {str(e)}")
             return jsonify({"status": False, "message": f"Error listing datasets: {str(e)}"}), 500
