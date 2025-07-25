@@ -280,11 +280,13 @@ QGroupBox::title {
   margin-right: 8px;
 }
 
+QTableView,
 QListView {
   background-color: #FFF;
   border: 1px solid #D2D2D2;
 }
 
+QTableView::item,
 QListView::item {
   border-radius: 2px;
   border: 1px solid transparent;
@@ -293,16 +295,19 @@ QListView::item {
   padding: 2px 4px;
 }
 
+QTableView::item:hover,
 QListView::item:hover {
   background-color: #eee;
   border: 1px solid #eee;
 }
 
+QTableView::item:selected,
 QListView::item:selected {
   background-color: #F4F4F4;
   border: 1px solid #C4C4C4;
 }
 
+QTableView::item:selected:active,
 QListView::item:selected:active {
   background-color: #dcedf5;
   border: 1px solid #97b5c6;
