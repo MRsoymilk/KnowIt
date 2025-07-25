@@ -19,9 +19,10 @@ void FormDataset::retranslateUI() {
 
 void FormDataset::init() {
   m_model = new QStandardItemModel(this);
-  m_model->setHorizontalHeaderLabels(QStringList() << tr("ID"));
+  m_model->setHorizontalHeaderLabels(QStringList() << tr("ID") << tr("Compound Name(en)") << tr("Compound Name(zh)"));
   ui->tableView->setModel(m_model);
   ui->tableView->horizontalHeader()->setStretchLastSection(true);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
   ui->tableView->verticalHeader()->setVisible(false);
   ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
   ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
@@ -81,10 +82,20 @@ void FormDataset::onUpdateData() {
   LOG_INFO("{}", res);
 
   QJsonArray array = res["data"].toArray();
+
   for (int i = 0; i < array.size(); ++i) {
-    QString name = array[i].toString();
-    QStandardItem *item = new QStandardItem(name);
-    m_model->setItem(i, 0, item);
+    QJsonObject obj = array.at(i).toObject();
+    QString id = obj[ID].toString();
+    QStandardItem *itemID = new QStandardItem(id);
+    m_model->setItem(i, 0, itemID);
+
+    QString name_en = obj[BASIC_INFORMATION].toObject()[COMPOUND_NAME_EN].toString();
+    QStandardItem *itemName_en = new QStandardItem(name_en);
+    m_model->setItem(i, 1, itemName_en);
+
+    QString name_zh = obj[BASIC_INFORMATION].toObject()[COMPOUND_NAME_ZH].toString();
+    QStandardItem *itemName_zh = new QStandardItem(name_zh);
+    m_model->setItem(i, 2, itemName_zh);
   }
 }
 
