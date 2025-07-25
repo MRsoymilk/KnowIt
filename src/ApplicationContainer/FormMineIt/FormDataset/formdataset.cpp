@@ -19,11 +19,20 @@ void FormDataset::retranslateUI() {
 
 void FormDataset::init() {
   m_model = new QStandardItemModel(this);
-  m_model->setHorizontalHeaderLabels(QStringList() << tr("ID") << tr("Compound Name(en)") << tr("Compound Name(zh)"));
+  m_model->setHorizontalHeaderLabels(QStringList() << tr("ID") << tr("Compound Name(en)") << tr("Compound Name(zh)")
+                                                   << tr("Structure Picture"));
   ui->tableView->setModel(m_model);
-  ui->tableView->horizontalHeader()->setStretchLastSection(true);
-  ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+  QHeaderView *header = ui->tableView->horizontalHeader();
+  header->setSectionResizeMode(QHeaderView::Interactive);
+
+  ui->tableView->setColumnWidth(0, width() / 4);
+  ui->tableView->setColumnWidth(1, width() / 3);
+  ui->tableView->setColumnWidth(2, width() / 3);
+  ui->tableView->setColumnWidth(3, width() / 3);
+
   ui->tableView->verticalHeader()->setVisible(false);
+  ui->tableView->setIconSize(QSize(128, 128));
+  ui->tableView->verticalHeader()->setDefaultSectionSize(96);
   ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
   ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
@@ -96,6 +105,22 @@ void FormDataset::onUpdateData() {
     QString name_zh = obj[BASIC_INFORMATION].toObject()[COMPOUND_NAME_ZH].toString();
     QStandardItem *itemName_zh = new QStandardItem(name_zh);
     m_model->setItem(i, 2, itemName_zh);
+
+    int row = i;
+    QString url_get_img_structure =
+        QString("%1%2/%3/%4")
+            .arg(MY_GLOBAL->get<QString>(URL_SERVER), MY_GLOBAL->get<QString>(PATH_LOAD_IMG), obj[ID].toString(),
+                 obj[BASIC_INFORMATION].toObject()[STRUCTURE_PICTURE].toString());
+
+    MY_HTTP->getImage(
+        url_get_img_structure,
+        [=](QPixmap pix) {
+          QStandardItem *imgItem = new QStandardItem();
+          imgItem->setIcon(QIcon(pix.scaled(128, 128, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
+          imgItem->setTextAlignment(Qt::AlignCenter);
+          m_model->setItem(row, 3, imgItem);
+        },
+        [=](QString err) { LOG_WARN("Failed to load structure image: {}", err); });
   }
 }
 
