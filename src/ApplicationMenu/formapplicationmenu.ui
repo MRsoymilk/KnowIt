@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>481</width>
-    <height>682</height>
+    <width>325</width>
+    <height>762</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,15 +17,15 @@
    <item row="0" column="0">
     <widget class="QToolBox" name="toolBox">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="pageData">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>463</width>
-        <height>634</height>
+        <width>307</width>
+        <height>684</height>
        </rect>
       </property>
       <attribute name="label">
@@ -33,9 +33,95 @@
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
+        <widget class="QToolButton" name="tBtnIDExpert">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>ID Expert</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="tBtnSearchIt">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>SearchIt</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QToolButton" name="tBtnMineIt">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="text">
           <string>MineIt</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="tBtnQCExpert">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>QC Expert</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageSpectralAnalysis">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>307</width>
+        <height>684</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Spectral Analysis</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QToolButton" name="tBtnAnalyzeIt">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>AnalyzeIt</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="tBtnPredictIt">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>PredictIt NMR</string>
          </property>
         </widget>
        </item>

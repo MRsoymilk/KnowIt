@@ -19,6 +19,21 @@ void FormApplicationMenu::init() {
   ui->tBtnMineIt->setCheckable(true);
   ui->tBtnMineIt->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
   ui->tBtnMineIt->setChecked(true);
+
+  ui->tBtnAnalyzeIt->setVisible(false);
+  ui->tBtnIDExpert->setVisible(false);
+  ui->tBtnQCExpert->setVisible(false);
+  ui->tBtnPredictIt->setVisible(false);
+  ui->tBtnSearchIt->setVisible(false);
+
+  ui->tBtnAnalyzeIt->setObjectName("AnalyzeIt");
+  ui->tBtnIDExpert->setObjectName("IDExpert");
+  ui->tBtnQCExpert->setObjectName("QCExpert");
+  ui->tBtnPredictIt->setObjectName("PredictIt");
+  ui->tBtnSearchIt->setObjectName("SearchIt");
+
+  // ui->pageSpectralAnalysis->hide();
+  ui->toolBox->setCurrentIndex(0);
 }
 
 void FormApplicationMenu::on_tBtnMineIt_clicked() {}
