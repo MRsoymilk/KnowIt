@@ -22,6 +22,8 @@ class MainWindow : public QMainWindow {
  private slots:
   void on_tBtnSetting_clicked();
   void menuLanguageSelect(QAction *selectedAction);
+  void on_actionDocument_triggered();
+  void on_actionAbout_triggered();
 
  private:
   void init();

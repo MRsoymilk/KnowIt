@@ -17,6 +17,9 @@ set(PROJECT_SOURCES
         src/main/mainwindow.cpp
         src/main/mainwindow.h
         src/main/mainwindow.ui
+        src/main/About/about.h
+        src/main/About/about.cpp
+        src/main/About/about.ui
         src/main/SplashScreen/splashscreen.h
         src/main/SplashScreen/splashscreen.cpp
         src/main/SplashScreen/splashscreen.ui

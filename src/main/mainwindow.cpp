@@ -1,10 +1,13 @@
 #include "mainwindow.h"
 
+#include <QDesktopServices>
 #include <QFile>
 #include <QLabel>
+#include <QMessageBox>
 #include <QTranslator>
 
 #include "./ui_mainwindow.h"
+#include "About/about.h"
 #include "FormSetting/formsetting.h"
 #include "formapplicationmenu.h"
 #include "formmineit.h"
@@ -58,6 +61,22 @@ void MainWindow::menuLanguageSelect(QAction *selectedAction) {
       act->setChecked(false);
     }
   }
+}
+
+void MainWindow::on_actionDocument_triggered() {
+  QString pdfPath = QCoreApplication::applicationDirPath() + "/document/KnowIt.pdf";
+
+  if (!QFile::exists(pdfPath)) {
+    QMessageBox::warning(this, "Error", "Unable to find help document:\n" + pdfPath);
+    return;
+  }
+
+  QDesktopServices::openUrl(QUrl::fromLocalFile(pdfPath));
+}
+
+void MainWindow::on_actionAbout_triggered() {
+  About *about = new About;
+  about->exec();
 }
 
 void MainWindow::setLanguage(const QString &language) {
