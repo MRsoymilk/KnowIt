@@ -2,6 +2,19 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="zh_CN" sourcelanguage="en_US">
 <context>
+    <name>About</name>
+    <message>
+        <location filename="../../src/main/About/about.ui" line="14"/>
+        <source>About</source>
+        <translation>关于</translation>
+    </message>
+    <message>
+        <location filename="../../src/main/About/about.ui" line="20"/>
+        <source>KnowIt</source>
+        <translation>KnowIt</translation>
+    </message>
+</context>
+<context>
     <name>AnnotationsAndTags</name>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/AnnotationsAndTags/annotationsandtags.ui" line="14"/>
@@ -223,7 +236,7 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/DialogEdit/dialogedit.ui" line="30"/>
         <source>ID</source>
-        <translation type="unfinished">ID</translation>
+        <translation>ID</translation>
     </message>
 </context>
 <context>
@@ -330,7 +343,7 @@
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="26"/>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="55"/>
         <source>URL</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">URL</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="36"/>
@@ -361,9 +374,39 @@
         <translation>数据</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationMenu/formapplicationmenu.ui" line="38"/>
+        <location filename="../../src/ApplicationMenu/formapplicationmenu.ui" line="44"/>
+        <source>ID Expert</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationMenu/formapplicationmenu.ui" line="57"/>
+        <source>SearchIt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationMenu/formapplicationmenu.ui" line="70"/>
         <source>MineIt</source>
         <translation>MineIt</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationMenu/formapplicationmenu.ui" line="83"/>
+        <source>QC Expert</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationMenu/formapplicationmenu.ui" line="99"/>
+        <source>Spectral Analysis</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationMenu/formapplicationmenu.ui" line="111"/>
+        <source>AnalyzeIt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationMenu/formapplicationmenu.ui" line="124"/>
+        <source>PredictIt NMR</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -393,6 +436,21 @@
         <location filename="../../src/ApplicationContainer/FormMineIt/FormDataset/formdataset.cpp" line="22"/>
         <source>ID</source>
         <translation>ID</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormDataset/formdataset.cpp" line="22"/>
+        <source>Compound Name(en)</source>
+        <translation>化合物名称（英文）</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormDataset/formdataset.cpp" line="22"/>
+        <source>Compound Name(zh)</source>
+        <translation>化合物名称（中文）</translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormDataset/formdataset.cpp" line="23"/>
+        <source>Structure Picture</source>
+        <translation>结构图</translation>
     </message>
 </context>
 <context>
@@ -764,42 +822,57 @@
         <translation>语言</translation>
     </message>
     <message>
-        <location filename="../../src/main/mainwindow.ui" line="128"/>
+        <location filename="../../src/main/mainwindow.ui" line="124"/>
+        <source>Help</source>
+        <translation>帮助</translation>
+    </message>
+    <message>
+        <location filename="../../src/main/mainwindow.ui" line="136"/>
         <source>Lite</source>
         <translation>Lite</translation>
     </message>
     <message>
-        <location filename="../../src/main/mainwindow.ui" line="133"/>
+        <location filename="../../src/main/mainwindow.ui" line="141"/>
         <source>Dark</source>
         <translation>Dark</translation>
     </message>
     <message>
-        <location filename="../../src/main/mainwindow.ui" line="138"/>
+        <location filename="../../src/main/mainwindow.ui" line="146"/>
         <source>OSX_Lite</source>
         <translation>OSX_Lite</translation>
     </message>
     <message>
-        <location filename="../../src/main/mainwindow.ui" line="143"/>
+        <location filename="../../src/main/mainwindow.ui" line="151"/>
         <source>OSX_Dark</source>
         <translation>OSX_Dark</translation>
     </message>
     <message>
-        <location filename="../../src/main/mainwindow.ui" line="148"/>
+        <location filename="../../src/main/mainwindow.ui" line="156"/>
         <source>en</source>
         <translation>en</translation>
     </message>
     <message>
-        <location filename="../../src/main/mainwindow.ui" line="153"/>
+        <location filename="../../src/main/mainwindow.ui" line="161"/>
         <source>zh_simple</source>
         <translation>zh_simple</translation>
     </message>
     <message>
-        <location filename="../../src/main/mainwindow.ui" line="158"/>
+        <location filename="../../src/main/mainwindow.ui" line="166"/>
         <source>zh_traditional</source>
         <translation>zh_traditional</translation>
     </message>
     <message>
-        <location filename="../../src/main/mainwindow.cpp" line="27"/>
+        <location filename="../../src/main/mainwindow.ui" line="171"/>
+        <source>Document</source>
+        <translation>文档</translation>
+    </message>
+    <message>
+        <location filename="../../src/main/mainwindow.ui" line="176"/>
+        <source>About</source>
+        <translation>关于</translation>
+    </message>
+    <message>
+        <location filename="../../src/main/mainwindow.cpp" line="30"/>
         <source>settings</source>
         <translation>设置</translation>
     </message>
@@ -813,8 +886,12 @@
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/Originate/originate.ui" line="20"/>
+        <source>Resource</source>
+        <translation>资源</translation>
+    </message>
+    <message>
         <source>Source</source>
-        <translation>来源</translation>
+        <translation type="vanished">来源</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/Originate/originate.ui" line="30"/>
@@ -1086,18 +1163,18 @@
         <translation>上传</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="419"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="420"/>
         <source>warning</source>
         <translation>警告</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="419"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="465"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="420"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="466"/>
         <source>%1 is empty!</source>
         <translation>%1 是空的！</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="511"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="512"/>
         <source>Choose Picture</source>
         <translation>选择图片</translation>
     </message>
@@ -1106,12 +1183,12 @@
         <translation type="vanished">图片（*.png *.jpg *.jpeg *.bmp *.gif）</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="519"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="520"/>
         <source>Error</source>
         <translation>错误</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="519"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="520"/>
         <source>Failed to load image.</source>
         <translation>加载图像失败。</translation>
     </message>

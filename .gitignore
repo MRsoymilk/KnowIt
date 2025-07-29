@@ -2,3 +2,5 @@ build
 CMakeLists.txt.user
 
 server/venv
+
+doc/*.pdf

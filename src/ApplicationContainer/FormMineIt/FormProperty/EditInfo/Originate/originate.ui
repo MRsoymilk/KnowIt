@@ -15,9 +15,9 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
-    <widget class="QLabel" name="labelSource">
+    <widget class="QLabel" name="labelResource">
      <property name="text">
-      <string>Source</string>
+      <string>Resource</string>
      </property>
     </widget>
    </item>
