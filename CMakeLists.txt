@@ -38,9 +38,6 @@ set(PROJECT_SOURCES
         src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.h
         src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.cpp
         src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.ui
-        src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.h
-        src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.cpp
-        src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui
         src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/editinfo.h
         src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/editinfo.cpp
         src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/editinfo.ui

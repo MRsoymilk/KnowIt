@@ -333,40 +333,12 @@
 <context>
     <name>EditURL</name>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="14"/>
         <source>EditURL</source>
-        <translation>EditURL</translation>
+        <translation type="vanished">EditURL</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="20"/>
-        <source>Web CompoundView</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="26"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="55"/>
         <source>URL</source>
-        <translation>URL</translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="36"/>
-        <source>CompoundView</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="49"/>
-        <source>Web RamanSpectralView</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="65"/>
-        <source>RamanSpectralView</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.cpp" line="28"/>
-        <source>URL is empty!</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">URL</translation>
     </message>
 </context>
 <context>

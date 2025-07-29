@@ -4,7 +4,6 @@
 
 #include "../EditID/editid.h"
 #include "../EditInfo/editinfo.h"
-#include "../EditURL/editurl.h"
 #include "g_define.h"
 #include "myglobal.h"
 #include "myhttp.h"
@@ -21,14 +20,12 @@ void DialogAdd::init() {
   setWindowState(Qt::WindowMaximized);
 
   m_editID = new EditID;
-  // m_editURL = new EditURL;
   m_editInfo = new EditInfo;
 
   ui->stackedWidget->addWidget(m_editID);
-  // ui->stackedWidget->addWidget(m_editURL);
   ui->stackedWidget->addWidget(m_editInfo);
 
-  m_editWidgets = {m_editID, /*m_editURL,*/ m_editInfo};
+  m_editWidgets = {m_editID, m_editInfo};
 
   ui->stackedWidget->setCurrentWidget(m_editID);
 
@@ -45,12 +42,6 @@ void DialogAdd::on_btnNext_clicked() {
       return;
     }
   }
-  // else if (auto edit = qobject_cast<EditURL *>(m_editWidgets[index])) {
-  //     if (edit->check()) {
-  //     } else {
-  //         return;
-  //     }
-  // }
   else if (auto edit = qobject_cast<EditInfo *>(m_editWidgets[index])) {
     QJsonObject obj = edit->getData();
     obj.insert(ID, ui->labelID->text());

@@ -4,7 +4,6 @@
 #include <QDialog>
 
 class EditID;
-class EditURL;
 class EditInfo;
 
 namespace Ui {
@@ -30,7 +29,6 @@ class DialogAdd : public QDialog {
  private:
   Ui::DialogAdd *ui;
   EditID *m_editID;
-  EditURL *m_editURL;
   EditInfo *m_editInfo;
   QVector<QWidget *> m_editWidgets;
 };
