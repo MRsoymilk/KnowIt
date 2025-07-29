@@ -3,7 +3,6 @@
 #include <QFileDialog>
 #include <QJsonArray>
 #include <QMainWindow>
-#include <QMessageBox>
 #include <QWheelEvent>
 
 #include "AnnotationsAndTags/annotationsandtags.h"

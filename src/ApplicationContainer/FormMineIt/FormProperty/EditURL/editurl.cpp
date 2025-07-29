@@ -1,7 +1,6 @@
 #include "editurl.h"
 
 #include <QJsonObject>
-#include <QMessageBox>
 
 #include "g_define.h"
 #include "myglobal.h"
@@ -26,7 +25,7 @@ bool EditURL::check() {
   // QJsonObject resCompound = MY_HTTP->post_sync(url, objCheckCompound);
 
   if (urlRamanSpectralView.isEmpty() || urlCompoundView.isEmpty()) {
-    QMessageBox::warning(this, "warning", "URL is empty!");
+    MSG_INFO(tr("URL is empty!"));
   }
 
   return true;

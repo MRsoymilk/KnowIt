@@ -3,7 +3,6 @@
 #include <QFileDialog>
 #include <QFileInfo>
 #include <QJsonArray>
-#include <QMessageBox>
 #include <QRegularExpression>
 #include <QWheelEvent>
 
@@ -417,7 +416,7 @@ void SpectralData::on_tBtnFittingCurve_clicked() {
       MY_GLOBAL->set<QString>(key, coordinate);
       SETTING_CONFIG_SET(GROUP_CALIBRATION, key, coordinate);
     } else {
-      QMessageBox::warning(this, tr("warning"), tr("%1 is empty!").arg(key));
+      MSG_WARN(tr("%1 is empty!").arg(key));
       return;
     }
   }
@@ -463,7 +462,7 @@ void SpectralData::on_tBtnFindPeak_clicked() {
       pointObj.insert("y", data.point.y());
       obj.insert(key, pointObj);
     } else {
-      QMessageBox::warning(this, "warning", tr("%1 is empty!").arg(key));
+      MSG_WARN(tr("%1 is empty!").arg(key));
       return;
     }
   }
@@ -517,7 +516,7 @@ void SpectralData::on_tBtnUploadSpectral_clicked() {
   ui->lineEditSpectralPicturePath->setText(path);
   m_pixRamanSpectral.load(path);
   if (m_pixRamanSpectral.isNull()) {
-    QMessageBox::warning(this, tr("Error"), tr("Failed to load image."));
+    MSG_WARN(tr("Failed to load image."));
     return;
   }
 

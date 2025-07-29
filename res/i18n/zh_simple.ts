@@ -279,12 +279,11 @@
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.cpp" line="27"/>
         <source>warning</source>
-        <translation>警告</translation>
+        <translation type="vanished">警告</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.cpp" line="27"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.cpp" line="25"/>
         <source>ID %1 already exists, please re-enter!</source>
         <translation>ID %1 已存在，请重新输入！</translation>
     </message>
@@ -343,7 +342,7 @@
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="26"/>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="55"/>
         <source>URL</source>
-        <translation type="unfinished">URL</translation>
+        <translation>URL</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="36"/>
@@ -358,6 +357,11 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="65"/>
         <source>RamanSpectralView</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.cpp" line="28"/>
+        <source>URL is empty!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -718,6 +722,11 @@
         <translation>资源</translation>
     </message>
     <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="368"/>
+        <source>No Item Selected!</source>
+        <translation>没有选择项目！</translation>
+    </message>
+    <message>
         <source>Origin</source>
         <translation type="vanished">来源</translation>
     </message>
@@ -872,7 +881,7 @@
         <translation>关于</translation>
     </message>
     <message>
-        <location filename="../../src/main/mainwindow.cpp" line="30"/>
+        <location filename="../../src/main/mainwindow.cpp" line="29"/>
         <source>settings</source>
         <translation>设置</translation>
     </message>
@@ -920,6 +929,19 @@
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/EditContainer/PeakInfo/peakinfo.ui" line="52"/>
         <source>Delete</source>
         <translation>删除</translation>
+    </message>
+</context>
+<context>
+    <name>QMessageBox</name>
+    <message>
+        <location filename="../../src/global/g_define.h" line="142"/>
+        <source>Info</source>
+        <translation>信息</translation>
+    </message>
+    <message>
+        <location filename="../../src/global/g_define.h" line="144"/>
+        <source>Warning</source>
+        <translation>警告</translation>
     </message>
 </context>
 <context>
@@ -1106,13 +1128,13 @@
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="42"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="35"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="34"/>
         <source>fitting curve</source>
         <translation>拟合曲线</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="49"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="33"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="32"/>
         <source>find peak</source>
         <translation>查找峰位</translation>
     </message>
@@ -1163,18 +1185,17 @@
         <translation>上传</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="420"/>
         <source>warning</source>
-        <translation>警告</translation>
+        <translation type="vanished">警告</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="420"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="466"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="419"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="465"/>
         <source>%1 is empty!</source>
         <translation>%1 是空的！</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="512"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="511"/>
         <source>Choose Picture</source>
         <translation>选择图片</translation>
     </message>
@@ -1183,12 +1204,11 @@
         <translation type="vanished">图片（*.png *.jpg *.jpeg *.bmp *.gif）</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="520"/>
         <source>Error</source>
-        <translation>错误</translation>
+        <translation type="vanished">错误</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="520"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="519"/>
         <source>Failed to load image.</source>
         <translation>加载图像失败。</translation>
     </message>

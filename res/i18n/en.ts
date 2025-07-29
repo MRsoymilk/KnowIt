@@ -283,12 +283,11 @@
         <translation type="vanished">-</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.cpp" line="27"/>
         <source>warning</source>
-        <translation>warning</translation>
+        <translation type="vanished">warning</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.cpp" line="27"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditID/editid.cpp" line="25"/>
         <source>ID %1 already exists, please re-enter!</source>
         <translation>ID %1 already exists, please re-enter!</translation>
     </message>
@@ -347,7 +346,7 @@
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="26"/>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="55"/>
         <source>URL</source>
-        <translation type="unfinished">URL</translation>
+        <translation>URL</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="36"/>
@@ -362,6 +361,11 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.ui" line="65"/>
         <source>RamanSpectralView</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditURL/editurl.cpp" line="28"/>
+        <source>URL is empty!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -444,17 +448,17 @@
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormDataset/formdataset.cpp" line="22"/>
         <source>Compound Name(en)</source>
-        <translation type="unfinished">Compound Name(en)</translation>
+        <translation>Compound Name(en)</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormDataset/formdataset.cpp" line="22"/>
         <source>Compound Name(zh)</source>
-        <translation type="unfinished">Compound Name(zh)</translation>
+        <translation>Compound Name(zh)</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormDataset/formdataset.cpp" line="23"/>
         <source>Structure Picture</source>
-        <translation type="unfinished">Structure Picture</translation>
+        <translation>Structure Picture</translation>
     </message>
 </context>
 <context>
@@ -722,6 +726,11 @@
         <translation>Resource</translation>
     </message>
     <message>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/formproperty.cpp" line="368"/>
+        <source>No Item Selected!</source>
+        <translation>No Item Selected!</translation>
+    </message>
+    <message>
         <source>Origin</source>
         <translation type="vanished">Origin</translation>
     </message>
@@ -876,7 +885,7 @@
         <translation>About</translation>
     </message>
     <message>
-        <location filename="../../src/main/mainwindow.cpp" line="30"/>
+        <location filename="../../src/main/mainwindow.cpp" line="29"/>
         <source>settings</source>
         <translation>settings</translation>
     </message>
@@ -924,6 +933,19 @@
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/EditContainer/PeakInfo/peakinfo.ui" line="52"/>
         <source>Delete</source>
         <translation>Delete</translation>
+    </message>
+</context>
+<context>
+    <name>QMessageBox</name>
+    <message>
+        <location filename="../../src/global/g_define.h" line="142"/>
+        <source>Info</source>
+        <translation>Info</translation>
+    </message>
+    <message>
+        <location filename="../../src/global/g_define.h" line="144"/>
+        <source>Warning</source>
+        <translation>Warning</translation>
     </message>
 </context>
 <context>
@@ -1110,13 +1132,13 @@
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="42"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="35"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="34"/>
         <source>fitting curve</source>
         <translation>fitting curve</translation>
     </message>
     <message>
         <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.ui" line="49"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="33"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="32"/>
         <source>find peak</source>
         <translation>find peak</translation>
     </message>
@@ -1167,18 +1189,17 @@
         <translation>Upload</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="420"/>
         <source>warning</source>
-        <translation>warning</translation>
+        <translation type="vanished">warning</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="420"/>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="466"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="419"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="465"/>
         <source>%1 is empty!</source>
         <translation>%1 is empty!</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="512"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="511"/>
         <source>Choose Picture</source>
         <translation>Choose Picture</translation>
     </message>
@@ -1187,12 +1208,11 @@
         <translation type="vanished">Picture (*.png *.jpg *.jpeg *.bmp *.gif)</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="520"/>
         <source>Error</source>
-        <translation>Error</translation>
+        <translation type="vanished">Error</translation>
     </message>
     <message>
-        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="520"/>
+        <location filename="../../src/ApplicationContainer/FormMineIt/FormProperty/EditInfo/SpectralData/spectraldata.cpp" line="519"/>
         <source>Failed to load image.</source>
         <translation>Failed to load image.</translation>
     </message>

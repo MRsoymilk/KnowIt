@@ -1,7 +1,5 @@
 #include "editid.h"
 
-#include <QMessageBox>
-
 #include "g_define.h"
 #include "myglobal.h"
 #include "myhttp.h"
@@ -24,7 +22,7 @@ bool EditID::check() {
     MY_GLOBAL->set<QString>(ID, m_id);
     return true;
   } else {
-    QMessageBox::warning(this, tr("warning"), tr("ID %1 already exists, please re-enter!").arg(m_id));
+    MSG_WARN(tr("ID %1 already exists, please re-enter!").arg(m_id));
     return false;
   }
 }

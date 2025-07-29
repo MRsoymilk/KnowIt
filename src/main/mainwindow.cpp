@@ -3,7 +3,6 @@
 #include <QDesktopServices>
 #include <QFile>
 #include <QLabel>
-#include <QMessageBox>
 #include <QTranslator>
 
 #include "./ui_mainwindow.h"
@@ -67,7 +66,7 @@ void MainWindow::on_actionDocument_triggered() {
   QString pdfPath = QCoreApplication::applicationDirPath() + "/document/KnowIt.pdf";
 
   if (!QFile::exists(pdfPath)) {
-    QMessageBox::warning(this, "Error", "Unable to find help document:\n" + pdfPath);
+    MSG_WARN(QString("Unable to find help document: %1").arg(pdfPath));
     return;
   }
 

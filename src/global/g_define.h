@@ -114,4 +114,33 @@ const QString CHEMICAL_CATEGORY_MAJOR_MINOR = "ChemicalCategory_MajorMinor";
 #define LOG_ERROR(...) MY_LOG.getLogger()->error(__VA_ARGS__)
 #define LOG_CRITICAL(...) MY_LOG.getLogger()->critical(__VA_ARGS__)
 
+#include <QGraphicsOpacityEffect>
+#include <QMessageBox>
+#include <QPropertyAnimation>
+#include <QTimer>
+#define SHOW_AUTO_CLOSE_MSGBOX(PARENT, TITLE, TEXT)                                         \
+  do {                                                                                      \
+    QMessageBox *msgBox = new QMessageBox(PARENT);                                          \
+    msgBox->setWindowTitle(TITLE);                                                          \
+    msgBox->setText(TEXT);                                                                  \
+    msgBox->setAttribute(Qt::WA_DeleteOnClose, false);                                      \
+    msgBox->show();                                                                         \
+    QPropertyAnimation *fadeAnim = new QPropertyAnimation(msgBox, "windowOpacity", msgBox); \
+    fadeAnim->setDuration(1000);                                                            \
+    fadeAnim->setStartValue(1.0);                                                           \
+    fadeAnim->setEndValue(0.0);                                                             \
+    fadeAnim->setEasingCurve(QEasingCurve::InOutQuad);                                      \
+    QTimer::singleShot(1000, [msgBox, fadeAnim]() {                                         \
+      fadeAnim->start();                                                                    \
+      QObject::connect(fadeAnim, &QPropertyAnimation::finished, msgBox, [msgBox]() {        \
+        msgBox->close();                                                                    \
+        msgBox->deleteLater();                                                              \
+      });                                                                                   \
+    });                                                                                     \
+  } while (0)
+
+#define MSG_INFO(message) QMessageBox::information(this, tr("Info"), message)
+
+#define MSG_WARN(message) QMessageBox::warning(this, tr("Warning"), message)
+
 #endif  // G_DEFINE_H
