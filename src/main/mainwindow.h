@@ -24,6 +24,7 @@ class MainWindow : public QMainWindow {
   void menuLanguageSelect(QAction *selectedAction);
   void on_actionDocument_triggered();
   void on_actionAbout_triggered();
+  void on_actionDownloadHelper_triggered();
 
  private:
   void init();

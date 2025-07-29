@@ -114,6 +114,13 @@ const QString CHEMICAL_CATEGORY_MAJOR_MINOR = "ChemicalCategory_MajorMinor";
 #define LOG_ERROR(...) MY_LOG.getLogger()->error(__VA_ARGS__)
 #define LOG_CRITICAL(...) MY_LOG.getLogger()->critical(__VA_ARGS__)
 
+#include <QDateTime>
+#define TIMESTAMP_0() (QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss"))
+#define TIMESTAMP_1(format) (QDateTime::currentDateTime().toString(format))
+#define TIMESTAMP(...) TIMESTAMP_MACRO(__VA_ARGS__, TIMESTAMP_1, TIMESTAMP_0)(__VA_ARGS__)
+
+#define TIMESTAMP_MACRO(_1, _2, NAME, ...) NAME
+
 #include <QGraphicsOpacityEffect>
 #include <QMessageBox>
 #include <QPropertyAnimation>
@@ -138,6 +145,9 @@ const QString CHEMICAL_CATEGORY_MAJOR_MINOR = "ChemicalCategory_MajorMinor";
       });                                                                                   \
     });                                                                                     \
   } while (0)
+
+const QString TITLE_INFO = "Info";
+const QString TITLE_WARNING = "Warning";
 
 #define MSG_INFO(message) QMessageBox::information(this, tr("Info"), message)
 

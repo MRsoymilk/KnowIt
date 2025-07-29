@@ -86,11 +86,15 @@ set(PROJECT_SOURCES
         src/IndependentWindow/HoverPopup/hoverpopup.h
         src/IndependentWindow/HoverPopup/hoverpopup.cpp
         src/IndependentWindow/HoverPopup/hoverpopup.ui
-        src/IndependentWindow/AutoUpdate/autoupdate.h src/IndependentWindow/AutoUpdate/autoupdate.cpp
+        src/IndependentWindow/AutoUpdate/autoupdate.h
+        src/IndependentWindow/AutoUpdate/autoupdate.cpp
         src/IndependentWindow/AutoUpdate/autoupdate.ui
         src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.h
         src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.cpp
         src/IndependentWindow/FormSetting/UpdateSetting/updatesetting.ui
+        src/IndependentWindow/DownloadHelper/downloadhelper.h
+        src/IndependentWindow/DownloadHelper/downloadhelper.cpp
+        src/IndependentWindow/DownloadHelper/downloadhelper.ui
         src/ApplicationMenu/formapplicationmenu.h
         src/ApplicationMenu/formapplicationmenu.cpp
         src/ApplicationMenu/formapplicationmenu.ui

@@ -7,6 +7,7 @@
 
 #include "./ui_mainwindow.h"
 #include "About/about.h"
+#include "DownloadHelper/downloadhelper.h"
 #include "FormSetting/formsetting.h"
 #include "formapplicationmenu.h"
 #include "formmineit.h"
@@ -76,6 +77,11 @@ void MainWindow::on_actionDocument_triggered() {
 void MainWindow::on_actionAbout_triggered() {
   About *about = new About;
   about->exec();
+}
+
+void MainWindow::on_actionDownloadHelper_triggered() {
+  DownloadHelper *helper = new DownloadHelper;
+  helper->show();
 }
 
 void MainWindow::setLanguage(const QString &language) {
