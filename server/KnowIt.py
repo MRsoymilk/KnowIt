@@ -284,6 +284,12 @@ def dataset_set():
         return jsonify({"status": False, "message": "Missing 'ID' in JSON"}), 400
 
     dataset_id = data["ID"]
+
+    # Check if dataset_id is empty
+    if not dataset_id:
+        print("Dataset ID is empty")
+        return jsonify({"status": False, "message": "Dataset ID cannot be empty"}), 400
+
     uuid = data["UUID"]
 
     dir_uuid = os.path.join("uploads", uuid)

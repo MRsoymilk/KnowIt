@@ -364,6 +364,10 @@ void FormProperty::on_btnAdd_clicked() {
 void FormProperty::on_btnEdit_clicked() {
   ui->btnEdit->setChecked(true);
   DialogEdit *edit = new DialogEdit(m_info);
+  if (m_info.isEmpty()) {
+    MSG_WARN(tr("No Item Selected!"));
+    return;
+  }
   connect(edit, &DialogEdit::updateEditInfo, this, &FormProperty::onItInfo);
   edit->exec();
   ui->btnEdit->setChecked(false);
