@@ -64,35 +64,55 @@ void AutoUpdate::showEvent(QShowEvent *event) {
 
 void AutoUpdate::on_btnUpdate_clicked() {
   ui->progressBar->setVisible(true);
+  QString to_downloaded;
   if (ui->radioButtonExeOnly->isChecked()) {
+    to_downloaded = "KnowIt.exe";
   } else if (ui->radioButtonFull->isChecked()) {
+    to_downloaded = m_objUpdate["file"].toString();
   }
+
   MY_HTTP->downloadBinary(
       ui->lineEditURL->text(),
-
-      // 成功下载回调
       [=](QByteArray data) {
         QString tempDir = QStandardPaths::writableLocation(QStandardPaths::TempLocation);
-        QString fileName = m_objUpdate["file"].toString();
-        QString fullPath = QDir(tempDir).filePath(fileName);
+        QString fullPath = QDir(tempDir).filePath(to_downloaded);
 
         QFile file(fullPath);
         if (file.open(QIODevice::WriteOnly)) {
           file.write(data);
           file.close();
-          qDebug() << "✅ 下载完成并保存成功：" << fullPath;
+          ui->textBrowserDescription->append("✅ 下载完成并保存成功：" + fullPath);
 
-          // 自动执行下载的文件
-          QProcess::startDetached(fullPath);
+          if (ui->radioButtonFull->isChecked()) {
+            QProcess::startDetached(fullPath);
+          } else {
+            QString currentExePath = QCoreApplication::applicationFilePath();
+            QString currentExeName = QFileInfo(currentExePath).fileName();
+
+            QString updaterPath = QDir(tempDir).filePath("updater.bat");
+
+            QFile updater(updaterPath);
+            if (updater.open(QIODevice::WriteOnly | QIODevice::Text)) {
+              QTextStream out(&updater);
+              out << "@echo off\n";
+              out << "timeout /t 2 /nobreak > nul\n";
+              out << "move /Y \"" << fullPath.replace("/", "\\") << "\" \"" << currentExePath.replace("/", "\\")
+                  << "\"\n";
+              out << "start \"\" \"" << currentExePath.replace("/", "\\") << "\"\n";
+              out << "del \"%~f0\"\n";
+              updater.close();
+
+              QProcess::startDetached("cmd.exe", {"/C", updaterPath});
+              QApplication::exit(0);
+            } else {
+              MSG_WARN(tr("Unable to write update script!"));
+            }
+          }
         } else {
           ui->textBrowserDescription->append("❌ 无法保存文件：" + fullPath);
         }
       },
-
-      // 错误处理
       [=](QString err) { ui->textBrowserDescription->append("❌ 下载失败: " + err); },
-
-      // 进度显示
       [=](qint64 received, qint64 total) {
         if (total > 0) {
           int percent = static_cast<int>((double(received) / total) * 100);
