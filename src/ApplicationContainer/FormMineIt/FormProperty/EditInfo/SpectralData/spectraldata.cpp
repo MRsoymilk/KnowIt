@@ -209,6 +209,7 @@ void SpectralData::setUUID(const QString &uuid) { m_uuid = uuid; }
 void SpectralData::setSpectralData(const QJsonObject &data) {
   QJsonObject objSpectralData = data[SPECTRAL_DATA].toObject();
   ui->lineEditPeakMain->setText(objSpectralData.value(PEAK_MAIN).toString());
+  ui->lineEditPeakAssistance->setText(objSpectralData.value(PEAK_ASSISTANCE).toString());
   ui->lineEditSpectralPicturePath->setText(objSpectralData.value(SPECTRAL_PICTURE).toString());
 
   QString url_get_img = QString("%1%2/%3/%4")
