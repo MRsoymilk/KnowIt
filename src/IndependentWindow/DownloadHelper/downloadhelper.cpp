@@ -18,8 +18,6 @@ DownloadHelper::DownloadHelper(QWidget *parent) : QWidget(parent), ui(new Ui::Do
 DownloadHelper::~DownloadHelper() { delete ui; }
 
 void DownloadHelper::init() {
-  setAcceptDrops(true);
-
   ui->graphicsView->setScene(new QGraphicsScene(this));
   ui->graphicsView->setRenderHint(QPainter::Antialiasing);
   ui->graphicsView->setRenderHint(QPainter::SmoothPixmapTransform);
@@ -28,6 +26,8 @@ void DownloadHelper::init() {
   ui->graphicsView->viewport()->installEventFilter(this);
 
   ui->lineEditDir->setText(QDir::tempPath());
+
+  setAcceptDrops(true);
 }
 
 void DownloadHelper::display(const QPixmap &pix) {
@@ -44,43 +44,63 @@ void DownloadHelper::dragEnterEvent(QDragEnterEvent *event) {
 void DownloadHelper::dropEvent(QDropEvent *event) {
   const QMimeData *mimeData = event->mimeData();
 
+  auto getSavePath = [&]() -> QString {
+    QString saveDir = ui->lineEditDir->text().trimmed();
+    if (saveDir.isEmpty()) {
+      SHOW_AUTO_CLOSE_MSGBOX(this, TITLE_WARNING, tr("Save directory is empty!"));
+      return QString();
+    }
+
+    QString name = ui->lineEditName->text().trimmed();
+    if (name.isEmpty()) {
+      QString dftName = QString("%1.png").arg(TIMESTAMP_1("yyyyMMddhhmmss"));
+      ui->lineEditName->setText(dftName);
+      name = dftName;
+    }
+    return QDir(saveDir).filePath(name);
+  };
+
   if (mimeData->hasUrls()) {
     QList<QUrl> urlList = mimeData->urls();
     for (const QUrl &url : urlList) {
+      QString savePath = getSavePath();
+      if (savePath.isEmpty()) {
+        return;
+      }
+
       if (url.isLocalFile()) {
         QString localPath = url.toLocalFile();
 
-        QPixmap pix(localPath);
-        if (!pix.isNull()) {
-          display(pix);
+        if (QFile::exists(savePath)) {
+          QFile::remove(savePath);
+        }
+
+        bool success = QFile::rename(localPath, savePath);
+        if (!success) {
+          success = QFile::copy(localPath, savePath);
+          if (success) {
+            QFile::remove(localPath);
+          }
+        }
+
+        if (success) {
+          QPixmap pix(savePath);
+          if (!pix.isNull()) {
+            display(pix);
+          }
+        } else {
+          SHOW_AUTO_CLOSE_MSGBOX(this, TITLE_WARNING, tr("Failed to save file to %1").arg(savePath));
         }
       } else {
-        QString imageUrl = url.toString();
-
-        QString saveDir = ui->lineEditDir->text().trimmed();
-        QString name = ui->lineEditName->text().trimmed();
-
-        if (saveDir.isEmpty()) {
-          SHOW_AUTO_CLOSE_MSGBOX(this, TITLE_WARNING, tr("Save directory is empty!"));
-          return;
-        }
-
-        QString savePath;
-        if (!name.isEmpty()) {
-          savePath = QDir(saveDir).filePath(name);
-        } else {
-          QString dftName = QString("%1.png").arg(TIMESTAMP());
-          ui->lineEditName->setText(dftName);
-          QFileInfo fi(dftName);
-          savePath = QDir(saveDir).filePath(fi.fileName());
-        }
-
         MY_HTTP->getImage(
-            imageUrl,
+            url.toString(),
             [=](QPixmap pix) {
               if (!pix.isNull()) {
                 pix.save(savePath);
+                SHOW_AUTO_CLOSE_MSGBOX(this, TITLE_INFO, tr("Download success: %1").arg(savePath));
                 display(pix);
+              } else {
+                SHOW_AUTO_CLOSE_MSGBOX(this, TITLE_WARNING, tr("Downloaded image is invalid"));
               }
             },
             [=](QString err) { SHOW_AUTO_CLOSE_MSGBOX(this, TITLE_WARNING, tr("Download failed: %1").arg(err)); });
