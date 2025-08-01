@@ -30,7 +30,9 @@ void BasicInformation::init() {
   ui->comboBoxState->addItems({"", tr("Liquid"), tr("Powder"), tr("Grain"), tr("Gas")});
 
   auto map_MajorMinor = MY_GLOBAL->get<QMap<QString, QStringList>>(CHEMICAL_CATEGORY_MAJOR_MINOR);
+  ui->comboBoxCategory->addItem("");
   ui->comboBoxCategory->addItems(map_MajorMinor.keys());
+  ui->comboBoxCategory->setCurrentIndex(0);
   QString defaultMajor = ui->comboBoxCategory->currentText();
   ui->comboBoxApplicationArea->clear();
   ui->comboBoxApplicationArea->addItems(map_MajorMinor.value(defaultMajor));
@@ -195,7 +197,9 @@ void BasicInformation::on_comboBoxCategory_currentTextChanged(const QString &cat
 
   auto map_MajorMinor = MY_GLOBAL->get<QMap<QString, QStringList>>(CHEMICAL_CATEGORY_MAJOR_MINOR);
   ui->comboBoxApplicationArea->clear();
+  ui->comboBoxApplicationArea->addItem("");
   ui->comboBoxApplicationArea->addItems(map_MajorMinor.value(category));
+  ui->comboBoxApplicationArea->setCurrentIndex(0);
 
   QString text = ui->lineEditCategory->text();
   QStringList list = text.split(DELIMITER, Qt::SkipEmptyParts);
