@@ -27,7 +27,29 @@ bool EditID::check() {
   }
 }
 
-void EditID::init() { ui->comboBoxSpectralType->addItems({"RAM", "NIR", "MIR", "UV"}); }
+int EditID::getAutoIncreateID() {
+  QJsonObject objGet;
+  objGet.insert("type", ui->comboBoxSpectralType->currentText());
+  QString url =
+      QString("%1%2").arg(MY_GLOBAL->get<QString>(URL_SERVER), MY_GLOBAL->get<QString>(PATH_DATASET_AUTO_INCREASE_ID));
+  QJsonObject res = MY_HTTP->post_sync(url, objGet);
+  if (res["status"].toBool()) {
+    return res["increate_id"].toInt();
+  } else {
+    return 0;
+  }
+}
+
+void EditID::init() {
+  ui->comboBoxSpectralType->addItems({"RAM", "NIR", "MIR", "UV"});
+  int id = getAutoIncreateID();
+  if (id == 0) {
+    SHOW_AUTO_CLOSE_MSGBOX(this, TITLE_WARNING,
+                           tr("Failed to obtain the auto-increment ID, please enter it manually!"));
+  } else {
+    ui->spinBoxSpecificNumber->setValue(id);
+  }
+}
 
 void EditID::updateID() {
   m_id = QString("%1_%2").arg(ui->comboBoxSpectralType->currentText(),

@@ -26,6 +26,7 @@ class EditID : public QWidget {
   Ui::EditID *ui;
   QString m_id;
   // QMap<QString, QStringList> m_mapMajorMinor;
+  int getAutoIncreateID();
 };
 
 #endif  // EDITID_H
