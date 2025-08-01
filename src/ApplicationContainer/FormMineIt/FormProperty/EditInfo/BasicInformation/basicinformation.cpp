@@ -211,17 +211,23 @@ void BasicInformation::on_comboBoxCategory_currentTextChanged(const QString &cat
 }
 
 void BasicInformation::on_comboBoxApplicationArea_currentTextChanged(const QString &area) {
+  if (ui->comboBoxCategory->currentText().isEmpty()) {
+    return;
+  }
+
   if (area.isEmpty()) {
     return;
   }
+
+  QString prefix_area = QString("%1-%2").arg(ui->comboBoxCategory->currentText(), area);
 
   QString text = ui->lineEditApplicationArea->text();
 
   QStringList list = text.split(DELIMITER, Qt::SkipEmptyParts);
   list.removeAll("");
 
-  if (!list.contains(area)) {
-    list << area;
+  if (!list.contains(prefix_area)) {
+    list << prefix_area;
     ui->lineEditApplicationArea->setText(list.join(DELIMITER));
   }
 }
