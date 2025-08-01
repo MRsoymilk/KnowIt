@@ -19,6 +19,10 @@ class DialogAdd : public QDialog {
   explicit DialogAdd(QWidget *parent = nullptr);
   ~DialogAdd();
 
+ protected:
+  void closeEvent(QCloseEvent *event) override;
+  void showEvent(QShowEvent *event) override;
+
  private:
   void init();
 
@@ -31,6 +35,7 @@ class DialogAdd : public QDialog {
   EditID *m_editID;
   EditInfo *m_editInfo;
   QVector<QWidget *> m_editWidgets;
+  bool m_committed;
 };
 
 #endif  // DIALOGADD_H

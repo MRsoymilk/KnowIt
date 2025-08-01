@@ -16,6 +16,19 @@ DialogAdd::DialogAdd(QWidget *parent) : QDialog(parent), ui(new Ui::DialogAdd) {
 
 DialogAdd::~DialogAdd() { delete ui; }
 
+void DialogAdd::closeEvent(QCloseEvent *event) {
+  if (!m_committed && !ui->labelID->text().isEmpty()) {
+    QString id = ui->labelID->text();
+    QString url = QString("%1%2").arg(MY_GLOBAL->get<QString>(URL_SERVER), MY_GLOBAL->get<QString>(PATH_DATASET_DEL));
+    QJsonObject obj;
+    obj.insert(ID, id);
+    QJsonObject res = MY_HTTP->post_sync(url, obj);
+    LOG_INFO("Delete result: {}", res);
+  }
+}
+
+void DialogAdd::showEvent(QShowEvent *event) { m_committed = false; }
+
 void DialogAdd::init() {
   setWindowState(Qt::WindowMaximized);
 
@@ -47,6 +60,7 @@ void DialogAdd::on_btnNext_clicked() {
     obj.insert(ID, ui->labelID->text());
     QString url = QString("%1/%2").arg(MY_GLOBAL->get<QString>(URL_SERVER), MY_GLOBAL->get<QString>(PATH_DATASET_SET));
     QJsonObject res = MY_HTTP->post_sync(url, obj);
+    m_committed = true;
     this->close();
     return;
   }
