@@ -10,12 +10,15 @@
 EditContainer::EditContainer(TYPE type, QWidget *parent) : QDialog(parent), ui(new Ui::EditContainer) {
   ui->setupUi(this);
   m_type = type;
+  m_history = "";
+  m_ok = false;
   ui->tBtnAdd->setObjectName("add");
 }
 
 EditContainer::~EditContainer() { delete ui; }
 
 void EditContainer::setData(const QString &data) {
+  m_history = data;
   QLayoutItem *child;
   while ((child = ui->vLay->takeAt(0)) != nullptr) {
     if (child->widget()) {
@@ -56,6 +59,9 @@ void EditContainer::setData(const QString &data) {
 }
 
 const QString EditContainer::getData() {
+  if (!m_ok) {
+    return m_history;
+  }
   QStringList result;
   int count = ui->vLay->count();
 
@@ -86,7 +92,7 @@ const QString EditContainer::getData() {
     } break;
   }
 
-  return result.join(";");
+  return result.join(DELIMITER);
 }
 
 void EditContainer::on_tBtnAdd_clicked() {
@@ -94,12 +100,22 @@ void EditContainer::on_tBtnAdd_clicked() {
     case EditContainer::PEAK: {
       auto *info = new PeakInfo(0, 0, this);
       ui->vLay->addWidget(info);
+      QObject::connect(info, &PeakInfo::requestDelete, this, [=](PeakInfo *w) {
+        ui->vLay->removeWidget(w);
+        w->deleteLater();
+      });
     } break;
     case EditContainer::SINGLE_LINE: {
       auto *info = new SingleLineInfo();
       ui->vLay->addWidget(info);
+      QObject::connect(info, &SingleLineInfo::requestDelete, this, [=](SingleLineInfo *w) {
+        ui->vLay->removeWidget(w);
+        w->deleteLater();
+      });
     } break;
   }
 }
 
-void EditContainer::on_buttonBox_accepted() {}
+void EditContainer::on_buttonBox_accepted() { m_ok = true; }
+
+void EditContainer::on_buttonBox_rejected() { m_ok = false; }

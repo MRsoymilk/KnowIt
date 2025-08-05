@@ -22,10 +22,13 @@ class EditContainer : public QDialog {
  private slots:
   void on_tBtnAdd_clicked();
   void on_buttonBox_accepted();
+  void on_buttonBox_rejected();
 
  private:
   Ui::EditContainer *ui;
   TYPE m_type;
+  QString m_history;
+  bool m_ok;
 };
 
 #endif  // EDITCONTAINER_H
