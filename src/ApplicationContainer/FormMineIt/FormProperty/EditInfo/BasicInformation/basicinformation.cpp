@@ -167,7 +167,11 @@ void BasicInformation::on_tBtnCategoryEdit_clicked() {
   edit.setData(items.join(DELIMITER));
   edit.exec();
   ui->comboBoxCategory->clear();
-  ui->comboBoxCategory->addItems(edit.getData().split(DELIMITER));
+  QStringList results = edit.getData().split(DELIMITER);
+  results.erase(std::remove_if(results.begin(), results.end(), [](const QString &s) { return s.trimmed().isEmpty(); }),
+                results.end());
+  ui->comboBoxCategory->addItem("");
+  ui->comboBoxCategory->addItems(results);
 }
 
 void BasicInformation::on_tBtnApplicationAreaEdit_clicked() {
@@ -178,14 +182,17 @@ void BasicInformation::on_tBtnApplicationAreaEdit_clicked() {
   }
   edit.setData(items.join(DELIMITER));
   edit.exec();
-  QString value = edit.getData();
+  QStringList results = edit.getData().split(DELIMITER);
+  results.erase(std::remove_if(results.begin(), results.end(), [](const QString &s) { return s.trimmed().isEmpty(); }),
+                results.end());
   ui->comboBoxApplicationArea->clear();
-  ui->comboBoxApplicationArea->addItems(value.split(DELIMITER));
+  ui->comboBoxApplicationArea->addItem("");
+  ui->comboBoxApplicationArea->addItems(results);
   QString key = ui->comboBoxCategory->currentText();
   if (!key.isEmpty()) {
-    SETTING_CONFIG_SET(CFG_GROUP_CHEMICAL_CATEGORY, key, value);
+    SETTING_CONFIG_SET(CFG_GROUP_CHEMICAL_CATEGORY, key, results.join(DELIMITER));
     auto map_MajorMinor = MY_GLOBAL->get<QMap<QString, QStringList>>(CHEMICAL_CATEGORY_MAJOR_MINOR);
-    map_MajorMinor[key] = value.split(DELIMITER);
+    map_MajorMinor[key] = results;
     MY_GLOBAL->set<QMap<QString, QStringList>>(CHEMICAL_CATEGORY_MAJOR_MINOR, map_MajorMinor);
   }
 }
