@@ -125,27 +125,39 @@ const QString CHEMICAL_CATEGORY_MAJOR_MINOR = "ChemicalCategory_MajorMinor";
 
 #include <QGraphicsOpacityEffect>
 #include <QMessageBox>
+#include <QMetaObject>
 #include <QPropertyAnimation>
+#include <QThread>
 #include <QTimer>
-#define SHOW_AUTO_CLOSE_MSGBOX(PARENT, TITLE, TEXT)                                         \
-  do {                                                                                      \
-    QMessageBox *msgBox = new QMessageBox(PARENT);                                          \
-    msgBox->setWindowTitle(TITLE);                                                          \
-    msgBox->setText(TEXT);                                                                  \
-    msgBox->setAttribute(Qt::WA_DeleteOnClose, false);                                      \
-    msgBox->show();                                                                         \
-    QPropertyAnimation *fadeAnim = new QPropertyAnimation(msgBox, "windowOpacity", msgBox); \
-    fadeAnim->setDuration(1000);                                                            \
-    fadeAnim->setStartValue(1.0);                                                           \
-    fadeAnim->setEndValue(0.0);                                                             \
-    fadeAnim->setEasingCurve(QEasingCurve::InOutQuad);                                      \
-    QTimer::singleShot(1000, [msgBox, fadeAnim]() {                                         \
-      fadeAnim->start();                                                                    \
-      QObject::connect(fadeAnim, &QPropertyAnimation::finished, msgBox, [msgBox]() {        \
-        msgBox->close();                                                                    \
-        msgBox->deleteLater();                                                              \
-      });                                                                                   \
-    });                                                                                     \
+
+#define SHOW_AUTO_CLOSE_MSGBOX(PARENT, TITLE, TEXT)                                               \
+  do {                                                                                            \
+    QWidget *_parentWidget = PARENT;                                                              \
+    QMetaObject::invokeMethod(                                                                    \
+        _parentWidget,                                                                            \
+        [=]() {                                                                                   \
+          QMessageBox *msgBox = new QMessageBox(_parentWidget);                                   \
+          msgBox->setWindowTitle(TITLE);                                                          \
+          msgBox->setText(TEXT);                                                                  \
+          msgBox->setAttribute(Qt::WA_DeleteOnClose, false);                                      \
+          msgBox->show();                                                                         \
+          QPropertyAnimation *fadeAnim = new QPropertyAnimation(msgBox, "windowOpacity", msgBox); \
+          fadeAnim->setDuration(1000);                                                            \
+          fadeAnim->setStartValue(1.0);                                                           \
+          fadeAnim->setEndValue(0.0);                                                             \
+          fadeAnim->setEasingCurve(QEasingCurve::InOutQuad);                                      \
+          QTimer *timer = new QTimer(msgBox);                                                     \
+          timer->setSingleShot(true);                                                             \
+          QObject::connect(timer, &QTimer::timeout, msgBox, [msgBox, fadeAnim]() {                \
+            fadeAnim->start();                                                                    \
+            QObject::connect(fadeAnim, &QPropertyAnimation::finished, msgBox, [msgBox]() {        \
+              msgBox->close();                                                                    \
+              msgBox->deleteLater();                                                              \
+            });                                                                                   \
+          });                                                                                     \
+          timer->start(1000);                                                                     \
+        },                                                                                        \
+        Qt::QueuedConnection);                                                                    \
   } while (0)
 
 const QString TITLE_INFO = "Info";
