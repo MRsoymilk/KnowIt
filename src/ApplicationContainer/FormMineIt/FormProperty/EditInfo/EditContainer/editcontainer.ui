@@ -100,6 +100,10 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>tBtnAdd</tabstop>
+  <tabstop>scrollArea</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>

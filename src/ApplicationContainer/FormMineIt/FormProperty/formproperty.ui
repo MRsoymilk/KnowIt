@@ -109,6 +109,14 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>spinBoxCrop</tabstop>
+  <tabstop>scrollArea</tabstop>
+  <tabstop>tableViewProperty</tabstop>
+  <tabstop>btnAdd</tabstop>
+  <tabstop>btnEdit</tabstop>
+  <tabstop>btnDelete</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

@@ -76,6 +76,10 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>comboBoxSpectralType</tabstop>
+  <tabstop>spinBoxSpecificNumber</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

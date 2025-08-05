@@ -160,6 +160,26 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>lineEditCompoundName_en</tabstop>
+  <tabstop>tBtnName_en_Edit</tabstop>
+  <tabstop>lineEditCompoundName_zh</tabstop>
+  <tabstop>tBtnName_zh_Edit</tabstop>
+  <tabstop>lineEditMolecularFormula</tabstop>
+  <tabstop>lineEditMolecularWeight</tabstop>
+  <tabstop>lineEditCASNumber</tabstop>
+  <tabstop>lineEditCompoundType</tabstop>
+  <tabstop>comboBoxCategory</tabstop>
+  <tabstop>tBtnCategoryEdit</tabstop>
+  <tabstop>lineEditCategory</tabstop>
+  <tabstop>comboBoxApplicationArea</tabstop>
+  <tabstop>tBtnApplicationAreaEdit</tabstop>
+  <tabstop>lineEditApplicationArea</tabstop>
+  <tabstop>graphicsViewStructure</tabstop>
+  <tabstop>lineEditStructurePicturePath</tabstop>
+  <tabstop>tBtnUploadStructure</tabstop>
+  <tabstop>comboBoxState</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

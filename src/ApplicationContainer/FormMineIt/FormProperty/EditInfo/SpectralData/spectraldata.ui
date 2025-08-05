@@ -198,6 +198,22 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>tBtnRedoCrop</tabstop>
+  <tabstop>tBtnFittingCurve</tabstop>
+  <tabstop>tBtnFindPeak</tabstop>
+  <tabstop>tBtnPointStart</tabstop>
+  <tabstop>tBtnPoint4000</tabstop>
+  <tabstop>tBtnPoint2000</tabstop>
+  <tabstop>tBtnPoint0</tabstop>
+  <tabstop>graphicsViewSpectral</tabstop>
+  <tabstop>lineEditPeakMain</tabstop>
+  <tabstop>tBtnEditPeakMain</tabstop>
+  <tabstop>lineEditPeakAssistance</tabstop>
+  <tabstop>tBtnEditPeakAssistance</tabstop>
+  <tabstop>lineEditSpectralPicturePath</tabstop>
+  <tabstop>tBtnUploadSpectral</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

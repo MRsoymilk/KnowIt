@@ -43,6 +43,12 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>lineEditDir</tabstop>
+  <tabstop>lineEditName</tabstop>
+  <tabstop>tBtnChooseDir</tabstop>
+  <tabstop>graphicsView</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

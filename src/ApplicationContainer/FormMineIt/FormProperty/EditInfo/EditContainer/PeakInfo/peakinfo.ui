@@ -55,6 +55,11 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>doubleSpinBoxWavelength</tabstop>
+  <tabstop>doubleSpinBoxIntensity</tabstop>
+  <tabstop>tBtnDelete</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

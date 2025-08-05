@@ -62,6 +62,11 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>tBtnRefresh</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>tableView</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

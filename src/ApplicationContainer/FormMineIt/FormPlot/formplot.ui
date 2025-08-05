@@ -153,6 +153,15 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>tBtnPeakAssistance</tabstop>
+  <tabstop>tBtnAutoScale</tabstop>
+  <tabstop>tBtnCrop</tabstop>
+  <tabstop>tBtnXaxisInvert</tabstop>
+  <tabstop>tBtnOriginalImage</tabstop>
+  <tabstop>graphicsViewPicture</tabstop>
+  <tabstop>tabWidget</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
