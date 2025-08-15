@@ -263,7 +263,7 @@ void BasicInformation::checkCASNumber() {
   QString url = QString("%1%2").arg(MY_GLOBAL->get<QString>(URL_SERVER), MY_GLOBAL->get<QString>(PATH_DATASET_CHECK));
   QJsonObject res = MY_HTTP->post_sync(url, objCheck);
   if (!res["status"].toBool()) {
-    MSG_WARN(tr("%1 already exists, please re-enter!").arg(cas));
+    MSG_WARN(tr("%1 already exists, please re-enter!\n%2").arg(cas).arg(res["message"].toString()));
   }
 }
 
