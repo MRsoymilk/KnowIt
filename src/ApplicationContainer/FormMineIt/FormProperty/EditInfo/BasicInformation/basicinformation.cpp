@@ -172,6 +172,18 @@ void BasicInformation::on_tBtnCategoryEdit_clicked() {
                 results.end());
   ui->comboBoxCategory->addItem("");
   ui->comboBoxCategory->addItems(results);
+  QStringList diff;
+  for (const QString &item : items) {
+    if (!results.contains(item)) {
+      diff << item;
+    }
+  }
+  for (const QString &item : diff) {
+    if (!item.isEmpty()) {
+      SETTING_CONFIG_RM(CFG_GROUP_CHEMICAL_CATEGORY, item);
+      MY_GLOBAL->rm(item);
+    }
+  }
 }
 
 void BasicInformation::on_tBtnApplicationAreaEdit_clicked() {

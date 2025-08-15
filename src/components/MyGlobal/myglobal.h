@@ -22,6 +22,8 @@ class MyGlobal : public QObject {
     return m_data.value(key, QVariant::fromValue(defaultValue)).template value<T>();
   }
 
+  void rm(const QString &key) { m_data.remove(key); }
+
   void setValue(const QString &key, const QVariant &value);
   QVariant getValue(const QString &key, const QVariant &defaultValue = QVariant()) const;
 

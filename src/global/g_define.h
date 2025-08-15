@@ -105,6 +105,7 @@ const QString CHEMICAL_CATEGORY_MAJOR_MINOR = "ChemicalCategory_MajorMinor";
 #include "mysetting.h"
 #define SETTING_CONFIG_GET(group, key, ...) MY_SETTING.getValue(MySetting::SETTING::CONFIG, group, key, ##__VA_ARGS__)
 #define SETTING_CONFIG_SET(group, key, value) MY_SETTING.setValue(MySetting::SETTING::CONFIG, group, key, value)
+#define SETTING_CONFIG_RM(group, key) MY_SETTING.removeKey(MySetting::SETTING::CONFIG, group, key)
 #define SETTING_CONFIG_GROUPS() MY_SETTING.getGroups(MySetting::SETTING::CONFIG)
 #define SETTING_CONFIG_GROUP_KEYS(group) MY_SETTING.getGroupKeys(MySetting::SETTING::CONFIG, group)
 #define SETTING_CONFIG_SYNC() MY_SETTING.sync(MySetting::SETTING::CONFIG)

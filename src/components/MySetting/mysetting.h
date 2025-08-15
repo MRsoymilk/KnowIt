@@ -16,6 +16,7 @@ class MySetting {
   QStringList getGroups(SETTING s);
   QStringList getGroupKeys(SETTING s, const QString &group);
   void sync(SETTING s);
+  void removeKey(SETTING s, const QString &group, const QString &key);
 
  private:
   MySetting();

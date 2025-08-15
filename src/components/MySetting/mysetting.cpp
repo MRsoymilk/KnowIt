@@ -29,6 +29,10 @@ QStringList MySetting::getGroupKeys(SETTING s, const QString &group) {
   return keys;
 }
 
+void MySetting::removeKey(SETTING s, const QString &group, const QString &key) {
+  m_settings[s]->remove(QString("%1/%2").arg(group, key));
+}
+
 void MySetting::sync(SETTING s) { m_settings[s]->sync(); }
 
 MySetting::MySetting() { m_settings[SETTING::CONFIG] = new QSettings("config/config.ini", QSettings::IniFormat); }
