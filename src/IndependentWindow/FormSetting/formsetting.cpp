@@ -13,12 +13,12 @@ FormSetting::FormSetting(QWidget *parent) : QWidget(parent), ui(new Ui::FormSett
 FormSetting::~FormSetting() { delete ui; }
 
 void FormSetting::init() {
+  m_updateSetting = new UpdateSetting;
+  ui->vLay->addWidget(m_updateSetting);
   m_serverSetting = new ServerSetting;
   ui->vLay->addWidget(m_serverSetting);
   m_spectralSetting = new SpectralSetting;
   ui->vLay->addWidget(m_spectralSetting);
-  m_updateSetting = new UpdateSetting;
-  ui->vLay->addWidget(m_updateSetting);
 }
 
 void FormSetting::on_buttonBox_accepted() { this->close(); }
