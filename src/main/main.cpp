@@ -1,6 +1,7 @@
 #include <QApplication>
 #include <QMessageBox>
 #include <QScreen>
+#include <QSharedMemory>
 
 #include "AutoUpdate/autoupdate.h"
 #include "SplashScreen/splashscreen.h"
@@ -17,6 +18,16 @@ void initUpdate();
 int main(int argc, char *argv[]) {
   LOG_INFO("version: {}", APP_VERSION);
   QApplication a(argc, argv);
+
+  QSharedMemory sharedMemory;
+  sharedMemory.setKey("KnownIt_soymilk");
+
+  if (!sharedMemory.create(1)) {
+    QMessageBox::warning(nullptr, TITLE_WARNING, QObject::tr("Application is already running!"));
+
+    return 0;
+  }
+
   a.setWindowIcon(QIcon(":/res/icons/KnowIt.png"));
 
   SplashScreen splash;
