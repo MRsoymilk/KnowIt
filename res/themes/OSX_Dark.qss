@@ -1242,4 +1242,8 @@ QToolButton#refresh {
   qproperty-icon: url(:/res/icons/white/refresh.png);
 }
 
+QToolButton#check {
+  qproperty-icon: url(:/res/icons/white/check.png);
+}
+
 /*# sourceMappingURL=OSX%20Dark.qss.map */

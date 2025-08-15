@@ -15,7 +15,8 @@ EditID::~EditID() { delete ui; }
 bool EditID::check() {
   updateID();
   QJsonObject objCheck;
-  objCheck.insert(ID, m_id);
+  objCheck.insert("key", ID);
+  objCheck.insert("value", m_id);
   QString url = QString("%1%2").arg(MY_GLOBAL->get<QString>(URL_SERVER), MY_GLOBAL->get<QString>(PATH_DATASET_CHECK));
   QJsonObject res = MY_HTTP->post_sync(url, objCheck);
   if (res["status"].toBool()) {

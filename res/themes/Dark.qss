@@ -1194,4 +1194,8 @@ QToolButton#crop {
   qproperty-icon: url(:/res/icons/white/crop.png);
 }
 
+QToolButton#check {
+  qproperty-icon: url(:/res/icons/white/check.png);
+}
+
 /*# sourceMappingURL=Dark.qss.map */

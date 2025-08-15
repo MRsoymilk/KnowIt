@@ -55,5 +55,22 @@
         <file>res/i18n/zh_traditional.qm</file>
         <file>res/icons/black/refresh.png</file>
         <file>res/icons/white/refresh.png</file>
+        <file>res/icons/black/AnalyzeIt.png</file>
+        <file>res/icons/black/check.png</file>
+        <file>res/icons/black/IDExpert.png</file>
+        <file>res/icons/black/PredictIt.png</file>
+        <file>res/icons/black/QCExpert.png</file>
+        <file>res/icons/black/SearchIt.png</file>
+        <file>res/icons/white/AnalyzeIt.png</file>
+        <file>res/icons/white/check.png</file>
+        <file>res/icons/white/IDExpert.png</file>
+        <file>res/icons/white/PredictIt.png</file>
+        <file>res/icons/white/QCExpert.png</file>
+        <file>res/icons/white/SearchIt.png</file>
+        <file>res/icons/AnalyzeIt.png</file>
+        <file>res/icons/IDExpert.png</file>
+        <file>res/icons/PredictIt.png</file>
+        <file>res/icons/QCExpert.png</file>
+        <file>res/icons/SearchIt.png</file>
     </qresource>
 </RCC>

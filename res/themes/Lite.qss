@@ -1254,4 +1254,8 @@ QToolButton#refresh {
   qproperty-icon: url(:/res/icons/black/refresh.png);
 }
 
+QToolButton#check {
+  qproperty-icon: url(:/res/icons/black/check.png);
+}
+
 /*# sourceMappingURL=Lite.qss.map */

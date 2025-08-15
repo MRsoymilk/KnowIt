@@ -27,6 +27,7 @@ void BasicInformation::init() {
   ui->tBtnName_zh_Edit->setObjectName("edit");
   ui->tBtnApplicationAreaEdit->setObjectName("edit");
   ui->tBtnCategoryEdit->setObjectName("edit");
+  ui->tBtnCheckCAS->setObjectName("check");
   ui->comboBoxState->addItems({"", tr("Liquid"), tr("Powder"), tr("Grain"), tr("Gas")});
 
   auto map_MajorMinor = MY_GLOBAL->get<QMap<QString, QStringList>>(CHEMICAL_CATEGORY_MAJOR_MINOR);
@@ -250,3 +251,20 @@ void BasicInformation::on_comboBoxApplicationArea_currentTextChanged(const QStri
     ui->lineEditApplicationArea->setText(list.join(DELIMITER));
   }
 }
+
+void BasicInformation::on_lineEditCASNumber_editingFinished() { checkCASNumber(); }
+
+void BasicInformation::checkCASNumber() {
+  QString cas = ui->lineEditCASNumber->text();
+  QJsonObject objCheck;
+  objCheck.insert("key", QString("%1/%2").arg(BASIC_INFORMATION).arg(CAS_NUMBER));
+  objCheck.insert("value", cas);
+  objCheck.insert("exclude", m_id);
+  QString url = QString("%1%2").arg(MY_GLOBAL->get<QString>(URL_SERVER), MY_GLOBAL->get<QString>(PATH_DATASET_CHECK));
+  QJsonObject res = MY_HTTP->post_sync(url, objCheck);
+  if (!res["status"].toBool()) {
+    MSG_WARN(tr("%1 already exists, please re-enter!").arg(cas));
+  }
+}
+
+void BasicInformation::on_tBtnCheckCAS_clicked() { checkCASNumber(); }

@@ -27,6 +27,7 @@ class BasicInformation : public QWidget {
  private:
   void init();
   bool handleGraphicsViewStructure(QEvent *event);
+  void checkCASNumber();
 
  private slots:
   void on_tBtnName_zh_Edit_clicked();
@@ -36,6 +37,8 @@ class BasicInformation : public QWidget {
   void on_tBtnApplicationAreaEdit_clicked();
   void on_comboBoxCategory_currentTextChanged(const QString &category);
   void on_comboBoxApplicationArea_currentTextChanged(const QString &area);
+  void on_lineEditCASNumber_editingFinished();
+  void on_tBtnCheckCAS_clicked();
 
  private:
   Ui::BasicInformation *ui;

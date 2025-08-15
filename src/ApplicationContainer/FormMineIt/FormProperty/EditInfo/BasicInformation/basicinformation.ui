@@ -158,6 +158,13 @@
      </property>
     </widget>
    </item>
+   <item row="4" column="3">
+    <widget class="QToolButton" name="tBtnCheckCAS">
+     <property name="text">
+      <string>Check</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <tabstops>
