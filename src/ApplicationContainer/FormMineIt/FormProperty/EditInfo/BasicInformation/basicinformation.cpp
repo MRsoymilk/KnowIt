@@ -182,7 +182,9 @@ void BasicInformation::on_tBtnCategoryEdit_clicked() {
   for (const QString &item : diff) {
     if (!item.isEmpty()) {
       SETTING_CONFIG_RM(CFG_GROUP_CHEMICAL_CATEGORY, item);
-      MY_GLOBAL->rm(item);
+      auto map_MajorMinor = MY_GLOBAL->get<QMap<QString, QStringList>>(CHEMICAL_CATEGORY_MAJOR_MINOR);
+      map_MajorMinor.remove(item);
+      MY_GLOBAL->set<QMap<QString, QStringList>>(CHEMICAL_CATEGORY_MAJOR_MINOR, map_MajorMinor);
     }
   }
 }
